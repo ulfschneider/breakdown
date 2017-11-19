@@ -1,26 +1,18 @@
 {
   "context-menu": {
-    "atom-text-editor": [
-      {
-        "label": "Toggle breakdown",
-        "command": "breakdown:toggle"
-      }
-    ]
+    "atom-text-editor": [{
+      "label": "Toggle breakdown",
+      "command": "breakdown:toggle"
+    }]
   },
-  "menu": [
-    {
-      "label": "Packages",
-      "submenu": [
-        {
-          "label": "breakdown",
-          "submenu": [
-            {
-              "label": "Toggle",
-              "command": "breakdown:toggle"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  "menu": [{
+    "label": "Packages",
+    "submenu": [{
+      "label": "Breakdown",
+      "submenu": [{
+        "label": "Toggle",
+        "command": "breakdown:toggle"
+      }]
+    }]
+  }]
 }
