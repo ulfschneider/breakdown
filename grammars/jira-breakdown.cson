@@ -11,7 +11,7 @@ foldingStartMarker: ''
 foldingStopMarker: ''
 patterns: [
   { #allows syntax: Epic JIRA-1234 (anything) The summary text of the issue ^JIRA-5678
-    'match': '(?i)(^\\s*Epic\\s+)([A-Z]{1,10}-\\d+\\s*)?(\\(.*\\)\\s*)?(.+(?=\\^[A-Z]{1,10}-\\d+\\s*$)|.+(?!\\^[A-Z]{1,10}-\\d+\\s*$))(\\^[A-Z]{1,10}-\\d+\\s*$)?'
+    'match': '(?i)(^\\s*Epic\\s*)([A-Z]{1,10}-\\d+\\s*)?(\\(.*\\)\\s*)?([^\\s].*(?=\\^[A-Z]{1,10}-\\d+\\s*$)|[^\\s].*(?!\\^[A-Z]{1,10}-\\d+\\s*$))(\\^[A-Z]{1,10}-\\d+\\s*$)?'
     'name': 'issue.epic.jira'
     'captures':
       '1':
@@ -23,10 +23,10 @@ patterns: [
       '4':
         'name': 'issue.summary.jira'
       '5':
-        'name': 'issue.parent-key.jira'
+        'name': 'issue.key.parent.jira'
   }
   {
-    'match': '(?i)(^\\s*Story\\s+)([A-Z]{1,10}-\\d+\\s*)?(\\(.*\\)\\s*)?(.+(?=\\^[A-Z]{1,10}-\\d+\\s*$)|.+(?!\\^[A-Z]{1,10}-\\d+\\s*$))(\\^[A-Z]{1,10}-\\d+\\s*$)?'
+    'match': '(?i)(^\\s*Story\\s*)([A-Z]{1,10}-\\d+\\s*)?(\\(.*\\)\\s*)?([^\\s].*(?=\\^[A-Z]{1,10}-\\d+\\s*$)|[^\\s].*(?!\\^[A-Z]{1,10}-\\d+\\s*$))(\\^[A-Z]{1,10}-\\d+\\s*$)?'
     'name': 'issue.story.jira'
     'captures':
       '1':
@@ -38,10 +38,10 @@ patterns: [
       '4':
         'name': 'issue.summary.jira'
       '5':
-        'name': 'issue.parent-key.jira'
+        'name': 'issue.parent.parent.jira'
   }
   {
-    'match': '(?i)(^\\s*Sub\\s+|^\\s*Subtask\\s+|^\\s*Sub-Task\\s+)([A-Z]{1,10}-\\d+\\s*)?(\\(.*\\)\\s*)?(.+(?=\\^[A-Z]{1,10}-\\d+\\s*$)|.+(?!\\^[A-Z]{1,10}-\\d+\\s*$))(\\^[A-Z]{1,10}-\\d+\\s*$)?'
+    'match': '(?i)(^\\s*Sub\\s*|^\\s*Subtask\\s*|^\\s*Sub-Task\\s*)([A-Z]{1,10}-\\d+\\s*)?(\\(.*\\)\\s*)?([^\\s].*(?=\\^[A-Z]{1,10}-\\d+\\s*$)|[^\\s].*(?!\\^[A-Z]{1,10}-\\d+\\s*$))(\\^[A-Z]{1,10}-\\d+\\s*$)?'
     'name': 'issue.sub-task.jira'
     'captures':
       '1':
@@ -53,6 +53,6 @@ patterns: [
       '4':
         'name': 'issue.summary.jira'
       '5':
-        'name': 'issue.parent-key.jira'
+        'name': 'issue.key.parent.jira'
   }
 ]
