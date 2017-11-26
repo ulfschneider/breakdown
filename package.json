@@ -4,11 +4,12 @@
   "version": "0.0.0",
   "description": "JIRA Breakdown",
   "keywords": [],
-
   "repository": "https://github.com/atom/breakdown",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
 }
