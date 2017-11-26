@@ -1,4 +1,0 @@
----
-jira: JIRA
-project: PROJECT
----
