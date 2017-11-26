@@ -4,5 +4,40 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.breakdown {
+.breakdown {}
+
+atom-text-editor {
+  .line {
+    color: @text-color-subtle;
+  }
+
+  .syntax--key {
+    color: @text-color-warning;
+  }
+
+  .syntax--parent-key {
+    color: @text-color-warning;
+  }
+
+  .syntax--issue.syntax--epic {}
+
+  .syntax--issue.syntax--status {
+    color: @text-color-info;
+  }
+
+  .syntax--issue.syntax--summary {
+    color: @text-color-highlight;
+  }
+
+  .syntax--issue.syntax--type.syntax--epic {
+    color: @text-color-warning;
+  }
+
+  .syntax--issue.syntax--type.syntax--story {
+    color: @text-color-warning;
+  }
+
+  .syntax--issue.syntax--type.syntax--sub-task {
+    color: @text-color-warning;
+  }
 }

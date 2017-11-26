@@ -1,0 +1,16 @@
+jira-breakdown
+jira:
+key:
+fixversion:
+query:
+---
+sub-task PROJECTA-12 lsadfj ^JIRA-456
+
+Epic ID-1234 text lsd faj    dkkd    ^JIRA-12
+EPic ID-1234 (s:status a:ulf)  anderer text ^JIRA-12
+EPic ID-1234(s:status a:ulf)anderer text ^JIRA-12 klhhhlk  l l  l
+epic  ID-1222  (asdfas)  ölasdjföl  asdöflj {
+  story dhhdkkdkd öasdjf ölasdföljasdlöf k asöldkfj aölsfj
+     sub ID-122 (asdfasfsd) af ölaj s  alösdfj  asöfd öal dfjslöas f
+  story dhhdkkdkd öasdjf ölasdföljasdlöf k asöldkfj aölsfj
+  }
