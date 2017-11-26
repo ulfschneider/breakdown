@@ -41,7 +41,7 @@ patterns: [
         'name': 'issue.parent.parent.jira'
   }
   {
-    'match': '(?i)(^\\s*Sub\\s*|^\\s*Subtask\\s*|^\\s*Sub-Task\\s*)([A-Z]{1,10}-\\d+\\s*)?(\\(.*\\)\\s*)?([^\\s].*(?=\\^[A-Z]{1,10}-\\d+\\s*$)|[^\\s].*(?!\\^[A-Z]{1,10}-\\d+\\s*$))(\\^[A-Z]{1,10}-\\d+\\s*$)?'
+    'match': '(?i)(^\\s*Sub-Task\\s*|^\\s*Subtask\\s*|^\\s*Sub\\s*)([A-Z]{1,10}-\\d+\\s*)?(\\(.*\\)\\s*)?([^\\s].*(?=\\^[A-Z]{1,10}-\\d+\\s*$)|[^\\s].*(?!\\^[A-Z]{1,10}-\\d+\\s*$))(\\^[A-Z]{1,10}-\\d+\\s*$)?'
     'name': 'issue.sub-task.jira'
     'captures':
       '1':
