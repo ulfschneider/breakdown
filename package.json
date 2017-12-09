@@ -1,15 +1,17 @@
 {
-  "name": "breakdown",
-  "main": "./lib/breakdown",
-  "version": "0.0.0",
-  "description": "JIRA Breakdown",
-  "keywords": [],
-  "repository": "https://github.com/atom/breakdown",
-  "license": "MIT",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-  "dependencies": {
-    "underscore": "^1.8.3"
-  }
+    "name": "breakdown",
+    "main": "./lib/breakdown",
+    "version": "0.0.0",
+    "description": "Display and manipulate a JIRA breakdown of your project",
+    "keywords": [],
+    "repository": "https://github.com/atom/breakdown",
+    "license": "MIT",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    },
+    "dependencies": {
+        "json-transforms": "^1.1.2",
+        "request": "^2.83.0",
+        "underscore": "^1.8.3"
+    }
 }

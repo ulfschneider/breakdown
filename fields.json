@@ -1,0 +1,1263 @@
+{
+    "fields": {
+        "summary": {
+            "required": true,
+            "schema": {
+                "type": "string",
+                "system": "summary"
+            },
+            "name": "Summary",
+            "operations": ["set"]
+        },
+        "issuetype": {
+            "required": true,
+            "schema": {
+                "type": "issuetype",
+                "system": "issuetype"
+            },
+            "name": "Issue Type",
+            "operations": [],
+            "allowedValues": [{
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/issuetype/10000",
+                "id": "10000",
+                "description": "gh.issue.story.desc",
+                "iconUrl": "https://jerry.wincor-nixdorf.com/images/icons/issuetypes/story.svg",
+                "name": "Story",
+                "subtask": false
+            }]
+        },
+        "components": {
+            "required": false,
+            "schema": {
+                "type": "array",
+                "items": "component",
+                "system": "components"
+            },
+            "name": "Component/s",
+            "operations": ["add", "set", "remove"],
+            "allowedValues": []
+        },
+        "description": {
+            "required": false,
+            "schema": {
+                "type": "string",
+                "system": "description"
+            },
+            "name": "Description",
+            "operations": ["set"]
+        },
+        "fixVersions": {
+            "required": false,
+            "schema": {
+                "type": "array",
+                "items": "version",
+                "system": "fixVersions"
+            },
+            "name": "Fix Version/s",
+            "operations": ["set", "add", "remove"],
+            "allowedValues": [{
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/version/15109",
+                "id": "15109",
+                "name": "SDLC 2018.03",
+                "archived": false,
+                "released": false,
+                "projectId": 10329
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/version/15110",
+                "id": "15110",
+                "name": "SDLC 2017.09.x",
+                "archived": false,
+                "released": false,
+                "startDate": "2017-09-30",
+                "userStartDate": "2017-09-30",
+                "projectId": 10329
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/version/15129",
+                "id": "15129",
+                "name": "GPMO",
+                "archived": false,
+                "released": false,
+                "projectId": 10329
+            }]
+        },
+        "customfield_11100": {
+            "required": true,
+            "schema": {
+                "type": "option",
+                "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+                "customId": 11100
+            },
+            "name": "Committed",
+            "operations": ["set"],
+            "allowedValues": [{
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11202",
+                "value": "No",
+                "id": "11202"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11201",
+                "value": "Yes",
+                "id": "11201"
+            }]
+        },
+        "customfield_10100": {
+            "required": false,
+            "schema": {
+                "type": "any",
+                "custom": "com.pyxis.greenhopper.jira:gh-epic-link",
+                "customId": 10100
+            },
+            "name": "Epic Link",
+            "operations": ["set"]
+        },
+        "priority": {
+            "required": true,
+            "schema": {
+                "type": "priority",
+                "system": "priority"
+            },
+            "name": "Priority",
+            "operations": ["set"],
+            "allowedValues": [{
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/priority/1",
+                "iconUrl": "https://jerry.wincor-nixdorf.com/images/icons/priorities/critical.svg",
+                "name": "Highest",
+                "id": "1"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/priority/2",
+                "iconUrl": "https://jerry.wincor-nixdorf.com/images/icons/priorities/high.svg",
+                "name": "High",
+                "id": "2"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/priority/3",
+                "iconUrl": "https://jerry.wincor-nixdorf.com/images/icons/priorities/medium.svg",
+                "name": "Medium",
+                "id": "3"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/priority/4",
+                "iconUrl": "https://jerry.wincor-nixdorf.com/images/icons/priorities/low.svg",
+                "name": "Low",
+                "id": "4"
+            }]
+        },
+        "customfield_11014": {
+            "required": false,
+            "schema": {
+                "type": "any",
+                "custom": "de.catworkx.jira.plugins.cwx-issue-picker:issue-picker-single-cf",
+                "customId": 11014
+            },
+            "name": "Customer/s",
+            "operations": ["set"]
+        },
+        "labels": {
+            "required": false,
+            "schema": {
+                "type": "array",
+                "items": "string",
+                "system": "labels"
+            },
+            "name": "Labels",
+            "autoCompleteUrl": "https://jerry.wincor-nixdorf.com/rest/api/1.0/labels/suggest?query=",
+            "operations": ["add", "set", "remove"]
+        },
+        "customfield_10015": {
+            "required": false,
+            "schema": {
+                "type": "user",
+                "custom": "com.atlassian.jira.plugin.system.customfieldtypes:userpicker",
+                "customId": 10015
+            },
+            "name": "Product Manager",
+            "autoCompleteUrl": "https://jerry.wincor-nixdorf.com/rest/api/1.0/users/picker?fieldName=customfield_10015&query=",
+            "operations": ["set"]
+        },
+        "customfield_10016": {
+            "required": false,
+            "schema": {
+                "type": "string",
+                "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+                "customId": 10016
+            },
+            "name": "References",
+            "operations": ["set"]
+        },
+        "customfield_10104": {
+            "required": false,
+            "schema": {
+                "type": "array",
+                "items": "string",
+                "custom": "com.pyxis.greenhopper.jira:gh-sprint",
+                "customId": 10104
+            },
+            "name": "Sprint",
+            "operations": ["set"]
+        },
+        "customfield_10007": {
+            "required": false,
+            "schema": {
+                "type": "string",
+                "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+                "customId": 10007
+            },
+            "name": "Acceptance Criteria",
+            "operations": ["set"]
+        },
+        "customfield_10106": {
+            "required": false,
+            "schema": {
+                "type": "number",
+                "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float",
+                "customId": 10106
+            },
+            "name": "Story Points",
+            "operations": ["set"]
+        },
+        "customfield_10117": {
+            "required": false,
+            "schema": {
+                "type": "array",
+                "items": "option",
+                "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multiselect",
+                "customId": 10117
+            },
+            "name": "Customer Country/s",
+            "operations": ["add", "set", "remove"],
+            "allowedValues": [{
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10300",
+                "value": "Afghanistan (AF)",
+                "id": "10300"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10116",
+                "value": "Albania (AL)",
+                "id": "10116"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10301",
+                "value": "Algeria (DZ)",
+                "id": "10301"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10302",
+                "value": "American Samoa (AS)",
+                "id": "10302"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10303",
+                "value": "Andorra (AD)",
+                "id": "10303"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10304",
+                "value": "Angola (AO)",
+                "id": "10304"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10305",
+                "value": "Anguilla (AI)",
+                "id": "10305"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10306",
+                "value": "Antarctica (AQ)",
+                "id": "10306"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10307",
+                "value": "Antigua And Barbuda (AG)",
+                "id": "10307"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10308",
+                "value": "Argentina (AR)",
+                "id": "10308"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10309",
+                "value": "Armenia (AM)",
+                "id": "10309"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10310",
+                "value": "Aruba (AW)",
+                "id": "10310"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10311",
+                "value": "Australia (AU)",
+                "id": "10311"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10122",
+                "value": "Austria (AT)",
+                "id": "10122"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10312",
+                "value": "Azerbaijan (AZ)",
+                "id": "10312"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10313",
+                "value": "Bahamas (BS)",
+                "id": "10313"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10314",
+                "value": "Bahrain (BH)",
+                "id": "10314"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10315",
+                "value": "Bangladesh (BD)",
+                "id": "10315"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10317",
+                "value": "Belarus (BY)",
+                "id": "10317"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10318",
+                "value": "Belgium (BE)",
+                "id": "10318"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10319",
+                "value": "Belize (BZ)",
+                "id": "10319"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10320",
+                "value": "Benin (BJ)",
+                "id": "10320"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10321",
+                "value": "Bermuda (BM)",
+                "id": "10321"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10322",
+                "value": "Bhutan (BT)",
+                "id": "10322"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10323",
+                "value": "Bolivia (BO)",
+                "id": "10323"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10324",
+                "value": "Bosnia And Herzegovina (BA)",
+                "id": "10324"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10325",
+                "value": "Botswana (BW)",
+                "id": "10325"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10326",
+                "value": "Bouvet Island (BV)",
+                "id": "10326"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10327",
+                "value": "Brazil (BR)",
+                "id": "10327"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10328",
+                "value": "British Indian Ocean Territory (IO)",
+                "id": "10328"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10329",
+                "value": "Brunei (BN)",
+                "id": "10329"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10330",
+                "value": "Bulgaria (BG)",
+                "id": "10330"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10331",
+                "value": "Burkina Faso (BF)",
+                "id": "10331"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10332",
+                "value": "Burundi (BI)",
+                "id": "10332"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10333",
+                "value": "Cambodia (KH)",
+                "id": "10333"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10334",
+                "value": "Cameroon (CM)",
+                "id": "10334"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10335",
+                "value": "Canada (CA)",
+                "id": "10335"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10336",
+                "value": "Cape Verde (CV)",
+                "id": "10336"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11404",
+                "value": "Cayman Islands (KY)",
+                "id": "11404"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11405",
+                "value": "Central African Republic (CF)",
+                "id": "11405"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11406",
+                "value": "Chad (TD)",
+                "id": "11406"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10341",
+                "value": "Chile (CL)",
+                "id": "10341"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10342",
+                "value": "China (CN)",
+                "id": "10342"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11409",
+                "value": "Christmas Island (CX)",
+                "id": "11409"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10343",
+                "value": "Cocos (Keeling) Islands (CC)",
+                "id": "10343"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10344",
+                "value": "Colombia (CO)",
+                "id": "10344"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10345",
+                "value": "Comoros (KM)",
+                "id": "10345"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10346",
+                "value": "Congo (CG)",
+                "id": "10346"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11415",
+                "value": "Cook Islands (CK)",
+                "id": "11415"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11416",
+                "value": "Costa Rica (CR)",
+                "id": "11416"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10349",
+                "value": "Cote d'Ivoire (CI)",
+                "id": "10349"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10350",
+                "value": "Croatia (HR)",
+                "id": "10350"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10351",
+                "value": "Cuba (CU)",
+                "id": "10351"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10352",
+                "value": "Cyprus (CY)",
+                "id": "10352"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10353",
+                "value": "Czech Republic (CZ)",
+                "id": "10353"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10354",
+                "value": "Denmark (DK)",
+                "id": "10354"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11419",
+                "value": "Djibouti (DJ)",
+                "id": "11419"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10356",
+                "value": "Dominica (DM)",
+                "id": "10356"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11421",
+                "value": "Dominican Republic (DO)",
+                "id": "11421"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10358",
+                "value": "East Timor (TP)",
+                "id": "10358"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11422",
+                "value": "Ecuador (EC)",
+                "id": "11422"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10360",
+                "value": "Egypt (EG)",
+                "id": "10360"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11424",
+                "value": "El Salvador (SV)",
+                "id": "11424"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10362",
+                "value": "Equatorial Guinea (GQ)",
+                "id": "10362"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10363",
+                "value": "Eritrea (ER)",
+                "id": "10363"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10364",
+                "value": "Estonia (EE)",
+                "id": "10364"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11481",
+                "value": "Ethiopia (ET)",
+                "id": "11481"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10366",
+                "value": "Europe (SSGFI only) (EU)",
+                "id": "10366"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10368",
+                "value": "Faeroe Islands (FO)",
+                "id": "10368"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10367",
+                "value": "Falkland Islands (Malvinas) (FK)",
+                "id": "10367"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10369",
+                "value": "Fiji (FJ)",
+                "id": "10369"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10370",
+                "value": "Finland (FI)",
+                "id": "10370"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10371",
+                "value": "France (FR)",
+                "id": "10371"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10372",
+                "value": "France, Metropolitan (FX)",
+                "id": "10372"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11431",
+                "value": "French Guiana (GF)",
+                "id": "11431"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11432",
+                "value": "French Polynesia (PF)",
+                "id": "11432"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11433",
+                "value": "French Southern Territories (TF)",
+                "id": "11433"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10377",
+                "value": "Gabon (GA)",
+                "id": "10377"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11435",
+                "value": "Gambia (GM)",
+                "id": "11435"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10379",
+                "value": "Georgia (GE)",
+                "id": "10379"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10119",
+                "value": "Germany (DE)",
+                "id": "10119"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10381",
+                "value": "Ghana (GH)",
+                "id": "10381"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10382",
+                "value": "Gibraltar (GI)",
+                "id": "10382"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10383",
+                "value": "Greece (GR)",
+                "id": "10383"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11440",
+                "value": "Greenland (GL)",
+                "id": "11440"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11558",
+                "value": "Grenada (GD)",
+                "id": "11558"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10387",
+                "value": "Guadeloupe (GP)",
+                "id": "10387"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11443",
+                "value": "Guam (GU)",
+                "id": "11443"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11444",
+                "value": "Guatemala (GT)",
+                "id": "11444"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10389",
+                "value": "Guinea (GN)",
+                "id": "10389"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11446",
+                "value": "Guinea-Bissau (GW)",
+                "id": "11446"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10390",
+                "value": "Guyana (GY)",
+                "id": "10390"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11448",
+                "value": "Haiti (HT)",
+                "id": "11448"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10120",
+                "value": "Heard And Mc Donald Islands (HM)",
+                "id": "10120"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10393",
+                "value": "Honduras (HN)",
+                "id": "10393"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10394",
+                "value": "Hong Kong\t(HK)",
+                "id": "10394"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10395",
+                "value": "Hungary (HU)",
+                "id": "10395"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10397",
+                "value": "India\t(IN)",
+                "id": "10397"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10398",
+                "value": "Indonesia (ID)",
+                "id": "10398"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10399",
+                "value": "International (SSGFI only) (II)",
+                "id": "10399"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10400",
+                "value": "Iran (IR)",
+                "id": "10400"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11456",
+                "value": "Iraq (IQ)",
+                "id": "11456"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10402",
+                "value": "Ireland (IE)",
+                "id": "10402"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10415",
+                "value": "Israel (IL)",
+                "id": "10415"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10416",
+                "value": "Italy (IT)",
+                "id": "10416"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10600",
+                "value": "Ivory Coast (CI)",
+                "id": "10600"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10417",
+                "value": "Jamaica (JM)",
+                "id": "10417"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10418",
+                "value": "Japan (JP)",
+                "id": "10418"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10419",
+                "value": "Jordan (JO)",
+                "id": "10419"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10408",
+                "value": "Kazakhstan (KZ)",
+                "id": "10408"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10409",
+                "value": "Kenya (KE)",
+                "id": "10409"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11465",
+                "value": "Kiribati (KI)",
+                "id": "11465"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10405",
+                "value": "Korea (KR)",
+                "id": "10405"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10404",
+                "value": "Korea, Democratic People's\t(KP)",
+                "id": "10404"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11467",
+                "value": "Kuwait (KW)",
+                "id": "11467"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10410",
+                "value": "Kyrgyzstan\t(KG)",
+                "id": "10410"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11469",
+                "value": "Lao People's Democratic Republic (LA)",
+                "id": "11469"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10411",
+                "value": "Latvia (LV)",
+                "id": "10411"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10421",
+                "value": "Lebanon (LB)",
+                "id": "10421"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10412",
+                "value": "Lesotho (LS)",
+                "id": "10412"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10422",
+                "value": "Liberia (LR)",
+                "id": "10422"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10423",
+                "value": "Libyan Arab Jamahiriya (LY)",
+                "id": "10423"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10424",
+                "value": "Liechtenstein (LI)",
+                "id": "10424"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10413",
+                "value": "Lithuania (LT)",
+                "id": "10413"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11477",
+                "value": "Luxembourg (LU)",
+                "id": "11477"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10407",
+                "value": "Macao (MO)",
+                "id": "10407"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10426",
+                "value": "Macedonia (MK)",
+                "id": "10426"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10427",
+                "value": "Madagascar (MG)",
+                "id": "10427"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10428",
+                "value": "Malawi (MW)",
+                "id": "10428"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10429",
+                "value": "Malaysia (MY)",
+                "id": "10429"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11519",
+                "value": "Maldives (MV)",
+                "id": "11519"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10431",
+                "value": "Mali (ML)",
+                "id": "10431"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10432",
+                "value": "Malta (MT)",
+                "id": "10432"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11484",
+                "value": "Marshall Islands (MH)",
+                "id": "11484"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10434",
+                "value": "Martinique\t(MQ)",
+                "id": "10434"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11486",
+                "value": "Mauritania (MR)",
+                "id": "11486"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11487",
+                "value": "Mauritius (MU)",
+                "id": "11487"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11488",
+                "value": "Mayotte (YT)",
+                "id": "11488"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10437",
+                "value": "Mexico (MX)",
+                "id": "10437"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10438",
+                "value": "Micronesia, Federated States (FM)",
+                "id": "10438"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10439",
+                "value": "Moldova (MD)",
+                "id": "10439"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11492",
+                "value": "Monaco (MC)",
+                "id": "11492"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10441",
+                "value": "Mongolia (MN)",
+                "id": "10441"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10442",
+                "value": "Montserrat (MS)",
+                "id": "10442"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10443",
+                "value": "Morocco (MA)",
+                "id": "10443"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11496",
+                "value": "Mozambique (MZ)",
+                "id": "11496"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10445",
+                "value": "Myanmar (MM)",
+                "id": "10445"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11498",
+                "value": "Namibia (NA)",
+                "id": "11498"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11499",
+                "value": "Nauru (NR)",
+                "id": "11499"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10448",
+                "value": "Nepal (NP)",
+                "id": "10448"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10449",
+                "value": "Netherlands (NL)",
+                "id": "10449"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10450",
+                "value": "Netherlands Antilles (AN)",
+                "id": "10450"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11502",
+                "value": "New Caledonia (NC)",
+                "id": "11502"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10452",
+                "value": "New Zealand (NZ)",
+                "id": "10452"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10453",
+                "value": "Nicaragua\t(NI)",
+                "id": "10453"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10454",
+                "value": "Niger (NE)",
+                "id": "10454"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11506",
+                "value": "Nigeria (NG)",
+                "id": "11506"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11507",
+                "value": "Niue (NU)",
+                "id": "11507"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11508",
+                "value": "Norfolk Island (NF)",
+                "id": "11508"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11509",
+                "value": "Northern Mariana Islands (MP)",
+                "id": "11509"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10459",
+                "value": "Norway (NO)",
+                "id": "10459"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10460",
+                "value": "Oman (OM)",
+                "id": "10460"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10461",
+                "value": "Pakistan (PK)",
+                "id": "10461"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11513",
+                "value": "Palau (PW)",
+                "id": "11513"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10603",
+                "value": "Palestine (PS)",
+                "id": "10603"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11514",
+                "value": "Panama (PA)",
+                "id": "11514"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11515",
+                "value": "Papua New Guinea (PG)",
+                "id": "11515"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11516",
+                "value": "Paraguay (PY)",
+                "id": "11516"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10466",
+                "value": "Peru\t(PE)",
+                "id": "10466"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10467",
+                "value": "Philippines\t(PH)",
+                "id": "10467"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11563",
+                "value": "Pitcairn (PN)",
+                "id": "11563"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10469",
+                "value": "Poland (PL)",
+                "id": "10469"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10470",
+                "value": "Portugal (PT)",
+                "id": "10470"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10471",
+                "value": "Puerto Rico (PR)",
+                "id": "10471"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11565",
+                "value": "Qatar (QA)",
+                "id": "11565"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10473",
+                "value": "Reunion (French) (RE)",
+                "id": "10473"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10474",
+                "value": "Romania (RO)",
+                "id": "10474"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10475",
+                "value": "Russia (RU)",
+                "id": "10475"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10476",
+                "value": "Rwanda (RW)",
+                "id": "10476"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10477",
+                "value": "Saint Kitts And Nevis (KN)",
+                "id": "10477"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11574",
+                "value": "Saint Lucia (LC)",
+                "id": "11574"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11579",
+                "value": "Saint Vincent And The Grenadines (VC)",
+                "id": "11579"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11585",
+                "value": "Samoa (WS)",
+                "id": "11585"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11593",
+                "value": "San Marino (SM)",
+                "id": "11593"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11553",
+                "value": "Sao Tome And Principe (ST)",
+                "id": "11553"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10483",
+                "value": "Saudi Arabia (SA)",
+                "id": "10483"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10484",
+                "value": "Senegal (SN)",
+                "id": "10484"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11800",
+                "value": "Serbia (RS)",
+                "id": "11800"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10485",
+                "value": "Seychelles\t(SC)",
+                "id": "10485"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11570",
+                "value": "Sierra Leone (SL)",
+                "id": "11570"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10487",
+                "value": "Singapore\t(SG)",
+                "id": "10487"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10488",
+                "value": "Slovakia (SK)",
+                "id": "10488"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11571",
+                "value": "Slovenia (SI)",
+                "id": "11571"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10490",
+                "value": "Solomon Islands\t (SB)",
+                "id": "10490"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10491",
+                "value": "Somalia (SO)",
+                "id": "10491"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10492",
+                "value": "South Africa (ZA)",
+                "id": "10492"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11531",
+                "value": "South Georgia And The South Sandwich Islands (GS)",
+                "id": "11531"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10602",
+                "value": "South Sudan (SS)",
+                "id": "10602"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10494",
+                "value": "Spain (ES)",
+                "id": "10494"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10495",
+                "value": "Sri Lanka (LK)",
+                "id": "10495"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11573",
+                "value": "St. Helena (SH)",
+                "id": "11573"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11533",
+                "value": "St. Pierre And Miquelon (PM)",
+                "id": "11533"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11536",
+                "value": "Sudan (SD)",
+                "id": "11536"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11534",
+                "value": "Suriname (SR)",
+                "id": "11534"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11575",
+                "value": "Svalbard And Jan Mayen Islands (SJ)",
+                "id": "11575"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10501",
+                "value": "Swaziland\t(SZ)",
+                "id": "10501"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10502",
+                "value": "Sweden (SE)",
+                "id": "10502"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10503",
+                "value": "Switzerland (CH)",
+                "id": "10503"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10504",
+                "value": "Syria (SY)",
+                "id": "10504"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10505",
+                "value": "Taiwan (TW)",
+                "id": "10505"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10506",
+                "value": "Tajikistan (TJ)",
+                "id": "10506"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10507",
+                "value": "Tanzania (TZ)",
+                "id": "10507"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10508",
+                "value": "Thailand (TH)",
+                "id": "10508"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11538",
+                "value": "Togo (TG)",
+                "id": "11538"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11567",
+                "value": "Tokelau (TK)",
+                "id": "11567"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10511",
+                "value": "Tonga (TO)",
+                "id": "10511"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10512",
+                "value": "Trinidad And Tobago (TT)",
+                "id": "10512"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10513",
+                "value": "Tunisia (TN)",
+                "id": "10513"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10514",
+                "value": "Turkey (TR)",
+                "id": "10514"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10515",
+                "value": "Turkmenistan (TM)",
+                "id": "10515"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10516",
+                "value": "Turks and Caicos (TC)",
+                "id": "10516"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11568",
+                "value": "Tuvalu (TV)",
+                "id": "11568"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10518",
+                "value": "Uganda (UG)",
+                "id": "10518"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10519",
+                "value": "Ukraine (UA)",
+                "id": "10519"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10520",
+                "value": "United Arab Emirates (AE)",
+                "id": "10520"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10521",
+                "value": "United Kingdom (GB)",
+                "id": "10521"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10522",
+                "value": "United States (US)",
+                "id": "10522"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10523",
+                "value": "United States Minor Outlying Islands (UM)",
+                "id": "10523"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11586",
+                "value": "Uruguay (UY)",
+                "id": "11586"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10525",
+                "value": "Uzbekistan\t(UZ)",
+                "id": "10525"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11588",
+                "value": "Vanuatu (VU)",
+                "id": "11588"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11543",
+                "value": "Vatican City State (Holy See) (VA)",
+                "id": "11543"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10528",
+                "value": "Venezuela\t(VE)",
+                "id": "10528"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10529",
+                "value": "Vietnam (VN)",
+                "id": "10529"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10530",
+                "value": "Virgin Islands (British)\t(VG)",
+                "id": "10530"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10531",
+                "value": "Virgin Islands US (VI)",
+                "id": "10531"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10532",
+                "value": "Wallis And Futuna Islands (WF)",
+                "id": "10532"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10533",
+                "value": "Western Sahara\t(EH)",
+                "id": "10533"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10601",
+                "value": "WorldWide (WW)",
+                "id": "10601"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10534",
+                "value": "Yemen (YE)",
+                "id": "10534"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/10535",
+                "value": "Yugoslavia\t(YU)",
+                "id": "10535"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11592",
+                "value": "Zaire (ZR)",
+                "id": "11592"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11551",
+                "value": "Zambia (ZM)",
+                "id": "11551"
+            }, {
+                "self": "https://jerry.wincor-nixdorf.com/rest/api/2/customFieldOption/11552",
+                "value": "Zimbabwe (ZW)",
+                "id": "11552"
+            }]
+        },
+        "customfield_10008": {
+            "required": false,
+            "schema": {
+                "type": "string",
+                "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+                "customId": 10008
+            },
+            "name": "Build ID",
+            "operations": ["set"]
+        },
+        "attachment": {
+            "required": false,
+            "schema": {
+                "type": "array",
+                "items": "attachment",
+                "system": "attachment"
+            },
+            "name": "Attachment",
+            "operations": []
+        },
+        "duedate": {
+            "required": false,
+            "schema": {
+                "type": "date",
+                "system": "duedate"
+            },
+            "name": "Due Date",
+            "operations": ["set"]
+        },
+        "issuelinks": {
+            "required": false,
+            "schema": {
+                "type": "array",
+                "items": "issuelinks",
+                "system": "issuelinks"
+            },
+            "name": "Linked Issues",
+            "autoCompleteUrl": "https://jerry.wincor-nixdorf.com/rest/api/2/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=SWBO-196&query=",
+            "operations": ["add"]
+        },
+        "comment": {
+            "required": false,
+            "schema": {
+                "type": "comments-page",
+                "system": "comment"
+            },
+            "name": "Comment",
+            "operations": ["add", "edit", "remove"]
+        },
+        "assignee": {
+            "required": false,
+            "schema": {
+                "type": "user",
+                "system": "assignee"
+            },
+            "name": "Assignee",
+            "autoCompleteUrl": "https://jerry.wincor-nixdorf.com/rest/api/latest/user/assignable/search?issueKey=SWBO-196&username=",
+            "operations": ["set"]
+        }
+    }
+}

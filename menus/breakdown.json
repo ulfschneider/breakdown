@@ -1,18 +1,18 @@
 {
-  "context-menu": {
-    "atom-text-editor": [{
-      "label": "Toggle breakdown",
-      "command": "breakdown:toggle"
-    }]
-  },
-  "menu": [{
-    "label": "Packages",
-    "submenu": [{
-      "label": "Breakdown",
-      "submenu": [{
-        "label": "Toggle",
-        "command": "breakdown:toggle"
+   "context-menu": {
+      "atom-text-editor": [{
+         "label": "Pull JIRA",
+         "command": "breakdown:pull"
       }]
-    }]
-  }]
+   },
+   "menu": [{
+      "label": "Packages",
+      "submenu": [{
+         "label": "Breakdown",
+         "submenu": [{
+            "label": "Pull JIRA",
+            "command": "breakdown:pull"
+         }]
+      }]
+   }]
 }

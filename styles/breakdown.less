@@ -4,40 +4,75 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.breakdown {}
+.breakdown-credentials {
+    button,
+    input {
+        color: @input-background-color;
+    }
+
+    button {
+        margin-right: 1.62em;
+    }
+
+    input {
+        font-weight: bold;
+    }
+
+    dl {
+        display: inline-block;
+        margin-right: 1.62em;
+    }
+}
 
 atom-text-editor {
-  .line {
-    color: @text-color-subtle;
-  }
+    .line {
+        color: @text-color-subtle;
+    }
 
-  .syntax--key {
-    color: @text-color-warning;
-  }
+    .syntax--jira {}
 
-  .syntax--parent {
-    color: @text-color-warning;
-  }
+    .syntax--settings {
+        color: @text-color-subtle;
 
-  .syntax--issue.syntax--epic {}
+        .syntax--key,
+        .syntax--punctuation {
+            color: darken(@ui-site-color-5, 30%);
+        }
 
-  .syntax--issue.syntax--status {
-    color: @text-color-info;
-  }
+        .syntax--begin,
+        .syntax--end,
+        .syntax--value {
+            color: @ui-site-color-5;
+        }
+    }
 
-  .syntax--issue.syntax--summary {
-    color: @text-color;
-  }
+    .syntax--key {
+        color: darken(@text-color-warning, 20%);
+    }
 
-  .syntax--issue.syntax--type.syntax--epic {
-    color: @text-color-warning;
-  }
+    .syntax--parent {
+        color: darken(@text-color-warning, 30%);
+    }
 
-  .syntax--issue.syntax--type.syntax--story {
-    color: @text-color-warning;
-  }
+    .syntax--issue.syntax--epic {}
 
-  .syntax--issue.syntax--type.syntax--sub-task {
-    color: @text-color-warning;
-  }
+    .syntax--issue.syntax--status {
+        color: darken(@text-color-success, 20%);
+    }
+
+    .syntax--issue.syntax--summary {
+        color: @text-color;
+    }
+
+    .syntax--issue.syntax--type.syntax--epic {
+        color: @text-color-success;
+    }
+
+    .syntax--issue.syntax--type.syntax--story {
+        color: @text-color-success;
+    }
+
+    .syntax--issue.syntax--type.syntax--sub-task {
+        color: @text-color-success;
+    }
 }
