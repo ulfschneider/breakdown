@@ -5,74 +5,72 @@
 @import "ui-variables";
 
 .breakdown-credentials {
-    button,
-    input {
-        color: @input-background-color;
-    }
+  button,
+  input {
+    color: @input-background-color;
+  }
 
-    button {
-        margin-right: 1.62em;
-    }
+  button {
+    margin-right: 1.62em;
+  }
 
-    input {
-        font-weight: bold;
-    }
+  input {
+    font-weight: bold;
+  }
 
-    dl {
-        display: inline-block;
-        margin-right: 1.62em;
-    }
+  dl {
+    display: inline-block;
+    margin-right: 1.62em;
+  }
 }
 
 atom-text-editor {
-    .line {
-        color: @text-color-subtle;
+  .line {
+    color: @text-color-subtle;
+  }
+
+  .syntax--jira {}
+
+  .syntax--settings {
+    color: @text-color-subtle;
+
+    .syntax--key,
+    .syntax--punctuation {
+      color: darken(@ui-site-color-5, 30%);
     }
 
-    .syntax--jira {}
-
-    .syntax--settings {
-        color: @text-color-subtle;
-
-        .syntax--key,
-        .syntax--punctuation {
-            color: darken(@ui-site-color-5, 30%);
-        }
-
-        .syntax--begin,
-        .syntax--end,
-        .syntax--value {
-            color: @ui-site-color-5;
-        }
+    .syntax--begin,
+    .syntax--end,
+    .syntax--value {
+      color: @ui-site-color-5;
     }
+  }
 
-    .syntax--key {
-        color: darken(@text-color-warning, 20%);
-    }
+  .syntax--key {
+    color: darken(@text-color-warning, 20%);
+  }
 
-    .syntax--parent {
-        color: darken(@text-color-warning, 30%);
-    }
+  .syntax--parent {
+    color: darken(@text-color-warning, 30%);
+  }
 
-    .syntax--issue.syntax--epic {}
+  .syntax--fields.syntax--begin,
+  .syntax--fields.syntax--end,
+  .syntax--issue.syntax--field.syntax--identifier {
+    color: darken(@text-color-success, 20%);
+  }
 
-    .syntax--issue.syntax--status {
-        color: darken(@text-color-success, 20%);
-    }
+  .syntax--issue.syntax--field.syntax--value {
+    color: @text-color-success;
+  }
 
-    .syntax--issue.syntax--summary {
-        color: @text-color;
-    }
+  .syntax--issue.syntax--summary {
+    color: @text-color;
+  }
 
-    .syntax--issue.syntax--type.syntax--epic {
-        color: @text-color-success;
-    }
-
-    .syntax--issue.syntax--type.syntax--story {
-        color: @text-color-success;
-    }
-
-    .syntax--issue.syntax--type.syntax--sub-task {
-        color: @text-color-success;
-    }
+  .syntax--issue.syntax--type.syntax--epic,
+  .syntax--issue.syntax--type.syntax--story,
+  .syntax--issue.syntax--type.syntax--sub-task {
+    color: @text-color-success;
+  }
 }
