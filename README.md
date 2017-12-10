@@ -20,7 +20,7 @@ To pull JIRA data into your Atom editor, create a file with a `.bkdn` filetype, 
 ```
 jira-breakdown
 url: http://address.of.your.jira
-query: any JIRA JQL query to select your download data set
+query: any JIRA JQL query to select your download dataset
 ---
 ```
 
@@ -29,7 +29,7 @@ Optionally, you can configure also some JIRA fields which would be incorporated 
 ```
 jira-breakdown
 url: http://address.of.your.jira
-query: any JIRA JQL query to select your download data set
+query: any JIRA JQL query to select your download dataset
 fields: status assignee points fixversion parentkey
 ---
 ```
