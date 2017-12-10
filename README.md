@@ -11,11 +11,11 @@ Display and manipulate a JIRA breakdown of your project. As this package is at a
 apm install breakdown
 ```
 
-1. Now you are ready to start.
+Fire up Atom and you are ready to start.
 
-## Example
+## How to use
 
-To pull JIRA data into your Atom editor, create a file with a .bkdn filetype and open it in Atom. The file must start with the following four lines:
+To pull JIRA data into your Atom editor, create a file with a `.bkdn` filetype. The file must start with the following four lines:
 
 ```
 jira-breakdown
@@ -24,7 +24,7 @@ query: any JIRA JQL query to select your download data set
 ---
 ```
 
-Optionally, you can provide also some JIRA fields you want to have displayed in Atom.
+Optionally, you can provide also some JIRA fields which would be displayed in your breakdown.
 
 ```
 jira-breakdown
