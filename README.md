@@ -15,7 +15,7 @@ Fire up Atom and you are ready to start.
 
 ## How to use
 
-To pull JIRA data into your Atom editor, create a file with a `.bkdn` filetype. The file must start with the following four lines:
+To pull JIRA data into your Atom editor, create a file with a `.bkdn` filetype, e.g. `myjira.bkdn`. The file must start with your configuration and at least contain the following first four lines:
 
 ```
 jira-breakdown
@@ -24,7 +24,7 @@ query: any JIRA JQL query to select your download data set
 ---
 ```
 
-Optionally, you can provide also some JIRA fields which would be displayed in your breakdown.
+Optionally, you can configure also some JIRA fields which would be incorporated into your breakdown.
 
 ```
 jira-breakdown
