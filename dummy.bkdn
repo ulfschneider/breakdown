@@ -1,14 +1,14 @@
 jira-breakdown
 url: https://jerry.wincor-nixdorf.com
 query: project=TPNET AND (fixVersion in (6.6, 6.7) OR issue in parent("fixVersion in (6.6, 6.7)")) ORDER BY Rank
-fields: assignee fixversion points
+fields: status
 ---
-    Story ( s:asdfasdf ) hello world (öas dflöaj ) 
+    Story ( s:asdfasdf ) hello world (öas dflöaj )
     Story TPNET-13376 ( s:Done a:maciej.jarecki p:5 v:6.6 ) TP Mobile Document for Triumph Project
     Story TPNET-13077 ( s:Done a:marek.elmrych v:6.6 ) Story4Test
     Story TPNET-13256 ( s:Done a:alexander.bausch p:1 v:6.6 ) Move Delivery/Webservice/cfg to dev.net/Webservice CFG
         Sub-Task TPNET-13258 ( s:Done a:matthias.tietz ) Webservices - Move cfg folder to dev.net ^TPNET-13256
-        Sub-Task TPNET-13259 ( s:Done a:alexander.bausch ) adapt setups to new location ^TPNET-13256
+        Sub-Task TPNET-13259 ( s:Done a:alexander.bausch ) adapt setups to new location ^TPNET-13256 
         Sub-Task TPNET-13338 ( s:Done a:stefanie.temme ) Test if workflows are installed properly still ^TPNET-13256
         Sub-Task TPNET-14012 ( s:Done a:matthias.tietz ) TPMobileSetup - Update setup after moving workflow cfg folder ^TPNET-13256
     Story TPNET-13891 ( s:Ready for QA a:marek.elmrych p:3 v:6.7 ) Adjust TenderMaintenance to TPLoyaltyAdapter ^TPNET-12712
