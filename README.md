@@ -34,4 +34,4 @@ fields: status assignee points fixversion parentkey
 ---
 ```
 
-Select then in the Packages menu Breakdown / Pull JIRA. Whenever you pull the JIRA dataset into your Atom editor, all contents of the editor will be overwritten by your JIRA dataset.
+Select then in the Packages menu **Breakdown / Pull JIRA**. Whenever you pull the JIRA dataset into your Atom editor, all contents of the editor will be overwritten by your JIRA dataset.
