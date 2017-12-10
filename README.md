@@ -1,6 +1,6 @@
 # JIRA Breakdown for Atom
 
-Display and manipulate a JIRA breakdown of your project. As this package is at a very early stage. Currently you can only pull for JIRA data into Atom and display that data in a breakdown structure. Pushing changes back to JIRA is the next function to come - but it´s not there yet.
+Display and manipulate a JIRA breakdown of your project. As this package is at a very early stage, currently you can only pull JIRA data into Atom and display that data in a breakdown structure. Pushing changes back to JIRA is the next function to come - but it´s not there yet.
 
 ## Installation
 
