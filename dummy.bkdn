@@ -1,9 +1,9 @@
 jira-breakdown
 url: https://jerry.wincor-nixdorf.com
 query: project=TPNET AND (fixVersion in (6.6, 6.7) OR issue in parent("fixVersion in (6.6, 6.7)")) ORDER BY Rank
-fields: assignee fixversion points 
+fields: assignee fixversion points
 ---
-    Story ( s:asdfasdf ) hello world (öas dflöaj )
+    Story ( s:asdfasdf ) hello world (öas dflöaj ) 
     Story TPNET-13376 ( s:Done a:maciej.jarecki p:5 v:6.6 ) TP Mobile Document for Triumph Project
     Story TPNET-13077 ( s:Done a:marek.elmrych v:6.6 ) Story4Test
     Story TPNET-13256 ( s:Done a:alexander.bausch p:1 v:6.6 ) Move Delivery/Webservice/cfg to dev.net/Webservice CFG
