@@ -1,170 +1,187 @@
 scopeName: 'breakdown.jira'
 name: 'JIRA Breakdown'
 fileTypes: [
-  'bkdn'
+    'bkdn'
 ]
 firstLineMatch: '(?i)^\\s*jira-breakdown\\s*$'
 foldingStartMarker: ''
 foldingStopMarker: ''
 patterns: [
-  {
-    'begin': '(?i)^\\s*jira-breakdown\\s*$'
-    'beginCaptures':
-      '0':
-        'name': 'settings.begin.jira'
-    'end': '^\\s*---\\s*$|^\\s*$'
-    'endCaptures':
-      '0':
-        'name': 'settings.end.jira'
-    'name': 'settings.jira'
-    'patterns': [
-      {
-        'match': '(?i)(^\\s*url\\s*)(:)(.*)'
-        'name': 'settings.jira-url.jira'
-        'captures':
-          '1':
-            'name': 'settings.key.jira'
-          '2':
-            'name': 'settings.punctuation.separator.key-value.jira'
-          '3':
-            'name': 'settings.value.jira'
-      }
-      {
-        'match': '(?i)(^\\s*query\\s*)(:)(.*)'
-        'name': 'settings.query.jira'
-        'captures':
-          '1':
-            'name': 'settings.key.jira'
-          '2':
-            'name': 'settings.punctuation.separator.key-value.jira'
-          '3':
-            'name': 'settings.value.jira'
-      }
-    ]
-  }
-  {
-    'name': 'issue.epic.jira'
-    'begin': '(?i)(^\\s*Epic\\s+)'
-    'beginCaptures':
-      '0':
-        'name': 'issue.type.epic.jira'
-    'end': '\\s*$'
-    'patterns': [
-      {
-        'include': '#key'
-      }
-      {
-        'include': '#fields'
-      }
-      {
-        'include': '#summary'
-      }
-    ]
-  }
-  {
-    'name': 'issue.story.jira'
-    'begin': '(?i)(^\\s*Story\\s+)'
-    'beginCaptures':
-      '0':
-        'name': 'issue.type.story.jira'
-    'end': '\\s*$'
-    'patterns': [
-      {
-        'include': '#key'
-      }
-      {
-        'include': '#fields'
-      }
-      {
-        'include': '#parentkey'
-      }
-      {
-        'include': '#summary'
-      }
-    ]
-  }
-  {
-    'name': 'issue.sub-task.jira'
-    'begin': '(?i)(^\\s*Sub-Task\\s+|^\\s*Subtask\\s+|^\\s*Sub\\s+)'
-    'beginCaptures':
-      '0':
-        'name': 'issue.type.sub-task.jira'
-    'end': '\\s*$'
-    'patterns': [
-      {
-        'include': '#key'
-      }
-      {
-        'include': '#fields'
-      }
-      {
-        'include': '#parentkey'
-      }
-      {
-        'include': '#summary'
-      }
-    ]
-  }
+    {
+        'name': 'settings.jira'
+        'begin': '(?i)^\\s*jira-breakdown\\s*$'
+        'beginCaptures':
+            '0':
+                'name': 'settings.begin.jira'
+        'end': '^\\s*---\\s*$|^\\s*$'
+        'endCaptures':
+            '0':
+                'name': 'settings.end.jira'
+        'patterns': [
+            {
+                'name': 'settings.jira-url.jira'
+                'match': '(?i)(^\\s*url\\s*)(:)(.*)'
+                'captures':
+                    '1':
+                        'name': 'settings.key.jira'
+                    '2':
+                        'name': 'settings.punctuation.separator.key-value.jira'
+                    '3':
+                        'name': 'settings.value.jira'
+            }
+            {
+                'name': 'settings.query.jira'
+                'match': '(?i)(^\\s*query\\s*)(:)(.*)'
+                'captures':
+                    '1':
+                        'name': 'settings.key.jira'
+                    '2':
+                        'name': 'settings.punctuation.separator.key-value.jira'
+                    '3':
+                        'name': 'settings.value.jira'
+            }
+            {
+                'name': 'settings.fields.jira'
+                'begin': '(?i)(^\\s*fields\\s*)(:)'
+                'beginCaptures':
+                    '1':
+                        'name': 'settings.key.jira'
+                    '2':
+                        'name': 'settings.punctuation.separator.key-value.jira'
+                'end': '\\s*$'
+                'patterns': [
+                    {
+                        'name': 'settings.value.jira'
+                        'match': '(?i)(\\b)(status|assignee|points|fixversion|parentkey)(\\b)'
+                    }
+                ]
+
+            }
+        ]
+    }
+    {
+        'name': 'issue.epic.jira'
+        'begin': '(?i)(^\\s*Epic\\s+)'
+        'beginCaptures':
+            '0':
+                'name': 'issue.type.epic.jira'
+        'end': '\\s*$'
+        'patterns': [
+            {
+                'include': '#key'
+            }
+            {
+                'include': '#fields'
+            }
+            {
+                'include': '#summary'
+            }
+        ]
+    }
+    {
+        'name': 'issue.story.jira'
+        'begin': '(?i)(^\\s*Story\\s+)'
+        'beginCaptures':
+            '0':
+                'name': 'issue.type.story.jira'
+        'end': '\\s*$'
+        'patterns': [
+            {
+                'include': '#key'
+            }
+            {
+                'include': '#fields'
+            }
+            {
+                'include': '#parentkey'
+            }
+            {
+                'include': '#summary'
+            }
+        ]
+    }
+    {
+        'name': 'issue.sub-task.jira'
+        'begin': '(?i)(^\\s*Sub-Task\\s+|^\\s*Subtask\\s+|^\\s*Sub\\s+)'
+        'beginCaptures':
+            '0':
+                'name': 'issue.type.sub-task.jira'
+        'end': '\\s*$'
+        'patterns': [
+            {
+                'include': '#key'
+            }
+            {
+                'include': '#fields'
+            }
+            {
+                'include': '#parentkey'
+            }
+            {
+                'include': '#summary'
+            }
+        ]
+    }
 ]
 'repository':
-  'key': {
-    'name': 'issue.key.jira'
-    'match': '[A-Z]{1,10}-\\d+'
+    'key': {
+        'name': 'issue.key.jira'
+        'match': '[A-Z]{1,10}-\\d+'
+        }
+    'parentkey': {
+        'name': 'issue.key.parent.jira'
+        'match': '\\^[A-Z]{1,10}-\\d+'
     }
-  'parentkey': {
-    'name': 'issue.key.parent.jira'
-    'match': '\\^[A-Z]{1,10}-\\d+'
-  }
-  'fields': {
-    'name': 'issue.fields.jira'
-    'begin': '\\('
-    'beginCaptures':
-      '0':
-        'name': 'fields.begin.jira'
-    'end': '\\)|$'
-    'endCaptures':
-      '0':
-        'name': 'fields.end.jira'
-    'patterns': [
-      {
-        'name': 'issue.status.jira'
-        'match': '(?i)(s:\\s*)(.+?(?=a:|p:|v:|\\)))(?-i)'
-        'captures':
-          '1':
-            'name':'issue.field.identifier.jira'
-          '2':
-            'name': 'issue.field.value.jira'
-      }
-      {
-        'name': 'issue.assignee.jira'
-        'match': '(?i)(a:\\s*)(.+?(?=a:|p:|v:|\\)))(?-i)'
-        'captures':
-          '1':
-            'name':'issue.field.identifier.jira'
-          '2':
-            'name': 'issue.field.value.jira'
-      }
-      {
-        'name': 'issue.points.jira'
-        'match': '(?i)(p:\\s*)(.+?(?=a:|p:|v:|\\)))(?-i)'
-        'captures':
-          '1':
-            'name':'issue.field.identifier.jira'
-          '2':
-            'name': 'issue.field.value.jira'
-      }
-      {
-        'name': 'issue.fixversion.jira'
-        'match': '(?i)(v:\\s*)(.+?(?=a:|p:|v:|\\)))(?-i)'
-        'captures':
-          '1':
-            'name':'issue.field.identifier.jira'
-          '2':
-            'name': 'issue.field.value.jira'
-      }
-    ]
-  }
-  'summary': {
-    'name': 'issue.summary.jira'
-    'match': '[^\\s].*(?=\\^[A-Z]{1,10}-\\d+)|[^\\s].*(?!\\^[A-Z]{1,10}-\\d+)'
-  }
+    'fields': {
+        'name': 'issue.fields.jira'
+        'begin': '\\('
+        'beginCaptures':
+            '0':
+                'name': 'fields.begin.jira'
+        'end': '\\)|$'
+        'endCaptures':
+            '0':
+                'name': 'fields.end.jira'
+        'patterns': [
+            {
+                'name': 'issue.status.jira'
+                'match': '(?i)(s:\\s*)(.+?(?=a:|p:|v:|\\)))(?-i)'
+                'captures':
+                    '1':
+                        'name':'issue.field.identifier.jira'
+                    '2':
+                        'name': 'issue.field.value.jira'
+            }
+            {
+                'name': 'issue.assignee.jira'
+                'match': '(?i)(a:\\s*)(.+?(?=a:|p:|v:|\\)))(?-i)'
+                'captures':
+                    '1':
+                        'name':'issue.field.identifier.jira'
+                    '2':
+                        'name': 'issue.field.value.jira'
+            }
+            {
+                'name': 'issue.points.jira'
+                'match': '(?i)(p:\\s*)(.+?(?=a:|p:|v:|\\)))(?-i)'
+                'captures':
+                    '1':
+                        'name':'issue.field.identifier.jira'
+                    '2':
+                        'name': 'issue.field.value.jira'
+            }
+            {
+                'name': 'issue.fixversion.jira'
+                'match': '(?i)(v:\\s*)(.+?(?=a:|p:|v:|\\)))(?-i)'
+                'captures':
+                    '1':
+                        'name':'issue.field.identifier.jira'
+                    '2':
+                        'name': 'issue.field.value.jira'
+            }
+        ]
+    }
+    'summary': {
+        'name': 'issue.summary.jira'
+        'match': '[^\\s].*(?=\\^[A-Z]{1,10}-\\d+)|[^\\s].*(?!\\^[A-Z]{1,10}-\\d+)'
+    }
