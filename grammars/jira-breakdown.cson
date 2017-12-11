@@ -154,7 +154,7 @@ patterns: [
             }
             {
                 'name': 'issue.assignee.jira'
-                'match': '(?i)(a:\\s*)(.+?(?=a:|p:|v:|\\)))(?-i)'
+                'match': '(?i)(a:\\s*)(.+?(?=s:|p:|v:|\\)))(?-i)'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -163,7 +163,7 @@ patterns: [
             }
             {
                 'name': 'issue.points.jira'
-                'match': '(?i)(p:\\s*)(.+?(?=a:|p:|v:|\\)))(?-i)'
+                'match': '(?i)(p:\\s*)(.+?(?=s:|a:|v:|\\)))(?-i)'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -172,7 +172,7 @@ patterns: [
             }
             {
                 'name': 'issue.fixversion.jira'
-                'match': '(?i)(v:\\s*)(.+?(?=a:|p:|v:|\\)))(?-i)'
+                'match': '(?i)(v:\\s*)(.+?(?=s:|a:|p:|\\)))(?-i)'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
