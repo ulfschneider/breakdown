@@ -35,3 +35,11 @@ fields: status assignee points fixversion parentkey
 ```
 
 Select then in the Packages menu **Breakdown / Pull JIRA**. Whenever you pull the JIRA dataset into your Atom editor, all contents of the editor will be overwritten by your JIRA dataset.
+
+## Release notes
+
+### v0.2.0
+
+- Sum of story points for epics
+- Completion progress bar for epics
+- CTRL-Click on JIRA key will open the JIRA issue in the web browser
