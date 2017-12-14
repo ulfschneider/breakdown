@@ -1,5 +1,0 @@
-jira-breakdown
-url:    https://jerry.wincor-nixdorf.com
-query:  project=TPNET AND (fixVersion in (6.6, 6.7) OR issue in parent("fixVersion in (6.6, 6.7)")) ORDER BY Rank
-fields: status
----
