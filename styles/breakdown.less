@@ -34,37 +34,31 @@ atom-text-editor {
     .syntax--settings {
         color: @text-color-subtle;
 
-        .syntax--key,
-        .syntax--punctuation {
-            color: darken(@ui-site-color-5, 30%);
-        }
-
         .syntax--begin,
         .syntax--end,
+        .syntax--key,
         .syntax--list,
+        .syntax--punctuation,
         .syntax--value {
             color: @ui-site-color-5;
         }
     }
 
-    .syntax--key {
-        color: darken(@text-color-warning, 30%);
-    }
+    .syntax--issue.syntax--key {
+        color: @text-color-warning;
 
-    .syntax--parent {
-        color: darken(@text-color-warning, 30%);
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     .syntax--fields.syntax--begin,
     .syntax--fields.syntax--end,
-    .syntax--issue.syntax--field.syntax--identifier {
-        color: darken(@text-color-success, 30%);
-    }
-
     .syntax--issue.syntax--field.syntax--value {
         color: @text-color-success;
     }
 
+    .syntax--issue.syntax--field.syntax--identifier,
     .syntax--issue.syntax--summary {
         color: @text-color;
     }

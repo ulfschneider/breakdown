@@ -41,6 +41,17 @@ patterns: [
                         'name': 'settings.value.jira'
             }
             {
+                'name': 'settings.project.jira'
+                'match': '(?i)(^\\s*project\\s*)(:)(\\s*[A-Z]{1,10}\\s*)'
+                'captures':
+                    '1':
+                        'name': 'settings.key.jira'
+                    '2':
+                        'name': 'settings.punctuation.separator.key-value.jira'
+                    '3':
+                        'name': 'settings.value.jira'
+            }
+            {
                 'name': 'settings.fields.jira'
                 'begin': '(?i)(^\\s*fields\\s*)(:)'
                 'beginCaptures':
@@ -61,7 +72,7 @@ patterns: [
     }
     {
         'name': 'issue.epic.jira'
-        'begin': '(?i)(^\\s*Epic\\s+)'
+        'begin': '(?i)(^\\s*Epic\\b)'
         'beginCaptures':
             '0':
                 'name': 'issue.type.epic.jira'
@@ -80,7 +91,7 @@ patterns: [
     }
     {
         'name': 'issue.story.jira'
-        'begin': '(?i)(^\\s*Story\\s+)'
+        'begin': '(?i)(^\\s*Story\\b)'
         'beginCaptures':
             '0':
                 'name': 'issue.type.story.jira'
@@ -102,7 +113,7 @@ patterns: [
     }
     {
         'name': 'issue.sub-task.jira'
-        'begin': '(?i)(^\\s*Sub-Task\\s+|^\\s*Subtask\\s+|^\\s*Sub\\s+)'
+        'begin': '(?i)(^\\s*Sub-Task\\b|^\\s*Subtask\\b|^\\s*Sub\\b)'
         'beginCaptures':
             '0':
                 'name': 'issue.type.sub-task.jira'
