@@ -52,6 +52,17 @@ patterns: [
                         'name': 'settings.value.jira'
             }
             {
+                'name': 'settings.pulled.jira'
+                'match': '(?i)(^\\s*pulled\\s*)(:)(.*)'
+                'captures':
+                    '1':
+                        'name': 'settings.key.jira'
+                    '2':
+                        'name': 'settings.punctuation.separator.key-value.jira'
+                    '3':
+                        'name': 'settings.value.jira'
+            }
+            {
                 'name': 'settings.fields.jira'
                 'begin': '(?i)(^\\s*fields\\s*)(:)'
                 'beginCaptures':
