@@ -38,6 +38,12 @@ Select then in the Packages menu **Breakdown / Pull JIRA**. Whenever you pull th
 
 ## Release notes
 
+### v0.3.0
+
+- Display date and time of last pull in the settings header
+- Fix: Destroy additional cursor that was created by click with meta-key on JIRA link (Mac)
+- Change from Apache 2.0 to MIT license
+
 ### v0.2.0
 
 - Sum of story points for epics
