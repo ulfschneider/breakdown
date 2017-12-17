@@ -63,6 +63,19 @@ atom-text-editor {
         color: @text-color;
     }
 
+    .resolved-issue {
+        .syntax--issue.syntax--status .syntax--issue.syntax--field.syntax--value {
+            background: @text-color-success;
+            color: @base-background-color;
+        }
+
+        .syntax--issue.syntax--field.syntax--identifier,
+        .syntax--issue.syntax--key,
+        .syntax--issue.syntax--summary {
+            color: @text-color-success;
+        }
+    }
+
     .syntax--issue.syntax--type.syntax--epic,
     .syntax--issue.syntax--type.syntax--story,
     .syntax--issue.syntax--type.syntax--sub-task {
