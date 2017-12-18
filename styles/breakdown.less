@@ -44,14 +44,6 @@ atom-text-editor {
         }
     }
 
-    .syntax--issue.syntax--key {
-        color: @text-color-warning;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
     .syntax--fields.syntax--begin,
     .syntax--fields.syntax--end,
     .syntax--issue.syntax--field.syntax--value {
@@ -75,16 +67,21 @@ atom-text-editor {
         .syntax--issue.syntax--field.syntax--identifier,
         .syntax--issue.syntax--field.syntax--value,
         .syntax--issue.syntax--key,
+        .syntax--issue.syntax--parent.syntax--key,
         .syntax--issue.syntax--summary,
         .syntax--issue.syntax--type.syntax--epic,
         .syntax--issue.syntax--type.syntax--story,
         .syntax--issue.syntax--type.syntax--sub-task {
             color: @background-color-success;
         }
+    }
 
-        .syntax--issue.syntax--status .syntax--issue.syntax--field.syntax--value {
-            background: @background-color-success;
-            color: @base-background-color;
+    .syntax--issue.syntax--key,
+    .syntax--issue.syntax--parent.syntax--key {
+        color: @text-color-warning;
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 }

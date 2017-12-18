@@ -151,7 +151,7 @@ patterns: [
         'match': '[A-Z]{1,10}-\\d+'
         }
     'parentkey': {
-        'name': 'issue.key.parent.jira'
+        'name': 'issue.parent.key.jira'
         'match': '\\^[A-Z]{1,10}-\\d+'
     }
     'fields': {
