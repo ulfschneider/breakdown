@@ -63,22 +63,28 @@ atom-text-editor {
         color: @text-color;
     }
 
-    .resolved-issue {
-        .syntax--issue.syntax--status .syntax--issue.syntax--field.syntax--value {
-            background: @text-color-success;
-            color: @base-background-color;
-        }
-
-        .syntax--issue.syntax--field.syntax--identifier,
-        .syntax--issue.syntax--key,
-        .syntax--issue.syntax--summary {
-            color: @text-color-success;
-        }
-    }
-
     .syntax--issue.syntax--type.syntax--epic,
     .syntax--issue.syntax--type.syntax--story,
     .syntax--issue.syntax--type.syntax--sub-task {
         color: @text-color-success;
+    }
+
+    .resolved-issue {
+        .syntax--fields.syntax--begin,
+        .syntax--fields.syntax--end,
+        .syntax--issue.syntax--field.syntax--identifier,
+        .syntax--issue.syntax--field.syntax--value,
+        .syntax--issue.syntax--key,
+        .syntax--issue.syntax--summary,
+        .syntax--issue.syntax--type.syntax--epic,
+        .syntax--issue.syntax--type.syntax--story,
+        .syntax--issue.syntax--type.syntax--sub-task {
+            color: @background-color-success;
+        }
+
+        .syntax--issue.syntax--status .syntax--issue.syntax--field.syntax--value {
+            background: @background-color-success;
+            color: @base-background-color;
+        }
     }
 }
