@@ -38,9 +38,10 @@ Select then in the Packages menu **Breakdown / Pull JIRA**. Whenever you pull th
 
 ## Release notes
 
-## v0.4.0
+### v0.4.0
 
-- Indicate resolved JIRA issues with a different color to identify quickly, what´s already done.
+- Indicate resolved JIRA issues with a different color to identify quickly, what´s already done #2
+- Close all notifications with new pull/push command #7
 - Fix: Pulled date is not being refreshed after pull
 
 ### v0.3.0
