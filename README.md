@@ -38,6 +38,11 @@ Select then in the Packages menu **Breakdown / Pull JIRA**. Whenever you pull th
 
 ## Release notes
 
+## v0.4.0
+
+- Indicate resolved JIRA issues with a different color to identify quickly, what´s already done.
+- Fix: Pulled date is not being refreshed after pull
+
 ### v0.3.0
 
 - Display date and time of last pull in the settings header
