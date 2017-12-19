@@ -38,6 +38,10 @@ Select then in the Packages menu **Breakdown / Pull JIRA**. Whenever you pull th
 
 ## Release notes
 
+### v0.4.1
+
+- Fix: When pulling without result set, an exception is thrown in promise when determining custom field names #8
+
 ### v0.4.0
 
 - Indicate resolved JIRA issues with a different color to identify quickly, what´s already done #2
