@@ -38,6 +38,10 @@ Select then in the Packages menu **Breakdown / Pull JIRA**. Whenever you pull th
 
 ## Release notes
 
+### v0.5.0
+
+- Display done points in overarching statistics #5
+
 ### v0.4.1
 
 - Fix: When pulling without result set, an exception is thrown in promise when determining custom field names #8
