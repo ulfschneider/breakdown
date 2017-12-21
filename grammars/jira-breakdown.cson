@@ -82,6 +82,17 @@ patterns: [
         ]
     }
     {
+        'name': 'statistics.jira'
+        'begin': '(?i)^\\s*statistics\\s*$'
+        'beginCaptures':
+            '0':
+                'name': 'statistics.begin.jira'
+        'end': '^\\s*---\\s*$|^\\s*$'
+        'endCaptures':
+            '0':
+                'name': 'statistics.end.jira'
+    }
+    {
         'name': 'issue.epic.jira'
         'begin': '(?i)(^\\s*Epic\\b)'
         'beginCaptures':
