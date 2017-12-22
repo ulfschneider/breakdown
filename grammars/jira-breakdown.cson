@@ -91,6 +91,11 @@ patterns: [
         'endCaptures':
             '0':
                 'name': 'statistics.end.jira'
+        'patterns': [
+            {
+                'include': '#key'
+            }
+        ]
     }
     {
         'name': 'issue.epic.jira'
