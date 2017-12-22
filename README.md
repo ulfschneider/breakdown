@@ -48,6 +48,10 @@ Select then in the Packages menu **Breakdown / Pull JIRA**. Whenever you pull th
 
 ## Release notes
 
+### v0.6.0
+
+- Display assignees with issue keys in overall statistics #9
+
 ### v0.5.0
 
 - Display done points in overarching statistics #5
