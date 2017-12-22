@@ -98,8 +98,8 @@ patterns: [
         ]
     }
     {
-        'name': 'issue.epic.jira'
-        'begin': '(?i)(^\\s*)(Resolved\\s+)?(Epic\\b)'
+        'name': 'issue.resolved.epic.jira'
+        'begin': '(?i)(^\\s*)(Resolved\\s+)(Epic\\b)'
         'beginCaptures':
             '2':
                 'name': 'issue.resolved.jira'
@@ -119,8 +119,8 @@ patterns: [
         ]
     }
     {
-        'name': 'issue.story.jira'
-        'begin': '(?i)(^\\s*)(Resolved\\s+)?(Story\\b)'
+        'name': 'issue.resolved.story.jira'
+        'begin': '(?i)(^\\s*)(Resolved\\s+)(Story\\b)'
         'beginCaptures':
             '2':
                 'name': 'issue.resolved.jira'
@@ -143,8 +143,8 @@ patterns: [
         ]
     }
     {
-        'name': 'issue.sub-task.jira'
-        'begin': '(?i)(^\\s*)(Resolved\\s+)?(Sub-Task\\b|Subtask\\b|Sub\\b)'
+        'name': 'issue.resolved.sub-task.jira'
+        'begin': '(?i)(^\\s*)(Resolved\\s+)(Sub-Task\\b|Subtask\\b|Sub\\b)'
         'beginCaptures':
             '2':
                 'name': 'issue.resolved.jira'
@@ -165,7 +165,70 @@ patterns: [
                 'include': '#summary'
             }
         ]
-    } 
+    }
+    {
+        'name': 'issue.epic.jira'
+        'begin': '(?i)(^\\s*)(Epic\\b)'
+        'beginCaptures':
+            '2':
+                'name': 'issue.type.epic.jira'
+        'end': '\\s*$'
+        'patterns': [
+            {
+                'include': '#key'
+            }
+            {
+                'include': '#fields'
+            }
+            {
+                'include': '#summary'
+            }
+        ]
+    }
+    {
+        'name': 'issue.story.jira'
+        'begin': '(?i)(^\\s*)(Story\\b)'
+        'beginCaptures':
+            '2':
+                'name': 'issue.type.story.jira'
+        'end': '\\s*$'
+        'patterns': [
+            {
+                'include': '#key'
+            }
+            {
+                'include': '#fields'
+            }
+            {
+                'include': '#parentkey'
+            }
+            {
+                'include': '#summary'
+            }
+        ]
+    }
+    {
+        'name': 'issue.sub-task.jira'
+        'begin': '(?i)(^\\s*)(Sub-Task\\b|Subtask\\b|Sub\\b)'
+        'beginCaptures':
+            '2':
+                'name': 'issue.type.sub-task.jira'
+        'end': '\\s*$'
+        'patterns': [
+            {
+                'include': '#key'
+            }
+            {
+                'include': '#fields'
+            }
+            {
+                'include': '#parentkey'
+            }
+            {
+                'include': '#summary'
+            }
+        ]
+    }
 ]
 'repository':
     'key': {
