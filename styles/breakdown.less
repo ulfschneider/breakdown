@@ -40,7 +40,7 @@ atom-text-editor {
         .syntax--list,
         .syntax--punctuation,
         .syntax--value {
-            color: @ui-site-color-5;
+            color: @text-color-warning;
         }
     }
 
@@ -65,18 +65,19 @@ atom-text-editor {
         color: @text-color-success;
     }
 
-    .resolved-issue {
+    .syntax--issue.syntax--resolved {
         .syntax--fields.syntax--begin,
         .syntax--fields.syntax--end,
         .syntax--issue.syntax--field.syntax--identifier,
         .syntax--issue.syntax--field.syntax--value,
         .syntax--issue.syntax--key,
         .syntax--issue.syntax--parent.syntax--key,
+        .syntax--issue.syntax--resolved,
         .syntax--issue.syntax--summary,
         .syntax--issue.syntax--type.syntax--epic,
         .syntax--issue.syntax--type.syntax--story,
         .syntax--issue.syntax--type.syntax--sub-task {
-            color: @background-color-success;
+            color: darken(@text-color-success, 30%);
         }
     }
 

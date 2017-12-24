@@ -4,14 +4,24 @@ Display and manipulate a JIRA breakdown of your project. As this package is at a
 
 ## Installation
 
+### Atom GUI
+
+1. Install [Atom](https://atom.io)
+2. Launch Atom
+3. Open Settings View using Cmd+, on macOS or Ctrl+, on other platforms
+4. Click the Install tab on the left side
+5. Enter breakdown in the search box and press Enter
+6. Click the "Install" button that appears
+
+### Command line
+
 1. Install [Atom](https://atom.io)
 2. In the terminal, install the breakdown package via apm
+3. Fire up Atom
 
 ```
 apm install breakdown
 ```
-
-Fire up Atom and you are ready to start.
 
 ## How to use
 
@@ -37,6 +47,10 @@ fields: status assignee points fixversion parentkey
 Select then in the Packages menu **Breakdown / Pull JIRA**. Whenever you pull the JIRA dataset into your Atom editor, all contents of the editor will be overwritten by your JIRA dataset.
 
 ## Release notes
+
+### v0.6.0
+
+- Display assignees with issue keys in overall statistics #9
 
 ### v0.5.0
 

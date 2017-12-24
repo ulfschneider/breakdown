@@ -91,12 +91,86 @@ patterns: [
         'endCaptures':
             '0':
                 'name': 'statistics.end.jira'
+        'patterns': [
+            {
+                'include': '#key'
+            }
+        ]
+    }
+    {
+        'name': 'issue.resolved.epic.jira'
+        'begin': '(?i)(^\\s*)(Resolved\\s+)(Epic\\b)'
+        'beginCaptures':
+            '2':
+                'name': 'issue.resolved.jira'
+            '3':
+                'name': 'issue.type.epic.jira'
+        'end': '\\s*$'
+        'patterns': [
+            {
+                'include': '#key'
+            }
+            {
+                'include': '#fields'
+            }
+            {
+                'include': '#summary'
+            }
+        ]
+    }
+    {
+        'name': 'issue.resolved.story.jira'
+        'begin': '(?i)(^\\s*)(Resolved\\s+)(Story\\b)'
+        'beginCaptures':
+            '2':
+                'name': 'issue.resolved.jira'
+            '3':
+                'name': 'issue.type.story.jira'
+        'end': '\\s*$'
+        'patterns': [
+            {
+                'include': '#key'
+            }
+            {
+                'include': '#fields'
+            }
+            {
+                'include': '#parentkey'
+            }
+            {
+                'include': '#summary'
+            }
+        ]
+    }
+    {
+        'name': 'issue.resolved.sub-task.jira'
+        'begin': '(?i)(^\\s*)(Resolved\\s+)(Sub-Task\\b|Subtask\\b|Sub\\b)'
+        'beginCaptures':
+            '2':
+                'name': 'issue.resolved.jira'
+            '3':
+                'name': 'issue.type.sub-task.jira'
+        'end': '\\s*$'
+        'patterns': [
+            {
+                'include': '#key'
+            }
+            {
+                'include': '#fields'
+            }
+            {
+                'include': '#parentkey'
+            }
+            {
+                'include': '#summary'
+            }
+        ]
     }
     {
         'name': 'issue.epic.jira'
-        'begin': '(?i)(^\\s*Epic\\b)'
+        'begin': '(?i)(^\\s*)(Epic\\b)'
         'beginCaptures':
-            '0':
+            '2':
                 'name': 'issue.type.epic.jira'
         'end': '\\s*$'
         'patterns': [
@@ -113,9 +187,9 @@ patterns: [
     }
     {
         'name': 'issue.story.jira'
-        'begin': '(?i)(^\\s*Story\\b)'
+        'begin': '(?i)(^\\s*)(Story\\b)'
         'beginCaptures':
-            '0':
+            '2':
                 'name': 'issue.type.story.jira'
         'end': '\\s*$'
         'patterns': [
@@ -135,9 +209,9 @@ patterns: [
     }
     {
         'name': 'issue.sub-task.jira'
-        'begin': '(?i)(^\\s*Sub-Task\\b|^\\s*Subtask\\b|^\\s*Sub\\b)'
+        'begin': '(?i)(^\\s*)(Sub-Task\\b|Subtask\\b|Sub\\b)'
         'beginCaptures':
-            '0':
+            '2':
                 'name': 'issue.type.sub-task.jira'
         'end': '\\s*$'
         'patterns': [
