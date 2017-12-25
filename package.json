@@ -1,16 +1,23 @@
 {
-  "name": "breakdown",
-  "main": "./lib/breakdown",
-  "version": "0.6.0",
-  "description": "Display and manipulate a JIRA breakdown of your project",
-  "keywords": [],
-  "repository": "https://github.com/ulfschneider/breakdown",
-  "license": "mit",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-  "dependencies": {
-    "request": "^2.83.0",
-    "underscore": "^1.8.3"
-  }
+    "name": "breakdown",
+    "main": "./lib/breakdown",
+    "version": "0.6.0",
+    "description": "Display and manipulate a JIRA breakdown of your project",
+    "keywords": [],
+    "repository": "https://github.com/ulfschneider/breakdown",
+    "license": "mit",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    },
+    "consumedServices": {
+        "status-bar": {
+            "versions": {
+                "^1.0.0": "consumeStatusBar"
+            }
+        }
+    },
+    "dependencies": {
+        "request": "^2.83.0",
+        "underscore": "^1.8.3"
+    }
 }
