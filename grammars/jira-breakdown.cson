@@ -98,6 +98,10 @@ patterns: [
         ]
     }
     {
+        'name': 'issue.no-parent.jira'
+        'match': '(?i)^\\s*no parent in selection\\s*$'
+    }
+    {
         'name': 'issue.resolved.epic.jira'
         'begin': '(?i)(^\\s*)(Resolved\\s+)(Epic\\b)'
         'beginCaptures':
