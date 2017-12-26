@@ -15,9 +15,10 @@ Display and manipulate a JIRA breakdown of your project. As this package is at a
 
 ### Command line
 
+Alternatively you can use your terminal to install the breakdown package.
+
 1. Install [Atom](https://atom.io)
 2. In the terminal, install the breakdown package via apm
-3. Fire up Atom
 
 ```
 apm install breakdown
