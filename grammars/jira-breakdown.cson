@@ -98,8 +98,8 @@ patterns: [
         ]
     }
     {
-        'name': 'issue.no-epic.jira'
-        'match': '(?i)^\\s*no epic.*$'
+        'name': 'issue.no-parent.jira'
+        'match': '(?i)^\\s*no parent.*$'
     }
     {
         'name': 'issue.resolved.epic.jira'
