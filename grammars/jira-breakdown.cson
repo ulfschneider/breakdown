@@ -20,7 +20,7 @@ patterns: [
         'patterns': [
             {
                 'name': 'settings.jira-url.jira'
-                'match': '(?i)(^\\s*url\\s*)(:)(.*)'
+                'match': '(?i)(^\\s*url\\s*)(:\\s*)([^\\s]*)'
                 'captures':
                     '1':
                         'name': 'settings.key.jira'
@@ -31,7 +31,7 @@ patterns: [
             }
             {
                 'name': 'settings.query.jira'
-                'match': '(?i)(^\\s*query\\s*)(:)(.*)'
+                'match': '(?i)(^\\s*query\\s*)(:\\s*)(.*)'
                 'captures':
                     '1':
                         'name': 'settings.key.jira'
@@ -42,7 +42,7 @@ patterns: [
             }
             {
                 'name': 'settings.project.jira'
-                'match': '(?i)(^\\s*project\\s*)(:)(\\s*[A-Z]{1,10}\\s*)'
+                'match': '(?i)(^\\s*project\\s*)(:\\s*)(\\s*[A-Z]{1,10})'
                 'captures':
                     '1':
                         'name': 'settings.key.jira'
@@ -53,7 +53,7 @@ patterns: [
             }
             {
                 'name': 'settings.pulled.jira'
-                'match': '(?i)(^\\s*pulled\\s*)(:)(.*)'
+                'match': '(?i)(^\\s*pulled\\s*)(:\\s*)(.*)'
                 'captures':
                     '1':
                         'name': 'settings.key.jira'
@@ -64,7 +64,7 @@ patterns: [
             }
             {
                 'name': 'settings.fields.jira'
-                'begin': '(?i)(^\\s*fields\\s*)(:)'
+                'begin': '(?i)(^\\s*fields\\s*)(:\\s*)'
                 'beginCaptures':
                     '1':
                         'name': 'settings.key.jira'
