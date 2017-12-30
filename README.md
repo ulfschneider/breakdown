@@ -61,7 +61,7 @@ Epic This is a new epic
     Sub This is a new sub-task inside of a new story inside of a new epic
 ```
 
-Currently you cannot modify already created issues - it´s only possible to create new issues.
+Currently you cannot modify already created issues - it´s only possible to create new issues. Any push will always be followed by an automatical pull.
 
 ## Release notes
 
