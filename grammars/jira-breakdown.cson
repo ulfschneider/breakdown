@@ -9,9 +9,9 @@ foldingStopMarker: ''
 patterns: [
     {
         'name': 'settings.jira'
-        'begin': '(?i)^\\s*jira-breakdown\\s*$'
+        'begin': '(?i)^\\s*(jira-breakdown)\\s*$'
         'beginCaptures':
-            '0':
+            '1':
                 'name': 'settings.begin.jira'
         'end': '^\\s*---\\s*$|^\\s*$'
         'endCaptures':
@@ -20,7 +20,7 @@ patterns: [
         'patterns': [
             {
                 'name': 'settings.jira-url.jira'
-                'match': '(?i)(^\\s*url\\s*)(:\\s*)([^\\s]*)'
+                'match': '(?i)^\\s*(url)\\s*(:)\\s*([^\\s]*)'
                 'captures':
                     '1':
                         'name': 'settings.key.jira'
@@ -31,7 +31,7 @@ patterns: [
             }
             {
                 'name': 'settings.query.jira'
-                'match': '(?i)(^\\s*query\\s*)(:\\s*)(.*)'
+                'match': '(?i)^\\s*(query)\\s*(:)\\s*([^\\s].*)'
                 'captures':
                     '1':
                         'name': 'settings.key.jira'
@@ -42,7 +42,7 @@ patterns: [
             }
             {
                 'name': 'settings.project.jira'
-                'match': '(?i)(^\\s*project\\s*)(:\\s*)(\\s*[A-Z]{1,10})'
+                'match': '(?i)^\\s*(project)\\s*(:)\\s*([A-Z]{1,10})'
                 'captures':
                     '1':
                         'name': 'settings.key.jira'
@@ -53,7 +53,7 @@ patterns: [
             }
             {
                 'name': 'settings.pulled.jira'
-                'match': '(?i)(^\\s*pulled\\s*)(:\\s*)(.*)'
+                'match': '(?i)^\\s*(pulled)\\s*(:)\\s*([^\\s].*)'
                 'captures':
                     '1':
                         'name': 'settings.key.jira'
@@ -64,7 +64,7 @@ patterns: [
             }
             {
                 'name': 'settings.fields.jira'
-                'begin': '(?i)(^\\s*fields\\s*)(:\\s*)'
+                'begin': '(?i)^\\s*(fields)\\s*(:)\\s*'
                 'beginCaptures':
                     '1':
                         'name': 'settings.key.jira'
@@ -74,7 +74,7 @@ patterns: [
                 'patterns': [
                     {
                         'name': 'settings.value.jira'
-                        'match': '(?i)(\\b)(status|assignee|points|fixversion|parentkey)(\\b)'
+                        'match': '(?i)\\b(status|assignee|points|fixversion|parentkey)\\b'
                     }
                 ]
 
@@ -83,9 +83,9 @@ patterns: [
     }
     {
         'name': 'statistics.jira'
-        'begin': '(?i)^\\s*statistics\\s*$'
+        'begin': '(?i)^\\s*(statistics)\\s*$'
         'beginCaptures':
-            '0':
+            '1':
                 'name': 'statistics.begin.jira'
         'end': '^\\s*---\\s*$|^\\s*$'
         'endCaptures':
@@ -99,15 +99,66 @@ patterns: [
     }
     {
         'name': 'issue.no-parent.jira'
-        'match': '(?i)^\\s*no parent.*$'
+        'match': '(?i)^\\s*(no parent.*)$'
+    }
+    {
+        'name': 'issue.delete.epic.jira'
+        'begin': '(?i)^\\s*(del|delete)(\\s*resolved\\s*|\\s*)(Epic)\\b'
+        'beginCaptures':
+            '1':
+                'name': 'issue.delete.jira'
+            '3':
+                'name': 'issue.type.epic.jira'
+        'end': '$'
+        'patterns': [
+            {
+                'include': '#key'
+            }
+        ]
+    }
+    {
+        'name': 'issue.delete.story.jira'
+        'begin': '(?i)^\\s*(del|delete)(\\s*resolved\\s*|\\s*)(Story)\\b'
+        'beginCaptures':
+            '1':
+                'name': 'issue.delete.jira'
+            '3':
+                'name': 'issue.type.story.jira'
+        'end': '$'
+        'patterns': [
+            {
+                'include': '#key'
+            }
+            {
+                'include': '#parentkey'
+            }
+        ]
+    }
+    {
+        'name': 'issue.delete.sub-task.jira'
+        'begin': '(?i)^\\s*(del|delete)(\\s*resolved\\s*|\\s*)(Sub-Task|Subtask|Sub)\\s+'
+        'beginCaptures':
+            '1':
+                'name': 'issue.delete.jira'
+            '3':
+                'name': 'issue.type.sub-task.jira'
+        'end': '$'
+        'patterns': [
+            {
+                'include': '#key'
+            }
+            {
+                'include': '#parentkey'
+            }
+        ]
     }
     {
         'name': 'issue.resolved.epic.jira'
-        'begin': '(?i)(^\\s*)(Resolved\\s+)(Epic\\b)'
+        'begin': '(?i)^\\s*(Resolved)\\s+(Epic)\\b'
         'beginCaptures':
-            '2':
+            '1':
                 'name': 'issue.resolved.jira'
-            '3':
+            '2':
                 'name': 'issue.type.epic.jira'
         'end': '\\s*$'
         'patterns': [
@@ -124,11 +175,11 @@ patterns: [
     }
     {
         'name': 'issue.resolved.story.jira'
-        'begin': '(?i)(^\\s*)(Resolved\\s+)(Story\\b)'
+        'begin': '(?i)^\\s*(Resolved)\\s+(Story)\\b'
         'beginCaptures':
-            '2':
+            '1':
                 'name': 'issue.resolved.jira'
-            '3':
+            '2':
                 'name': 'issue.type.story.jira'
         'end': '\\s*$'
         'patterns': [
@@ -148,11 +199,11 @@ patterns: [
     }
     {
         'name': 'issue.resolved.sub-task.jira'
-        'begin': '(?i)(^\\s*)(Resolved\\s+)(Sub-Task\\b|Subtask\\b|Sub\\b)'
+        'begin': '(?i)^\\s*(Resolved)\\s+(Sub-Task|Subtask|Sub)\\s+'
         'beginCaptures':
-            '2':
+            '1':
                 'name': 'issue.resolved.jira'
-            '3':
+            '2':
                 'name': 'issue.type.sub-task.jira'
         'end': '\\s*$'
         'patterns': [
@@ -172,9 +223,9 @@ patterns: [
     }
     {
         'name': 'issue.epic.jira'
-        'begin': '(?i)(^\\s*)(Epic\\b)'
+        'begin': '(?i)^\\s*(Epic)\\b'
         'beginCaptures':
-            '2':
+            '1':
                 'name': 'issue.type.epic.jira'
         'end': '\\s*$'
         'patterns': [
@@ -191,9 +242,9 @@ patterns: [
     }
     {
         'name': 'issue.story.jira'
-        'begin': '(?i)(^\\s*)(Story\\b)'
+        'begin': '(?i)^\\s*(Story)\\b'
         'beginCaptures':
-            '2':
+            '1':
                 'name': 'issue.type.story.jira'
         'end': '\\s*$'
         'patterns': [
@@ -213,9 +264,9 @@ patterns: [
     }
     {
         'name': 'issue.sub-task.jira'
-        'begin': '(?i)(^\\s*)(Sub-Task\\b|Subtask\\b|Sub\\b)'
+        'begin': '(?i)^\\s*(Sub-Task|Subtask|Sub)\\s+'
         'beginCaptures':
-            '2':
+            '1':
                 'name': 'issue.type.sub-task.jira'
         'end': '\\s*$'
         'patterns': [
