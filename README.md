@@ -56,9 +56,9 @@ Select then in the Packages menu **Breakdown / Pull from JIRA** to get your sele
 Select then in the Packages menu **Breakdown / Pull to JIRA** to create new issues inside of JIRA. First, in Atom you create one issue per line. Each new issue must contain at least the JIRA issuetype and the summary. To create a new epic, containing a new story which again contains a new sub-task, you would write in Atom:
 
 ```
-Epic This is a new epic
-  Story This is a new story inside of a new epic
-    Sub This is a new sub-task inside of a new story inside of a new epic
+Epic This will become a new epic
+  Story This will become a new story inside of a new epic
+    Sub This will become a new sub-task inside of a new story inside of a new epic
 ```
 
 Currently you cannot modify already created issues - it´s only possible to create new issues. Any push will always be followed by an automatical pull.
