@@ -51,6 +51,13 @@ fields: status assignee points fixversion parentkey
 
 Select then in the Packages menu **Breakdown / Pull from JIRA** to get your selected JIRA dataset into Atom. Whenever you pull the JIRA dataset into your Atom editor, all contents of the editor will be overwritten by your JIRA dataset.
 
+By default, after a pull all editor lines are folded. You can control folding with
+
+- CTRL+K CTRL+0 (Win) / CMD+K CMD+0 (Mac): to unfold all lines
+- CTRL+K CTRL+1 (Win) / CMD+K CMD+1 (Mac): to display only the epic level
+- CTRL+K CTRL+2 (Win) / CMD+K CMD+2 (Mac): to display the epic and story level
+- CTRL+K CTRL+3 (Win) / CMD+K CMD+3 (Mac): to display the epic, story and sub-task level
+
 ### Push to JIRA
 
 Select then in the Packages menu **Breakdown / Push to JIRA** to create new issues inside of JIRA. First, in Atom you create one issue per line. Each new issue must contain at least the JIRA issuetype and the summary. To create a new epic, containing a new story which again contains a new sub-task, you would write in Atom:
