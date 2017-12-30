@@ -58,6 +58,8 @@ By default, after a pull all editor lines are folded. You can control folding wi
 - CTRL+K CTRL+2 (Win) / CMD+K CMD+2 (Mac): to display the epic and story level
 - CTRL+K CTRL+3 (Win) / CMD+K CMD+3 (Mac): to display the epic, story and sub-task level
 
+Saving the editor contents with CTRL+S (Win) / CMD+S (Mac) will beautify your editor contents with correct spacing and indentation of lines.
+
 ### Push to JIRA
 
 Select then in the Packages menu **Breakdown / Push to JIRA** to create new issues inside of JIRA. First, in Atom you create one issue per line. Each new issue must contain at least the JIRA issuetype and the summary. To create a new epic, containing a new story which again contains a new sub-task, you would write in Atom:
