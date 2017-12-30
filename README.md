@@ -29,7 +29,7 @@ apm install breakdown
 To pull JIRA data into your Atom editor, create a file with a `.bkdn` filetype, e.g. `myjira.bkdn`. The file must start with your configuration and at least contain the following first four lines:
 
 ```
-jira-breakdown
+breakdown
 url: http://address.of.your.jira
 query: any JIRA JQL query to select your download dataset
 ---
@@ -38,7 +38,7 @@ query: any JIRA JQL query to select your download dataset
 Optionally, you can configure also some JIRA fields which would be incorporated into your breakdown.
 
 ```
-jira-breakdown
+breakdown
 url: http://address.of.your.jira
 query: any JIRA JQL query to select your download dataset
 fields: status assignee points fixversion parentkey
