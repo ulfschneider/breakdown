@@ -1,6 +1,6 @@
 # JIRA Breakdown for Atom
 
-Display and manipulate a JIRA breakdown of your project. As this package is at a very early stage, currently you can only pull JIRA data into Atom and display that data in a breakdown structure. Pushing changes back to JIRA is the next function to come - but it´s not there yet.
+Display and manipulate a JIRA breakdown of your project.
 
 ## Installation
 
@@ -26,11 +26,12 @@ apm install breakdown
 
 ## How to use
 
-To pull JIRA data into your Atom editor, create a file with a `.bkdn` filetype, e.g. `myjira.bkdn`. The file must start with your configuration and at least contain the following first four lines:
+To pull JIRA data into your Atom editor or push new issues from Atom to JIRA, create a file with a `.bkdn` filetype, e.g. `myjira.bkdn`. The file must start with your configuration and at least contain the following first five lines:
 
 ```
 breakdown
 url: http://address.of.your.jira
+project: the key of the JIRA project you want to create new issues in
 query: any JIRA JQL query to select your download dataset
 ---
 ```
@@ -40,12 +41,27 @@ Optionally, you can configure also some JIRA fields which would be incorporated 
 ```
 breakdown
 url: http://address.of.your.jira
+project: the key of the JIRA project you want to create new issues in
 query: any JIRA JQL query to select your download dataset
 fields: status assignee points fixversion parentkey
 ---
 ```
 
-Select then in the Packages menu **Breakdown / Pull JIRA**. Whenever you pull the JIRA dataset into your Atom editor, all contents of the editor will be overwritten by your JIRA dataset.
+### Pull from JIRA
+
+Select then in the Packages menu **Breakdown / Pull from JIRA** to get your selected JIRA dataset into Atom. Whenever you pull the JIRA dataset into your Atom editor, all contents of the editor will be overwritten by your JIRA dataset.
+
+### Push to JIRA
+
+Select then in the Packages menu **Breakdown / Pull to JIRA** to create new issues inside of JIRA. First, in Atom you create one issue per line. Each new issue must contain at least the JIRA issuetype and the summary. To create a new epic, containing a new story which again contains a new sub-task, you would write in Atom:
+
+```
+Epic This is a new epic
+  Story This is a new story inside of a new epic
+    Sub This is a new sub-task inside of a new story inside of a new epic
+```
+
+Currently you cannot modify already created issues - it´s only possible to create new issues.
 
 ## Release notes
 
