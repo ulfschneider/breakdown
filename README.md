@@ -36,7 +36,7 @@ query: any JIRA JQL query to select your download dataset
 ---
 ```
 
-Optionally, you can configure also some JIRA fields which would be incorporated into your breakdown.
+Optionally, you can configure some JIRA fields which would be incorporated into your breakdown.
 
 ```
 breakdown
