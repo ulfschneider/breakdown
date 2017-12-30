@@ -53,7 +53,7 @@ Select then in the Packages menu **Breakdown / Pull from JIRA** to get your sele
 
 ### Push to JIRA
 
-Select then in the Packages menu **Breakdown / Pull to JIRA** to create new issues inside of JIRA. First, in Atom you create one issue per line. Each new issue must contain at least the JIRA issuetype and the summary. To create a new epic, containing a new story which again contains a new sub-task, you would write in Atom:
+Select then in the Packages menu **Breakdown / Push to JIRA** to create new issues inside of JIRA. First, in Atom you create one issue per line. Each new issue must contain at least the JIRA issuetype and the summary. To create a new epic, containing a new story which again contains a new sub-task, you would write in Atom:
 
 ```
 Epic This will become a new epic
