@@ -58,65 +58,18 @@ Select in the Packages menu **Breakdown / Pull from JIRA** to get your selected 
 
 ### Working with the Editor
 
-In this explanation the 
-
-<kbd>CMD</kbd>
-
- key stands for 
-
-<kbd>CTRL</kbd>
-
- on Windows and 
-
-<kbd>⌘</kbd>
-
- on Mac.
+In this explanation the <kbd>CMD</kbd> key stands for <kbd>CTRL</kbd> on Windows and <kbd>⌘</kbd> on Mac.
 
 By default, after a pull all editor lines are folded. Folding can be controlled with the following keys
 
-- Unfold all lines: 
+- Unfold all lines: <kbd>CMD-K</kbd> and <kbd>CMD-0</kbd>
+- Display only epic level: <kbd>CMD-K</kbd> and <kbd>CMD-1</kbd>
+- Display epic and story level: <kbd>CMD-K</kbd> and <kbd>CMD-2</kbd>
+- Display epic, story and sub-task level: <kbd>CMD-K</kbd> and <kbd>CMD-3</kbd>
 
-  <kbd>CMD-K</kbd>
+Saving the editor contents with <kbd>CMD-S</kbd> will beautify your text with correct spacing and indentation.
 
-   and 
-
-  <kbd>CMD-0</kbd>
-
-- Display only epic level: 
-
-  <kbd>CMD-K</kbd>
-
-   and 
-
-  <kbd>CMD-1</kbd>
-
-- Display epic and story level: 
-
-  <kbd>CMD-K</kbd>
-
-   and 
-
-  <kbd>CMD-2</kbd>
-
-- Display epic, story and sub-task level: 
-
-  <kbd>CMD-K</kbd>
-
-   and 
-
-  <kbd>CMD-3</kbd>
-
-Saving the editor contents with 
-
-<kbd>CMD-S</kbd>
-
- will beautify your text with correct spacing and indentation.
-
-Open an issue inside of JIRA by 
-
-<kbd>CMD-MOUSECLICK</kbd>
-
- on the issue key.
+Open an issue inside of JIRA by <kbd>CMD-MOUSECLICK</kbd> on the issue key.
 
 New JIRA issues can be created inside of the Atom editor and subsequently be pushed to JIRA. It´s always one issue per line. Each new issue must contain at least the JIRA issuetype and the summary. In the following example a new epic is created, containing a new story which again contains a new sub-task:
 
