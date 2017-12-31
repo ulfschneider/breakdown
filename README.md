@@ -55,7 +55,7 @@ Select then in the Packages menu **Breakdown / Pull from JIRA** to get your sele
 
 By default, after a pull all editor lines are folded. You can control folding with
 
-- <kbd>CTRL</kbd>
+<kbd>CTRL</kbd>
 
 <kbd>K</kbd>
 
