@@ -10,7 +10,7 @@ Display and manipulate a JIRA breakdown of your project.
 
 1. Install [Atom](https://atom.io)
 2. Launch Atom
-3. Open Settings View using Cmd+, on macOS or Ctrl+, on other platforms
+3. Open Settings View using <kbd>⌘-,</kbd> on a Mac and <kbd>CTRL-,</kbd> on other platforms
 4. Click the Install tab on the left side
 5. Enter breakdown in the search box and press Enter
 6. Click the "Install" button that appears
@@ -25,6 +25,10 @@ Alternatively you can use your terminal to install the breakdown package.
 ```
 apm install breakdown
 ```
+
+## Issues and Improvements
+
+Please file an issue on [GitHub](https://github.com/ulfschneider/breakdown/issues) for bugs or desired improvements. Refer to the [release notes](https://github.com/ulfschneider/breakdown/releases) to get information about release contents.
 
 ## How to use
 
@@ -58,7 +62,7 @@ Select in the Packages menu **Breakdown / Pull from JIRA** to get your selected 
 
 ### Working with the Editor
 
-In this explanation the <kbd>CMD</kbd> key stands for <kbd>CTRL</kbd> on Windows and <kbd>⌘</kbd> on Mac.
+In this explanation the <kbd>CMD</kbd> key stands for <kbd>⌘</kbd> on a Mac and <kbd>CTRL</kbd> on other platforms.
 
 By default, after a pull all editor lines are folded. Folding can be controlled with the following keys
 
@@ -89,48 +93,5 @@ DEL Epic RESTTEST-26 This epic will be removed when pushed
 
 Select in the Packages menu **Breakdown / Push to JIRA** to push new issues to JIRA. Currently you cannot push modifications of already created issues - it´s only possible to push new created issues. A push is always followed by an automatic pull. If some issues could not be pushed, you will receive a warning notification with the reason code. In addition those issues will disappear from the editor. Use the editor UNDO function to let those issues reappear.
 
-## Release notes
 
-## v0.7.0
 
-- Allow to start the .bkdn file with breakdown instead of jira-breakdown #24
-- Make jira url and jira project clickable links #23
-- Allow creation of epics, stories and sub-tasks #22
-- Allow removal of issues #20
-- Show progress bar for issues by assignee #18
-- Change color of settings to be more homogenous #17
-- Show total number of open issues in 'issues by assignee' section #16
-- Fold all lines after pull and inserting JIRA data into the editor #15
-- Do not remove contents in editor when pull goes wrong #10
-- Fix: Color coding for resolved issues get´s lost #4
-- Fix: If status is no display field, color coding for resolved rows is not applied #13 
-
-### v0.6.0
-
-- Display assignees with issue keys in overall statistics #9
-
-### v0.5.0
-
-- Display done points in overarching statistics #5
-
-### v0.4.1
-
-- Fix: When pulling without result set, an exception is thrown in promise when determining custom field names #8
-
-### v0.4.0
-
-- Indicate resolved JIRA issues with a different color to identify quickly, what´s already done #2
-- Close all notifications with new pull/push command #7
-- Fix: Pulled date is not being refreshed after pull
-
-### v0.3.0
-
-- Display date and time of last pull in the settings header
-- Fix: Destroy additional cursor that was created by click with meta-key on JIRA link (Mac)
-- Change from Apache 2.0 to MIT license
-
-### v0.2.0
-
-- Sum of story points for epics
-- Completion progress bar for epics
-- CTRL-Click on JIRA key will open the JIRA issue in the web browser
