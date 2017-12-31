@@ -2,6 +2,8 @@
 
 Display and manipulate a JIRA breakdown of your project.
 
+![Pull JIRA Data](/doc/pull.gif)
+
 ## Installation
 
 ### Atom GUI
@@ -44,11 +46,11 @@ fields: status assignee points fixversion parentkey
 
 Where
 
-* ```status``` will display each issue status
-* ```assignee``` will display the assignee for an issue and will produce a statistic of open issues per assignee
-* ```points``` will display story points per issue and will display the overall progress in resolved vs. open story points
-* ```fixversion``` will display the fixversion per issue
-* ```parentkey```will display the epic link key for stories and the parent issue key for sub-tasks
+- `status` will display each issue status
+- `assignee` will display the assignee for an issue and will produce a statistic of open issues per assignee
+- `points` will display story points per issue and will display the overall progress in resolved vs. open story points
+- `fixversion` will display the fixversion per issue
+- `parentkey`will display the epic link key for stories and the parent issue key for sub-tasks
 
 ### Pull from JIRA
 
@@ -56,21 +58,65 @@ Select in the Packages menu **Breakdown / Pull from JIRA** to get your selected 
 
 ### Working with the Editor
 
-In this explanation the <kbd>CMD</kbd> key stands for <kbd>CTRL</kbd> on Windows and <kbd>⌘</kbd> on Mac.
+In this explanation the 
+
+<kbd>CMD</kbd>
+
+ key stands for 
+
+<kbd>CTRL</kbd>
+
+ on Windows and 
+
+<kbd>⌘</kbd>
+
+ on Mac.
 
 By default, after a pull all editor lines are folded. Folding can be controlled with the following keys
 
-- Unfold all lines: <kbd>CMD-K</kbd> and <kbd>CMD-0
+- Unfold all lines: 
 
-- Display only epic level: <kbd>CMD-K</kbd> and <kbd>CMD-1</kbd>
+  <kbd>CMD-K</kbd>
 
-- Display epic and story level: <kbd>CMD-K</kbd> and <kbd>CMD-2</kbd>
+   and 
 
-- Display epic, story and sub-task level: <kbd>CMD-K</kbd> and <kbd>CMD-3</kbd>
+  <kbd>CMD-0</kbd>
 
-Saving the editor contents with <kbd>CMD-S</kbd> will beautify your text with correct spacing and indentation.
+- Display only epic level: 
 
-Open an issue inside of JIRA by <kbd>CMD-MOUSECLICK</kbd> on the issue key.
+  <kbd>CMD-K</kbd>
+
+   and 
+
+  <kbd>CMD-1</kbd>
+
+- Display epic and story level: 
+
+  <kbd>CMD-K</kbd>
+
+   and 
+
+  <kbd>CMD-2</kbd>
+
+- Display epic, story and sub-task level: 
+
+  <kbd>CMD-K</kbd>
+
+   and 
+
+  <kbd>CMD-3</kbd>
+
+Saving the editor contents with 
+
+<kbd>CMD-S</kbd>
+
+ will beautify your text with correct spacing and indentation.
+
+Open an issue inside of JIRA by 
+
+<kbd>CMD-MOUSECLICK</kbd>
+
+ on the issue key.
 
 New JIRA issues can be created inside of the Atom editor and subsequently be pushed to JIRA. It´s always one issue per line. Each new issue must contain at least the JIRA issuetype and the summary. In the following example a new epic is created, containing a new story which again contains a new sub-task:
 
