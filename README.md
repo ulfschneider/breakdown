@@ -58,7 +58,7 @@ By default, after a pull all editor lines are folded. You can control folding wi
 - CTRL+K CTRL+2 (Win) / CMD+K CMD+2 (Mac): to display the epic and story level
 - CTRL+K CTRL+3 (Win) / CMD+K CMD+3 (Mac): to display the epic, story and sub-task level
 
-Saving the editor contents with CTRL+S (Win) / CMD+S (Mac) will unfold all lines and beautify your lines with correct spacing and indentation.
+Saving the editor contents with CTRL+S (Win) / CMD+S (Mac) will beautify your text with correct spacing and indentation.
 
 ### Push to JIRA
 
