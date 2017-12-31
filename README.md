@@ -57,32 +57,33 @@ By default, after a pull all editor lines are folded. You can control folding wi
 
 - <kbd>CTRL</kbd>
 
-  +
+<kbd>K</kbd>
 
-  <kbd>K</kbd>
+CTRL+0 (Win) / CMD+K CMD+0 (Mac): to unfold all lines
 
-   CTRL+0 (Win) / CMD+K CMD+0 (Mac): to unfold all lines
 - <kbd>CTRL</kbd>
 
   +
 
   <kbd>K</kbd>
 
-   CTRL+1 (Win) / CMD+K CMD+1 (Mac): to display only the epic level
+  CTRL+1 (Win) / CMD+K CMD+1 (Mac): to display only the epic level
+
 - <kbd>CTRL</kbd>
 
   +
 
   <kbd>K</kbd>
 
-   CTRL+2 (Win) / CMD+K CMD+2 (Mac): to display the epic and story level
+  CTRL+2 (Win) / CMD+K CMD+2 (Mac): to display the epic and story level
+
 - <kbd>CTRL</kbd>
 
   +
 
   <kbd>K</kbd>
 
-   CTRL+3 (Win) / CMD+K CMD+3 (Mac): to display the epic, story and sub-task level
+  CTRL+3 (Win) / CMD+K CMD+3 (Mac): to display the epic, story and sub-task level
 
 Saving the editor contents with CTRL+S (Win) / CMD+S (Mac) will beautify your text with correct spacing and indentation.
 
