@@ -79,11 +79,31 @@ Epic This will become a new epic
     Sub This will become a new sub-task inside of a new story inside of a new epic
 ```
 
+Issues can be removed by placing a deletion mark in front of the issue inside of Atom, followed by a push to JIRA:
+
+```
+DEL Epic RESTTEST-26 This epic will be removed when pushed
+```
+
 ### Push to JIRA
 
 Select in the Packages menu **Breakdown / Push to JIRA** to push new issues to JIRA. Currently you cannot push modifications of already created issues - it´s only possible to push new created issues. A push is always followed by an automatic pull. If some issues could not be pushed, you will receive a warning notification with the reason code. In addition those issues will disappear from the editor. Use the editor UNDO function to let those issues reappear.
 
 ## Release notes
+
+## v0.7.0
+
+- Allow to start the .bkdn file with breakdown instead of jira-breakdown #24
+- Make jira url and jira project clickable links #23
+- Allow creation of epics, stories and sub-tasks #22
+- Allow removal of issues #20
+- Show progress bar for issues by assignee #18
+- Change color of settings to be more homogenous #17
+- Show total number of open issues in 'issues by assignee' section #16
+- Fold all lines after pull and inserting JIRA data into the editor #15
+- Do not remove contents in editor when pull goes wrong #10
+- Fix: Color coding for resolved issues get´s lost #4
+- Fix: If status is no display field, color coding for resolved rows is not applied #13 
 
 ### v0.6.0
 
