@@ -51,6 +51,8 @@ fields: status assignee points fixversion parentkey
 
 Select then in the Packages menu **Breakdown / Pull from JIRA** to get your selected JIRA dataset into Atom. Whenever you pull the JIRA dataset into your Atom editor, all contents of the editor will be overwritten by your JIRA dataset.
 
+### Working with the Editor
+
 By default, after a pull all editor lines are folded. You can control folding with
 
 - CTRL+K CTRL+0 (Win) / CMD+K CMD+0 (Mac): to unfold all lines
@@ -60,9 +62,9 @@ By default, after a pull all editor lines are folded. You can control folding wi
 
 Saving the editor contents with CTRL+S (Win) / CMD+S (Mac) will beautify your text with correct spacing and indentation.
 
-### Push to JIRA
+CTRL+MOUSECLICK (Win) / CMD+MOUSECLICK (Mac) on an issue key will open that issue inside of JIRA.
 
-Select then in the Packages menu **Breakdown / Push to JIRA** to create new issues inside of JIRA. First, in Atom you create one issue per line. Each new issue must contain at least the JIRA issuetype and the summary. To create a new epic, containing a new story which again contains a new sub-task, you would write in Atom:
+You can create new JIRA issues in the Atom editor. It´s always one issue per line. Each new issue must contain at least the JIRA issuetype and the summary. In the following example a new epic is created, containing a new story which again contains a new sub-task:
 
 ```
 Epic This will become a new epic
@@ -70,7 +72,9 @@ Epic This will become a new epic
     Sub This will become a new sub-task inside of a new story inside of a new epic
 ```
 
-Currently you cannot modify already created issues - it´s only possible to create new issues. Any push will always be followed by an automatical pull.
+### Push to JIRA
+
+Select in the Packages menu **Breakdown / Push to JIRA** to push new issues to JIRA. Currently you cannot push modifications of already created issues - it´s only possible to push new created issues. Any push is always followed by an automatic pull. If some issues could not be pushed, you will receive a warning notification with the reason code. In addition those issues will disappear from the editor. Use the editor UNDO function to let those issues reappear.
 
 ## Release notes
 
