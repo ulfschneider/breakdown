@@ -17,7 +17,7 @@ Display and manipulate a JIRA breakdown of your project.
 
 ### Command line
 
-Alternatively you can use your terminal to install the breakdown package.
+Alternatively, use your terminal to install the breakdown package.
 
 1. Install [Atom](https://atom.io)
 2. In the terminal, install the breakdown package via apm
@@ -26,13 +26,13 @@ Alternatively you can use your terminal to install the breakdown package.
 apm install breakdown
 ```
 
-## Issues and Improvements
+## Issues and improvements
 
 Please file an issue on [GitHub](https://github.com/ulfschneider/breakdown/issues) for bugs or desired improvements. Refer to the [release notes](https://github.com/ulfschneider/breakdown/releases) to get information about release contents.
 
 ## How to use
 
-To pull JIRA data into your Atom editor or push new issues from Atom to JIRA, create a file with a `.bkdn` filetype, e.g. `myjira.bkdn`. The file must start with your configuration and at least contain the following first five lines:
+To pull JIRA data into your Atom editor or push new issues and changes from Atom to JIRA, create a file with a `.bkdn` filetype, e.g. `myjira.bkdn`. The file must start with your configuration and at least contain the following first five lines:
 
 ```
 breakdown
@@ -60,7 +60,7 @@ Where
 
 Select in the Packages menu **Breakdown / Pull from JIRA** to get your selected JIRA dataset into Atom. Whenever you pull the JIRA dataset into your Atom editor, all contents of the editor will be overwritten by your JIRA dataset (you have the UNDO function in the editor).
 
-### Working with the Editor
+### Working with the editor
 
 In this explanation the <kbd>CMD</kbd> key stands for <kbd>⌘</kbd> on a Mac and <kbd>CTRL</kbd> on other platforms.
 
@@ -89,9 +89,17 @@ Issues can be removed by placing a deletion mark in front of the issue inside of
 DEL Epic RESTTEST-26 This epic will be removed when pushed
 ```
 
+It´s also possible to change the contents of already existing JIRA issues. You can even convert stories to epics or epics to stories and by using cut and paste move a story from one epic to another.
+
+### What is not possible in Atom
+
+* You cannot convert sub-tasks into stories or epics and you cannot move sub-tasks to different parents.
+* You cannot change the status of issues.
+* To delete a story with sub-tasks you first have to delete the sub-tasks.
+
 ### Push to JIRA
 
-Select in the Packages menu **Breakdown / Push to JIRA** to push new issues to JIRA. Currently you cannot push modifications of already created issues - it´s only possible to push new created issues. A push is always followed by an automatic pull. If some issues could not be pushed, you will receive a warning notification with the reason code. In addition those issues will disappear from the editor. Use the editor UNDO function to let those issues reappear.
+Select in the Packages menu **Breakdown / Push to JIRA** to push your change to JIRA. A push is always followed by an automatic pull. If some issues could not be pushed, you will receive a warning notification with the reason code. In addition, those issues will disappear from the editor. Use the editor UNDO function to let those issues reappear.
 
 
 
