@@ -1,8 +1,8 @@
 # JIRA Breakdown for Atom
 
-Display and manipulate a JIRA breakdown of your project.
+Display and manipulate a breakdown structure of your JIRA Scrum project.
 
-![Pull JIRA Data](/doc/breakdown.gif)
+![Breakdown Demo](/doc/breakdown.gif)
 
 ## Installation
 
