@@ -2,7 +2,7 @@
 
 Display and manipulate a JIRA breakdown of your project.
 
-![Pull JIRA Data](/doc/pull.gif)
+![Pull JIRA Data](/doc/breakdown.gif)
 
 ## Installation
 
@@ -68,7 +68,11 @@ Saving the editor contents with <kbd>CMD-S</kbd> will beautify your text with co
 
 Open an issue inside of JIRA by <kbd>CMD-MOUSECLICK</kbd> on the issue key.
 
-New JIRA issues can be created inside of the Atom editor and subsequently be pushed to JIRA. It´s always one issue per line. Each new issue must contain at least the JIRA issuetype and the summary. In the following example a new epic is created, containing a new story which again contains a new sub-task:
+### Create and modify issues
+
+JIRA issues can be created and modified inside of the Atom editor. It´s always one issue per line. A new issue must contain at least the JIRA issuetype and the summary. The changes need to be pushed to JIRA to be effective. 
+
+In the following example a new epic is created, containing a new story which again contains a new sub-task:
 
 ```
 Epic This will become a new epic
@@ -76,13 +80,35 @@ Epic This will become a new epic
     Sub This will become a new sub-task inside of a new story inside of a new epic
 ```
 
-Issues can be removed by placing a deletion mark in front of the issue inside of Atom, followed by a push to JIRA:
+For any issue, the following JIRA fields can be modified: *assignee, story points, fixversion* and *summary.* For epics and stories even changing the *issuetype* is allowed. A full-fledged issue will be displayed like:
 
 ```
-DEL Epic RESTTEST-26 This epic will be removed when pushed
+Story REST-32 (s:In Progress a:admin p:13 v:Version 3.0) As a developer, I want to have the story status highlighted
 ```
 
-It´s also possible to change the contents of already existing JIRA issues. You can even convert stories to epics or epics to stories and by using cut and paste move a story from one epic to another.
+An issue will start with the issuetype, which is an *epic,* a *story* or a *sub-task*. It´s allowed to change epics into stories and stories into epics.
+
+Issues which are already available in JIRA will have the JIRA issue key.
+
+The issue key is followed by a paranthesis section, which contains:
+
+* ```s:<status>``` to indicate the issue status, which cannot be changed inside of Atom
+* ```a:<assignee>``` to indicate the JIRA user who is assigned to the issue
+* ```p:<story points>``` to indicate the story points for the issue, this is only valid for epics and stories and must be an integer number
+* ```v:<fixversion>``` to indicate the fixversion for the issue
+
+The last part of the issue is the *summary*, which is free text.
+
+### Changing issue parents
+
+Move stories from one epic to the other by using the cut and paste option of your Atom editor.
+
+### Delete issues
+Issues can be removed by placing a deletion mark in front of the issue inside of Atom:
+
+```
+DEL Epic REST-26 This epic will be removed when pushed
+```
 
 ### What is not possible in Atom
 
