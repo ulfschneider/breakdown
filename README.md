@@ -42,6 +42,8 @@ query: any JIRA JQL query to select your download dataset
 ---
 ```
 
+> Remark: The below described configuration of fields is currently disabled due to a bug that needs some more time to be fixed in the right way. 
+
 Optionally, you can configure some JIRA fields which would be incorporated into your breakdown.
 
 ```
