@@ -42,21 +42,12 @@ query: any JIRA JQL query to select your download dataset
 ---
 ```
 
-> Remark: The below described configuration of fields is currently disabled due to a bug that needs some more time to be fixed in the right way. 
-
-Optionally, you can configure some JIRA fields which would be incorporated into your breakdown.
+Optionally, you can configure to get the epic link key for stories visualized and the parent issue key for sub-tasks.
 
 ```
-fields: status assignee points fixversion parentkey
+fields: parentkey
 ```
 
-Where
-
-- `status` will display each issue status
-- `assignee` will display the assignee for an issue and will produce a statistic of open issues per assignee
-- `points` will display story points per issue and will display the overall progress in resolved vs. open story points
-- `fixversion` will display the fixversion per issue
-- `parentkey`will display the epic link key for stories and the parent issue key for sub-tasks
 
 ### Pull from JIRA
 
