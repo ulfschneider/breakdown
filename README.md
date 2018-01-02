@@ -36,9 +36,9 @@ To pull JIRA data into your Atom editor or push new issues and changes from Atom
 
 ```
 breakdown
-url: http://address.of.your.jira
-project: the key of the JIRA project you want to create new issues in
-query: any JIRA JQL query to select your download dataset
+url: <JIRA URL>
+project: <key of JIRA project you want to create new issues in>
+query: <any JIRA JQL query to select your download dataset>
 ---
 ```
 
@@ -49,13 +49,13 @@ fields: parentkey
 ```
 
 
-### Pull from JIRA
+### Pulling from JIRA
 
-Select in the Packages menu **Breakdown / Pull from JIRA** to get your selected JIRA dataset into Atom. Whenever you pull the JIRA dataset into your Atom editor, all contents of the editor will be overwritten by your JIRA dataset (you have the UNDO function in the editor).
+In the Packages menu, select **Breakdown → Pull from JIRA** to get your selected JIRA dataset into Atom. Whenever you pull the JIRA dataset into your Atom editor, all contents of the editor will be overwritten by the downloaded JIRA dataset.
 
 ### Working with the editor
 
-In this explanation the <kbd>CMD</kbd> key stands for <kbd>⌘</kbd> on a Mac and <kbd>CTRL</kbd> on other platforms.
+> In this explanation the <kbd>CMD</kbd> key stands for <kbd>⌘</kbd> on a Mac and <kbd>CTRL</kbd> on other platforms.
 
 By default, after a pull all editor lines are folded. Folding can be controlled with the following keys
 
@@ -66,9 +66,9 @@ By default, after a pull all editor lines are folded. Folding can be controlled 
 
 Saving the editor contents with <kbd>CMD-S</kbd> will beautify your text with correct spacing and indentation.
 
-Open an issue inside of JIRA by <kbd>CMD-MOUSECLICK</kbd> on the issue key.
+You can open an issue inside of JIRA by doing a <kbd>CMD-MOUSECLICK</kbd> on the issue key.
 
-### Create and modify issues
+### Creating and modifying issues
 
 JIRA issues can be created and modified inside of the Atom editor. It´s always one issue per line. A new issue must contain at least the JIRA issuetype and the summary. The changes need to be pushed to JIRA to be effective. 
 
@@ -90,7 +90,7 @@ An issue will start with the issuetype, which is an *epic,* a *story* or a *sub-
 
 Issues which are already available in JIRA will have the JIRA issue key.
 
-The issue key is followed by a paranthesis section, which contains:
+The issue key is followed by a paranthesis section, containing:
 
 * ```s:<status>``` to indicate the issue status, which cannot be changed inside of Atom
 * ```a:<assignee>``` to indicate the JIRA user who is assigned to the issue
@@ -101,10 +101,11 @@ The last part of the issue is the *summary*, which is free text.
 
 ### Changing issue parents
 
-Move stories from one epic to the other by using the cut and paste option of your Atom editor.
+Move stories from one epic to the other by using the cut and paste option of your Atom editor. Cut away a story from one epic and place it under the epic where you want it to be.
 
-### Delete issues
-Issues can be removed by placing a deletion mark in front of the issue inside of Atom:
+### Deleting issues
+
+Issues can be removed by placing a deletion mark in front of the issue:
 
 ```
 DEL Epic REST-26 This epic will be removed when pushed
@@ -116,9 +117,9 @@ DEL Epic REST-26 This epic will be removed when pushed
 * You cannot change the status of issues.
 * To delete a story with sub-tasks you first have to delete the sub-tasks.
 
-### Push to JIRA
+### Pushing to JIRA
 
-Select in the Packages menu **Breakdown / Push to JIRA** to push your change to JIRA. A push is always followed by an automatic pull. If some issues could not be pushed, you will receive a warning notification with the reason code. In addition, those issues will disappear from the editor. Use the editor UNDO function to let those issues reappear.
+Select in the Packages menu **Breakdown → Push to JIRA** to push your changes to JIRA. A push is always followed by an automatic pull to bring a current dataset back into your editor. If some issues could not be pushed, you will receive a warning notification with the reason code. In addition, those issues will *disappear from the editor.* Use the editor UNDO function to let those issues reappear.
 
 
 
