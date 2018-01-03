@@ -83,7 +83,7 @@ Epic This will become a new epic
 For any issue, the following JIRA fields can be modified: *status, assignee, story points, fixversion* and *summary.* For epics and stories even changing the *issuetype* is allowed. A full-fledged issue will be displayed like:
 
 ```
-Story REST-32 (s:In Progress a:admin p:13 v:Version 3.0) As a developer, I want to have the story status highlighted
+Story REST-32 ( s:In Progress a:admin p:13 v:Version 3.0 ) As a developer, I want to have the story status highlighted
 ```
 
 An issue will start with the issuetype, which can be an *epic,* a *story* or a *sub-task*. It´s allowed to change epics into stories and stories into epics.
@@ -108,7 +108,7 @@ Move stories from one epic to the other by using the cut and paste option of you
 Issues can be removed by placing a deletion mark in front of the issue:
 
 ```
-DEL Epic REST-26 This epic will be removed when pushed
+DEL Epic REST-26 ( s:In Progress p:13 ) This epic will be removed when pushed
 ```
 
 ### What is not possible from within Atom
