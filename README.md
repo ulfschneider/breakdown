@@ -80,13 +80,13 @@ Epic This will become a new epic
     Sub This will become a new sub-task inside of a new story inside of a new epic
 ```
 
-For any issue, the following JIRA fields can be modified: *assignee, story points, fixversion* and *summary.* For epics and stories even changing the *issuetype* is allowed. A full-fledged issue will be displayed like:
+For any issue, the following JIRA fields can be modified: *status, assignee, story points, fixversion* and *summary.* For epics and stories even changing the *issuetype* is allowed. A full-fledged issue will be displayed like:
 
 ```
 Story REST-32 (s:In Progress a:admin p:13 v:Version 3.0) As a developer, I want to have the story status highlighted
 ```
 
-An issue will start with the issuetype, which is an *epic,* a *story* or a *sub-task*. It´s allowed to change epics into stories and stories into epics.
+An issue will start with the issuetype, which can be an *epic,* a *story* or a *sub-task*. It´s allowed to change epics into stories and stories into epics.
 
 Issues which are already available in JIRA will have the JIRA issue key.
 
