@@ -48,12 +48,14 @@ Optionally, you can configure to get the epic link key for stories visualized an
 fields: parentkey
 ```
 
+> **A word of caution:** Whenever you change the configuration of your ```.bkdn``` file, your direct next step should be to pull the data from JIRA that is described by your configuration. Otherwise you might run into inconsistence issues when changing contents in Atom and pushing back those changes to JIRA!
 
-### Pulling from JIRA
+
+## Pulling from JIRA
 
 In the Packages menu, select **Breakdown → Pull from JIRA** to get your selected JIRA dataset into Atom. Whenever you pull the JIRA dataset into your Atom editor, all contents of the editor will be overwritten by the downloaded JIRA dataset.
 
-### Working with the editor
+## Working with the editor
 
 > In this explanation the <kbd>CMD</kbd> key stands for <kbd>⌘</kbd> on a Mac and <kbd>CTRL</kbd> on other platforms.
 
@@ -68,7 +70,7 @@ Saving the editor contents with <kbd>CMD-S</kbd> will beautify your text with co
 
 You can open an issue inside of JIRA by doing a <kbd>CMD-MOUSECLICK</kbd> on the issue key.
 
-### Creating and modifying issues
+## Creating and modifying issues
 
 JIRA issues can be created and modified inside of the Atom editor. It´s always one issue per line. A new issue must contain at least the JIRA issuetype and the summary. The changes need to be pushed to JIRA to be effective. 
 
@@ -99,11 +101,11 @@ The issue key is followed by a paranthesis section, containing:
 
 The last part of the issue is the *summary*, which is free text.
 
-### Changing issue parents
+## Changing issue parents
 
 Move stories from one epic to the other by using the cut and paste option of your Atom editor. Cut away a story from one epic and place it under the epic where you want it to be.
 
-### Deleting issues
+## Deleting issues
 
 Issues can be removed by placing a deletion mark in front of the issue:
 
@@ -111,12 +113,12 @@ Issues can be removed by placing a deletion mark in front of the issue:
 DEL Epic REST-26 ( s:In Progress p:13 ) This epic will be removed when pushed
 ```
 
-### What is not possible from within Atom
+## What is not possible from within Atom
 
 * You cannot convert sub-tasks into stories or epics and you cannot move sub-tasks to different parents.
 * To delete a story with sub-tasks you first have to delete the sub-tasks.
 
-### Pushing to JIRA
+## Pushing to JIRA
 
 In the Packages menu, select **Breakdown → Push to JIRA** to push your changes to JIRA. A push is always followed by an automatic pull to bring a current dataset back into your editor. If some issues could not be pushed, you will receive a warning notification with the reason code. In addition, those issues will *disappear from the editor.* Use the editor UNDO function to let those issues reappear.
 
