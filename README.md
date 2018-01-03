@@ -50,7 +50,7 @@ fields: parentkey
 
 ## A word of caution
 
-Whenever you change the configuration of your ```.bkdn``` file, your direct next step should be to pull the data from JIRA that is described by your configuration. Otherwise you might run into inconsistencies when changing contents in Atom and pushing back those changes to JIRA!
+Whenever you change the ```url``` or the ```query``` of your ```.bkdn``` file, your direct next step should be to pull the data from JIRA that is described by your configuration. Otherwise you might run into inconsistencies when changing contents in Atom and pushing back those changes to JIRA!
 
 ## Pulling from JIRA
 
