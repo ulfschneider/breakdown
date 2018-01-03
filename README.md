@@ -92,7 +92,7 @@ Issues which are already available in JIRA will have the JIRA issue key.
 
 The issue key is followed by a paranthesis section, containing:
 
-* ```s:<status>``` to indicate the issue status, which cannot be changed inside of Atom
+* ```s:<status>``` to indicate the issue status
 * ```a:<assignee>``` to indicate the JIRA user who is assigned to the issue
 * ```p:<story points>``` to indicate the story points for the issue, this is only valid for epics and stories and must be an integer number
 * ```v:<fixversion>``` to indicate the fixversion for the issue
@@ -111,10 +111,9 @@ Issues can be removed by placing a deletion mark in front of the issue:
 DEL Epic REST-26 This epic will be removed when pushed
 ```
 
-### What is not possible in Atom
+### What is not possible from within Atom
 
 * You cannot convert sub-tasks into stories or epics and you cannot move sub-tasks to different parents.
-* You cannot change the status of issues.
 * To delete a story with sub-tasks you first have to delete the sub-tasks.
 
 ### Pushing to JIRA
