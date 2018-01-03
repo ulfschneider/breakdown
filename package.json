@@ -2,7 +2,7 @@
   "name": "breakdown",
   "main": "./lib/breakdown",
   "version": "0.12.0",
-  "description": "Display and manipulate a JIRA breakdown of your project",
+  "description": "Display and manipulate a breakdown structure of your JIRA Scrum project",
   "keywords": [],
   "repository": "https://github.com/ulfschneider/breakdown",
   "license": "mit",
