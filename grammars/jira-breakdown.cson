@@ -74,7 +74,7 @@ patterns: [
                 'patterns': [
                     {
                         'name': 'settings.value.jira'
-                        'match': '(?i)\\b(parentkey)\\b'
+                        'match': '(?i)\\b(parentkey)\\b|\\b(rank)\\b'
                     }
                 ]
 
