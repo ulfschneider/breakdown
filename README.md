@@ -102,7 +102,23 @@ The issue key is followed by a paranthesis section, containing:
 
 The last part of the issue is the *summary*, which is free text.
 
-## Changing issue parents
+## Ranking 
+
+Atom has a nice function to move entire lines up and down with <kbd>CTRL-↑</kbd> and <kbd>CTRL-↓</kbd>, on Mac it´s <kbd>CTRL-⌘-↑</kbd> and <kbd>CTRL-⌘-↓</kbd>.
+
+Breakdown for Atom leverages this function, as it allows you to change your ranking in an quick and easy manner by still keeping a good overview of your entire breakdown structure. 
+
+If your query is not **SORTED BY Rank ASC**, you will **mess up** the ranking of your project when you apply the ranking inside of Atom and push the changes back to JIRA. For this reason ranking is a guarded feature in Breakdown for Atom - you have to activate it in your configuration section by adding the ```rank``` entry to your ```fields```, like   
+
+```
+fields: rank
+```
+
+To change the rank for a story with sub-tasks, it´s better to cut and paste the entire story together with the sub-tasks to bring it to a new ranking place. Moving single lines for ranking works best for, well, single lines.
+
+Currently you cannot rank epics or sub-tasks, only the ranking of stories is supported.
+
+## Changing parents
 
 Move stories from one epic to the other by using the cut and paste option of your Atom editor. Cut away a story from one epic and place it under the epic where you want it to be.
 
@@ -116,6 +132,7 @@ DEL Epic REST-26 ( s:In Progress p:13 ) This epic will be removed when pushed
 
 ## What is not possible from within Atom
 
+* Only stories are allowed to be ranked. The ranking of epics or sub-tasks is not supported.
 * You cannot convert sub-tasks into stories or epics and you cannot move sub-tasks to different parents.
 * To delete a story with sub-tasks you first have to delete the sub-tasks.
 
