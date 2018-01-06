@@ -60,7 +60,7 @@ In the Packages menu, select **Breakdown → Pull from JIRA** to get your select
 
 > In this explanation the <kbd>CMD</kbd> key stands for <kbd>⌘</kbd> on a Mac and <kbd>CTRL</kbd> on other platforms.
 
-By default, after a pull all editor lines are folded. Folding can be controlled with the following keys
+By default, after a pull all editor lines are folded. In the editor, folding can be controlled with the following keys
 
 - Unfold all lines: <kbd>CMD-K</kbd> and <kbd>CMD-0</kbd>
 - Display only epic level: <kbd>CMD-K</kbd> and <kbd>CMD-1</kbd>
@@ -139,6 +139,11 @@ DEL Epic REST-26 ( s:In Progress p:13 ) This epic will be removed when pushed
 ## Pushing to JIRA
 
 In the Packages menu, select **Breakdown → Push to JIRA** to push your changes to JIRA. A push is always followed by an automatic pull to bring a current dataset back into your editor. If some issues could not be pushed, you will receive a warning notification with the reason code. In addition, those issues will *disappear from the editor.* Use the editor UNDO function to let those issues reappear.
+
+## Configuration
+
+By default, all editor lines will be folded after pulling from JIRA. The package configuration allows to change that behavior. Press <kbd>CMD-,</kbd> and navigate to the *packages* tab. Search for the *breakdown* package and click on *Settings.* Here you have the option *Fold all editor lines after a pull* which you can activate or deactivate.
+
 
 
 
