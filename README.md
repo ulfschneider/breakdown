@@ -114,7 +114,7 @@ If your query is not **SORTED BY Rank ASC**, you will **mess up** the ranking of
 fields: rank
 ```
 
-To change the rank for a story with sub-tasks, it´s better to cut and paste the entire story together with the sub-tasks to bring it to a new ranking place. Moving single lines for ranking works best for, well, single lines.
+To change the rank for a story with sub-tasks, select the story line and all sub-tasks below, then apply the same command to move all selected lines at once.
 
 Currently you cannot rank epics or sub-tasks, only the ranking of stories is supported.
 
