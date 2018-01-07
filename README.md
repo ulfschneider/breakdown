@@ -2,7 +2,7 @@
 
 Display and manipulate a breakdown structure of your JIRA Scrum project.
 
-![Breakdown Demo](/doc/breakdown.gif)
+![Breakdown Pull](/doc/breakdown-pull.gif)
 
 ## Installation
 
@@ -75,6 +75,8 @@ You can open an issue inside of JIRA by doing a <kbd>CMD-MOUSECLICK</kbd> on the
 
 JIRA issues can be created and modified inside of the Atom editor. It´s always one issue per line. A new issue must contain at least the JIRA issuetype and the summary. The changes need to be pushed to JIRA to be effective. 
 
+![Breakdown Create and Push](/doc/breakdown-create-push.gif)
+
 In the following example a new epic is created, containing a new story which again contains a new sub-task:
 
 ```
@@ -106,6 +108,8 @@ The last part of the issue is the *summary*, which is free text.
 
 Atom has a nice function to move entire lines up and down with <kbd>CTRL-↑</kbd> and <kbd>CTRL-↓</kbd>, on Mac it´s <kbd>CTRL-⌘-↑</kbd> and <kbd>CTRL-⌘-↓</kbd>.
 
+![Breakdown Rank](/doc/breakdown-rank.gif)
+
 Breakdown for Atom leverages this function, as it allows you to change your ranking in an quick and easy manner by still keeping a good overview of your entire breakdown structure. 
 
 If your query is not **SORTED BY Rank ASC**, you will **mess up** the ranking of your project when you apply the ranking inside of Atom and push the changes back to JIRA. For this reason ranking is a guarded feature in Breakdown for Atom - you have to activate it in your configuration section by adding the ```rank``` entry to your ```fields```, like   
@@ -129,6 +133,9 @@ Issues can be removed by placing a deletion mark in front of the issue:
 ```
 DEL Epic REST-26 ( s:In Progress p:13 ) This epic will be removed when pushed
 ```
+
+![Breakdown Resolve Delete](/doc/breakdown-resolve-delete.gif)
+
 
 ## What is not possible from within Atom
 
