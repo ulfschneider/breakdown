@@ -1,5 +1,5 @@
 scopeName: 'breakdown.jira'
-name: 'JIRA Breakdown'
+name: 'Breakdown'
 fileTypes: [
     'bkdn'
 ]
