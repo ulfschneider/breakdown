@@ -108,8 +108,6 @@ The last part of the issue is the *summary*, which is free text.
 
 Atom has a nice function to move entire lines up and down with <kbd>CTRL-↑</kbd> and <kbd>CTRL-↓</kbd>, on Mac it´s <kbd>CTRL-⌘-↑</kbd> and <kbd>CTRL-⌘-↓</kbd>.
 
-![Breakdown Rank](/doc/breakdown-rank.gif)
-
 Breakdown for Atom leverages this function, as it allows you to change your ranking in an quick and easy manner by still keeping a good overview of your entire breakdown structure. 
 
 If your query is not **SORTED BY Rank ASC**, you will **mess up** the ranking of your project when you apply the ranking inside of Atom and push the changes back to JIRA. For this reason ranking is a guarded feature in Breakdown for Atom - you have to activate it in your configuration section by adding the ```rank``` entry to your ```fields```, like   
@@ -121,6 +119,8 @@ fields: rank
 To change the rank for a story with sub-tasks, select the story line and all sub-tasks below, then apply the same command to move all selected lines at once.
 
 Currently you cannot rank epics or sub-tasks, only the ranking of stories is supported.
+
+![Breakdown Rank](/doc/breakdown-rank.gif)
 
 ## Changing parents
 
