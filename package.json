@@ -1,23 +1,23 @@
 {
-  "name": "breakdown",
-  "main": "./lib/breakdown",
-  "version": "0.22.0",
-  "description": "Display and manipulate a breakdown structure of your JIRA Scrum project",
-  "keywords": [],
-  "repository": "https://github.com/ulfschneider/breakdown",
-  "license": "mit",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-  "consumedServices": {
-    "status-bar": {
-      "versions": {
-        "^1.0.0": "consumeStatusBar"
-      }
+    "name": "breakdown",
+    "main": "./lib/breakdown",
+    "version": "0.22.0",
+    "description": "Display and manipulate a breakdown structure of your JIRA Scrum project - even offline and only eventually connected to your JIRA system",
+    "keywords": [],
+    "repository": "https://github.com/ulfschneider/breakdown",
+    "license": "mit",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    },
+    "consumedServices": {
+        "status-bar": {
+            "versions": {
+                "^1.0.0": "consumeStatusBar"
+            }
+        }
+    },
+    "dependencies": {
+        "request": "^2.83.0",
+        "underscore": "^1.8.3"
     }
-  },
-  "dependencies": {
-    "request": "^2.83.0",
-    "underscore": "^1.8.3"
-  }
 }
