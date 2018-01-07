@@ -87,7 +87,7 @@ patterns: [
         'beginCaptures':
             '1':
                 'name': 'statistics.begin.jira'
-        'end': '^\\s*---\\s*$|^\\s*$'
+        'end': '^\\s*---\\s*$'
         'endCaptures':
             '0':
                 'name': 'statistics.end.jira'
