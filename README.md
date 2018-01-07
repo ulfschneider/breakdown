@@ -140,9 +140,12 @@ DEL Epic REST-26 ( s:In Progress p:13 ) This epic will be removed when pushed
 
 In the Packages menu, select **Breakdown → Push to JIRA** to push your changes to JIRA. A push is always followed by an automatic pull to bring a current dataset back into your editor. If some issues could not be pushed, you will receive a warning notification with the reason code. In addition, those issues will *disappear from the editor.* Use the editor UNDO function to let those issues reappear.
 
-## Configuration
+## Package configuration
 
-By default, all editor lines will be folded after pulling from JIRA. The package configuration allows to change that behavior. Press <kbd>CMD-,</kbd> and navigate to the *packages* tab. Search for the *breakdown* package and click on *Settings.* Here you have the option *Fold all editor lines after a pull* which you can activate or deactivate.
+In addition to the settings of the ```.bkdn``` file, you can make some configurations at the level of the breakdown package. Press <kbd>CMD-,</kbd> and navigate to the *packages* tab. Search for the *breakdown* package and click on *Settings.* You will find the following configuration options:
+
+* **Fold all editor lines after a pull**: By default, all editor lines will be folded after pulling from JIRA. Activate or deactivate this behavior here.
+* **JIRA URL:** This URL will be used in case you don´t provide a URL in the config section of your ```.bkdn``` file.
 
 
 
