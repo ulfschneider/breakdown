@@ -145,7 +145,7 @@ In the Packages menu, select **Breakdown → Push to JIRA** to push your changes
 In addition to the settings of the ```.bkdn``` file, you can make some configurations at the level of the breakdown package. Press <kbd>CMD-,</kbd> and navigate to the *packages* tab. Search for the *breakdown* package and click on *Settings.* You will find the following configuration options:
 
 * **Fold all editor lines after a pull**: By default, all editor lines will be folded after pulling from JIRA. Activate or deactivate this behavior here.
-* **JIRA URL:** This URL will be used in case you don´t provide a URL in the config section of your ```.bkdn``` file.
+* **JIRA URL**: This URL will be used in case you don´t provide a URL in the config section of your ```.bkdn``` file.
 
 
 
