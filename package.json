@@ -19,5 +19,20 @@
     "dependencies": {
         "request": "^2.83.0",
         "underscore": "^1.8.3"
+    },
+    "configSchema": {
+        "jiraUrl": {
+            "title": "JIRA URL",
+            "description": "This URL will be used in case you don´t provide a URL in the config section of your .bkdn file",
+            "type": "string",
+            "default": "",
+            "order": 1
+        },
+        "foldAfterPull": {
+            "title": "Fold all editor lines after a successful pull",
+            "type": "boolean",
+            "default": true,
+            "order": 2
+        }
     }
 }
