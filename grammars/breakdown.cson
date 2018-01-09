@@ -98,8 +98,12 @@ patterns: [
         ]
     }
     {
-        'name': 'issue.no-parent.jira'
-        'match': '(?i)^\\s*(no parent.*)$'
+        'name': 'issue.no-parent-in-selection.jira'
+        'match': '(?i)^\\s*(no[\\s]+parent.*|parent[\\s]+not.*|parent[\\s]+is[\\s]+not.*)$'
+    }
+    {
+        'name': 'issue.empty-parent.jira'
+        'match': '(?i)^\\s*(empty[\\s]+parent.*|without[\\s]+parent.*)$'
     }
     {
         'name': 'issue.delete.epic.jira'
