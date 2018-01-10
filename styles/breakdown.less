@@ -51,9 +51,6 @@ atom-text-editor {
     }
 
     .syntax--statistics {
-        .syntax--issue.syntax--summary {
-            color: @text-color;
-        }
         color: @text-color-success;
     }
 
@@ -95,9 +92,9 @@ atom-text-editor {
     }
 
     .syntax--issue.syntax--key,
-    .syntax--issue.syntax--parent.syntax--key,
     .syntax--jira-url .syntax--value,
-    .syntax--project .syntax--value {
+    .syntax--project .syntax--value,
+    .syntax--unresolved.syntax--issue.syntax--key .syntax--issue.syntax--parent.syntax--key {
         color: @text-color-warning;
 
         &:hover {

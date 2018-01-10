@@ -93,10 +93,24 @@ patterns: [
                 'name': 'statistics.end.jira'
         'patterns': [
             {
-                'include': '#key'
-            }
-            {
-                'include': '#parentkey'
+                'name': 'issue.unresolved.jira'
+                'begin': '(?i)^\\s*([A-Z]{1,10}-\\d+)\\s*([^\\s].*:)'
+                'beginCaptures':
+                    '1':
+                        'name': 'unresolved.issue.key.jira'
+                    '2':
+                        'name': 'unresolved.issuetype.jira'
+                'end': '$'
+                'patterns': [
+
+                    {
+                    'include': '#parentkey'
+                    }
+                    {
+                    'include': '#summary'
+                    }
+                ]
+
             }
         ]
     }
