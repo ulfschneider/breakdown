@@ -32,7 +32,7 @@ Please file an issue on [GitHub](https://github.com/ulfschneider/breakdown/issue
 
 ## How to use
 
-To pull JIRA data into your Atom editor or push new issues and changes from Atom to JIRA, create a file with a `.bkdn` filetype, e.g. `myjira.bkdn`. The file must start with your configuration and at least contain the following first five lines:
+To pull JIRA data into your Atom editor or push new issues and changes from Atom to JIRA, create a file with a `.bkdn` filetype, e.g. `myjira.bkdn`. The file must start with your configuration section and at least contain the following first five lines:
 
 ```
 breakdown
@@ -42,12 +42,6 @@ query: <any JIRA JQL query to select your download dataset>
 ---
 ```
 
-Optionally, you can configure to get the epic link key for stories visualized and the parent issue key for sub-tasks.
-
-```
-fields: parentkey
-```
-
 ## A word of caution
 
 Whenever you change the ```url``` or the ```query``` of your ```.bkdn``` file, your direct next step should be to pull the data from JIRA that is described by your configuration. Otherwise you might run into inconsistencies when changing contents in Atom and pushing back those changes to JIRA!
@@ -55,6 +49,13 @@ Whenever you change the ```url``` or the ```query``` of your ```.bkdn``` file, y
 ## Pulling from JIRA
 
 In the Packages menu, select **Breakdown → Pull from JIRA** to get your selected JIRA dataset into Atom. Whenever you pull the JIRA dataset into your Atom editor, all contents of the editor will be overwritten by the downloaded JIRA dataset.
+
+Optionally, you can define in your configuration section to visualize the epic link key for stories and the parent issue key for sub-tasks.
+
+```
+fields: parentkey
+```
+
 
 ## Working with the editor
 
@@ -147,13 +148,21 @@ DEL Epic REST-26 ( s:In Progress p:13 ) This epic will be removed when pushed
 
 In the Packages menu, select **Breakdown → Push to JIRA** to push your changes to JIRA. A push is always followed by an automatic pull to bring a current dataset back into your editor. If some issues could not be pushed, you will receive a warning notification with the reason code. In addition, those issues will *disappear from the editor.* Use the editor UNDO function to let those issues reappear.
 
+For the creation of epics and stories from within Atom, you can optionally define in your configuration section a default *fixversion* and the default amount of *story points* to assign to those epics and stories when pushing them to JIRA. So you don´t need to specify those values for each new created issue in Atom. However, you can overwrite the setting in each issue. Configure with:
+
+```
+fixversion: <your default fixversion>
+points: <the default amount of points>
+```
+
+
 ## Package configuration
 
-In addition to the settings of the ```.bkdn``` file, you can make some configurations at the level of the breakdown package. Press <kbd>CMD-,</kbd> and navigate to the *packages* tab. Search for the *breakdown* package and click on *Settings.* You will find the following configuration options:
+In addition to the configuration section of the ```.bkdn``` file, you can make some settings at the level of the breakdown package. Press <kbd>CMD-,</kbd> and navigate to the *packages* tab. Search for the *breakdown* package and click on *Settings.* You will find the following configuration options:
 
-* **Fold all editor lines after a pull**: By default, all editor lines will be folded after pulling from JIRA. Activate or deactivate this behavior here.
 * **JIRA URL**: This URL will be used in case you don´t provide a URL in the config section of your ```.bkdn``` file.
-
+* **Default Story Points**:The default amount of story points to assign to new created epics or stories.
+* **Fold all editor lines after a pull**: By default, all editor lines will be folded after pulling from JIRA.
 
 
 
