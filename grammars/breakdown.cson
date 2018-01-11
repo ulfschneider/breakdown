@@ -110,7 +110,7 @@ patterns: [
                     '1':
                         'name': 'unresolved.issue.key.jira'
                     '2':
-                        'name': 'unresolved.issuetype.jira'
+                        'name': 'unresolved.issuetype-and-state.jira'
                 'end': '$'
                 'patterns': [
 
