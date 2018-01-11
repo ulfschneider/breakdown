@@ -20,7 +20,7 @@ patterns: [
         'patterns': [
             {
                 'name': 'settings.jira-url.jira'
-                'match': '(?i)^\\s*(url)\\s*(:)\\s*([^\\s]*)'
+                'match': '(?i)^\\s*(url)\\s*(:)\\s*(.*)'
                 'captures':
                     '1':
                         'name': 'settings.key.jira'
@@ -31,7 +31,7 @@ patterns: [
             }
             {
                 'name': 'settings.query.jira'
-                'match': '(?i)^\\s*(query)\\s*(:)\\s*([^\\s].*)'
+                'match': '(?i)^\\s*(query)\\s*(:)\\s*(.*)'
                 'captures':
                     '1':
                         'name': 'settings.key.jira'
@@ -42,7 +42,7 @@ patterns: [
             }
             {
                 'name': 'settings.project.jira'
-                'match': '(?i)^\\s*(project)\\s*(:)\\s*([A-Z]{1,10})'
+                'match': '(?i)^\\s*(project)\\s*(:)\\s*(.*)'
                 'captures':
                     '1':
                         'name': 'settings.key.jira'
@@ -52,8 +52,19 @@ patterns: [
                         'name': 'settings.value.jira'
             }
             {
-                'name': 'settings.pulled.jira'
-                'match': '(?i)^\\s*(pulled)\\s*(:)\\s*([^\\s].*)'
+                'name': 'settings.fixversion.jira'
+                'match': '(?i)^\\s*(fixversion)\\s*(:)\\s*(.*)'
+                'captures':
+                    '1':
+                        'name': 'settings.key.jira'
+                    '2':
+                        'name': 'settings.punctuation.separator.key-value.jira'
+                    '3':
+                        'name': 'settings.value.jira'
+            }
+            {
+                'name': 'settings.points.jira'
+                'match': '(?i)^\\s*(points)\\s*(:)\\s*(.*)'
                 'captures':
                     '1':
                         'name': 'settings.key.jira'
@@ -70,7 +81,7 @@ patterns: [
                         'name': 'settings.key.jira'
                     '2':
                         'name': 'settings.punctuation.separator.key-value.jira'
-                'end': '\\s*$'
+                'end': '$'
                 'patterns': [
                     {
                         'name': 'settings.value.jira'
