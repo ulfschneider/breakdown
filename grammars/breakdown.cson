@@ -105,7 +105,7 @@ patterns: [
         'patterns': [
             {
                 'name': 'issue.unresolved.jira'
-                'begin': '(?i)^\\s*([A-Z]{1,10}-\\d+)\\s*([^\\s].*?:)'
+                'begin': '(?i)^\\s*([A-Z]{1,10}-\\d+)\\s*([^\\s].*?):'
                 'beginCaptures':
                     '1':
                         'name': 'issue.key.jira'
@@ -123,7 +123,7 @@ patterns: [
             }
             {
                 'name': 'issue.resolved.jira'
-                'begin': '(?i)^\\s*(Resolved)\\s*([A-Z]{1,10}-\\d+)\\s*([^\\s].*?:)'
+                'begin': '(?i)^\\s*(Resolved)\\s*([A-Z]{1,10}-\\d+)\\s*([^\\s].*?):'
                 'beginCaptures':
                     '1':
                         'name': 'issue.resolved.jira'
