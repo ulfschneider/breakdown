@@ -108,12 +108,11 @@ patterns: [
                 'begin': '(?i)^\\s*([A-Z]{1,10}-\\d+)\\s*([^\\s].*?:)'
                 'beginCaptures':
                     '1':
-                        'name': 'unresolved.issue.key.jira'
+                        'name': 'issue.key.jira'
                     '2':
-                        'name': 'unresolved.issuetype-and-state.jira'
+                        'name': 'issue.type-and-state.jira'
                 'end': '$'
                 'patterns': [
-
                     {
                     'include': '#parentkey'
                     }
@@ -121,7 +120,26 @@ patterns: [
                     'include': '#summary'
                     }
                 ]
-
+            }
+            {
+                'name': 'issue.resolved.jira'
+                'begin': '(?i)^\\s*(Resolved)\\s*([A-Z]{1,10}-\\d+)\\s*([^\\s].*?:)'
+                'beginCaptures':
+                    '1':
+                        'name': 'issue.resolved.jira'
+                    '2':
+                        'name': 'issue.key.jira'
+                    '3':
+                        'name': 'issue.type-and-state.jira'
+                'end': '$'
+                'patterns': [
+                    {
+                    'include': '#parentkey'
+                    }
+                    {
+                    'include': '#summary'
+                    }
+                ]
             }
         ]
     }

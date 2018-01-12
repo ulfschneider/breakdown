@@ -75,11 +75,14 @@ atom-text-editor {
         .syntax--issue.syntax--key,
         .syntax--issue.syntax--parent.syntax--key,
         .syntax--issue.syntax--resolved,
-        .syntax--issue.syntax--summary,
-        .syntax--issue.syntax--type.syntax--epic,
-        .syntax--issue.syntax--type.syntax--story,
-        .syntax--issue.syntax--type.syntax--sub-task {
+        .syntax--issue.syntax--summary {
             color: darken(@text-color-success, 30%);
+        }
+
+        .syntax--issue.syntax--status {
+            .syntax--issue.syntax--field.syntax--value {
+                color: @text-color-success;
+            }
         }
     }
 
@@ -92,9 +95,9 @@ atom-text-editor {
     }
 
     .syntax--issue.syntax--key,
+    .syntax--issue.syntax--parent.syntax--key,
     .syntax--jira-url .syntax--value,
-    .syntax--project .syntax--value,
-    .syntax--unresolved.syntax--issue.syntax--key .syntax--issue.syntax--parent.syntax--key {
+    .syntax--project .syntax--value {
         color: @text-color-warning;
 
         &:hover {
