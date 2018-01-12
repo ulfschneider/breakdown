@@ -105,7 +105,7 @@ patterns: [
         'patterns': [
             {
                 'name': 'issue.unresolved.jira'
-                'begin': '(?i)^\\s*([A-Z]{1,10}-\\d+)\\s*([^\\s].*:)'
+                'begin': '(?i)^\\s*([A-Z]{1,10}-\\d+)\\s*([^\\s].*?:)'
                 'beginCaptures':
                     '1':
                         'name': 'unresolved.issue.key.jira'
