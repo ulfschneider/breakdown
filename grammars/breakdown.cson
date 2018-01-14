@@ -13,7 +13,7 @@ patterns: [
         'beginCaptures':
             '1':
                 'name': 'settings.begin.jira'
-        'end': '^\\s*---\\s*$|^\\s*$'
+        'end': '^\\s*---\\s*$'
         'endCaptures':
             '0':
                 'name': 'settings.end.jira'
@@ -142,6 +142,10 @@ patterns: [
                 ]
             }
         ]
+    }
+    {
+        'name': 'editable-content.jira'
+        'match': '(?i)^\\s*(below[\\s]+this[\\s]+line.*|)$' 
     }
     {
         'name': 'issue.no-parent-in-selection.jira'
