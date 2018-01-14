@@ -26,13 +26,13 @@
 
 atom-text-editor {
     .line {
-        color: @text-color-subtle;
+        color: @ui-site-color-4;
     }
 
     .syntax--jira {}
 
     .syntax--settings {
-        color: @text-color-subtle;
+        color: @ui-site-color-4;
 
         .syntax--begin,
         .syntax--end,
@@ -56,7 +56,7 @@ atom-text-editor {
 
     .syntax--issue.syntax--field.syntax--identifier,
     .syntax--issue.syntax--summary {
-        color: @text-color;
+        color: darken(@text-color-highlight, 15%);
     }
 
     .syntax--issue.syntax--empty-parent,
