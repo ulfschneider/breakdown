@@ -40,6 +40,10 @@ atom-text-editor {
         }
     }
 
+    .syntax--statistics {
+        color: @text-color-success;
+    }
+
     .syntax--fields.syntax--begin,
     .syntax--fields.syntax--end,
     .syntax--issue.syntax--field.syntax--value,
@@ -47,8 +51,8 @@ atom-text-editor {
         color: @text-color-success;
     }
 
-    .syntax--statistics {
-        color: @text-color-success;
+    .syntax--editable-content {
+        color: @text-color-warning;
     }
 
     .syntax--issue.syntax--field.syntax--identifier,
@@ -70,15 +74,12 @@ atom-text-editor {
         .syntax--punctuation {
             color: darken(@text-color-success, 30%);
         }
-    }
 
-    .syntax--issue.syntax--empty-parent,
-    .syntax--issue.syntax--field.syntax--value,
-    .syntax--issue.syntax--no-parent-in-selection,
-    .syntax--issue.syntax--type.syntax--epic,
-    .syntax--issue.syntax--type.syntax--story,
-    .syntax--issue.syntax--type.syntax--sub-task {
-        color: @text-color-success;
+        .syntax--issue.syntax--status {
+            .syntax--issue.syntax--field.syntax--value {
+                color: @text-color-success;
+            }
+        }
     }
 
     .syntax--issue.syntax--delete {
@@ -89,8 +90,13 @@ atom-text-editor {
         color: @text-color-error;
     }
 
-    .syntax--editable-content {
-        color: @text-color-warning;
+    .syntax--issue.syntax--empty-parent,
+    .syntax--issue.syntax--field.syntax--value,
+    .syntax--issue.syntax--no-parent-in-selection,
+    .syntax--issue.syntax--type.syntax--epic,
+    .syntax--issue.syntax--type.syntax--story,
+    .syntax--issue.syntax--type.syntax--sub-task {
+        color: @text-color-success;
     }
 
     .syntax--issue.syntax--key,
