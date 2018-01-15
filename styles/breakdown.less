@@ -25,15 +25,11 @@
 }
 
 atom-text-editor {
-    .line {
+    .syntax--jira {
         color: @ui-site-color-4;
     }
 
-    .syntax--jira {}
-
     .syntax--settings {
-        color: @ui-site-color-4;
-
         .syntax--begin,
         .syntax--end,
         .syntax--key,
@@ -46,7 +42,8 @@ atom-text-editor {
 
     .syntax--fields.syntax--begin,
     .syntax--fields.syntax--end,
-    .syntax--issue.syntax--field.syntax--value {
+    .syntax--issue.syntax--field.syntax--value,
+    .syntax--issue.syntax--type-and-state {
         color: @text-color-success;
     }
 
@@ -55,16 +52,10 @@ atom-text-editor {
     }
 
     .syntax--issue.syntax--field.syntax--identifier,
-    .syntax--issue.syntax--summary {
+    .syntax--issue.syntax--summary,
+    .syntax--issue.syntax--unresolved,
+    .syntax--punctuation {
         color: darken(@text-color-highlight, 15%);
-    }
-
-    .syntax--issue.syntax--empty-parent,
-    .syntax--issue.syntax--no-parent-in-selection,
-    .syntax--issue.syntax--type.syntax--epic,
-    .syntax--issue.syntax--type.syntax--story,
-    .syntax--issue.syntax--type.syntax--sub-task {
-        color: @text-color-success;
     }
 
     .syntax--issue.syntax--resolved {
@@ -75,15 +66,19 @@ atom-text-editor {
         .syntax--issue.syntax--key,
         .syntax--issue.syntax--parent.syntax--key,
         .syntax--issue.syntax--resolved,
-        .syntax--issue.syntax--summary {
+        .syntax--issue.syntax--summary,
+        .syntax--punctuation {
             color: darken(@text-color-success, 30%);
         }
+    }
 
-        .syntax--issue.syntax--status {
-            .syntax--issue.syntax--field.syntax--value {
-                color: @text-color-success;
-            }
-        }
+    .syntax--issue.syntax--empty-parent,
+    .syntax--issue.syntax--field.syntax--value,
+    .syntax--issue.syntax--no-parent-in-selection,
+    .syntax--issue.syntax--type.syntax--epic,
+    .syntax--issue.syntax--type.syntax--story,
+    .syntax--issue.syntax--type.syntax--sub-task {
+        color: @text-color-success;
     }
 
     .syntax--issue.syntax--delete {

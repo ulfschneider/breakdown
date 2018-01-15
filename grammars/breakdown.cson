@@ -105,12 +105,14 @@ patterns: [
         'patterns': [
             {
                 'name': 'issue.unresolved.jira'
-                'begin': '(?i)^\\s*([A-Z]{1,10}-\\d+)\\s*([^\\s].*?):'
+                'begin': '(?i)^\\s*([A-Z]{1,10}-\\d+)\\s*([^\\s].*?)(:)'
                 'beginCaptures':
                     '1':
                         'name': 'issue.key.jira'
                     '2':
                         'name': 'issue.type-and-state.jira'
+                    '3':
+                        'name': 'punctuation.separator.jira'
                 'end': '$'
                 'patterns': [
                     {
@@ -123,7 +125,7 @@ patterns: [
             }
             {
                 'name': 'issue.resolved.jira'
-                'begin': '(?i)^\\s*(Resolved)\\s*([A-Z]{1,10}-\\d+)\\s*([^\\s].*?):'
+                'begin': '(?i)^\\s*(Resolved)\\s*([A-Z]{1,10}-\\d+)\\s*([^\\s].*?)(:)'
                 'beginCaptures':
                     '1':
                         'name': 'issue.resolved.jira'
@@ -131,6 +133,9 @@ patterns: [
                         'name': 'issue.key.jira'
                     '3':
                         'name': 'issue.type-and-state.jira'
+                    '4':
+                        'name': 'punctuation.separator.jira'
+
                 'end': '$'
                 'patterns': [
                     {
@@ -145,7 +150,7 @@ patterns: [
     }
     {
         'name': 'editable-content.jira'
-        'match': '(?i)^\\s*(below[\\s]+this[\\s]+line.*|)$' 
+        'match': '(?i)^\\s*(below[\\s]+this[\\s]+line.*|)$'
     }
     {
         'name': 'issue.no-parent-in-selection.jira'
