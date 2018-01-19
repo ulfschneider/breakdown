@@ -366,7 +366,7 @@ patterns: [
         'patterns': [
             {
                 'name': 'issue.status.jira'
-                'match': '(?i)(s:\\s*)(.+?(?=\\s*+a:|\\s*+p:|\\s*+v:|\\s*+c:|\\s*+\\)))(?-i)'
+                'match': '(?i)(s:\\s*)(.+?)(?=a:|p:|v:|c:|\\))(?-i)'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -375,7 +375,7 @@ patterns: [
             }
             {
                 'name': 'issue.assignee.jira'
-                'match': '(?i)(a:\\s*)(.+?(?=\\s*+s:|\\s*+p:|\\s*+v:|\\s*+c:|\\s*+\\)))(?-i)'
+                'match': '(?i)(a:\\s*)(.+?)(?=s:|p:|v:|c:|\\))(?-i)'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -384,7 +384,7 @@ patterns: [
             }
             {
                 'name': 'issue.points.jira'
-                'match': '(?i)(p:\\s*)(.+?(?=\\s*+s:|\\s*+a:|\\s*+v:|\\s*+c:|\\s*+\\)))(?-i)'
+                'match': '(?i)(p:\\s*)(.+?)(?=s:|a:|v:|c:|\\))(?-i)'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -393,7 +393,7 @@ patterns: [
             }
             {
                 'name': 'issue.fixversion.jira'
-                'match': '(?i)(v:\\s*)(.+?(?=\\s*+s:|\\s*+a:|\\s*+p:|\\s*+c:|\\s*+\\)))(?-i)'
+                'match': '(?i)(v:\\s*)(.+?)(?=s:|a:|p:|c:|\\))(?-i)'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -402,7 +402,7 @@ patterns: [
             }
             {
                 'name': 'issue.components.jira'
-                'match': '(?i)(c:\\s*)(.+?(?=\\s*+s:|\\s*+a:|\\s*+p:|\\s*+v:|\\s*+\\)))(?-i)'
+                'match': '(?i)(c:\\s*)(.+?)(?=s:|a:|p:|v:|\\))(?-i)'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
