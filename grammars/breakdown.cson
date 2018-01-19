@@ -295,9 +295,6 @@ patterns: [
                 'include': '#fields'
             }
             {
-                'include': '#component'
-            }
-            {
                 'include': '#summary'
             }
         ]
@@ -315,9 +312,6 @@ patterns: [
             }
             {
                 'include': '#fields'
-            }
-            {
-                'include': '#component'
             }
             {
                 'include': '#parentkey'
@@ -343,9 +337,6 @@ patterns: [
             }
             {
                 'include': '#parentkey'
-            }
-            {
-                'include': '#component'
             }
             {
                 'include': '#summary'
@@ -411,11 +402,7 @@ patterns: [
             }
         ]
     }
-    'component': {
-        'name': 'issue.component.jira'
-        'match': '::.*(?=((\\^[A-Z]{1,10}-\\d+)|(::)))'
-    }
     'summary': {
         'name': 'issue.summary.jira'
-        'match': '[^\\s].*?(?=((\\^[A-Z]{1,10}-\\d+)|(::)))|[^\\s].*?(?!((\\^[A-Z]{1,10}-\\d+)|(::)))'
+        'match': '.*(?=\\^[A-Z]{1,10}-\\d+)|.*(?!\\^[A-Z]{1,10}-\\d+)'
     }
