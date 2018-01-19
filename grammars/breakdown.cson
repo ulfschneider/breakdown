@@ -150,7 +150,7 @@ patterns: [
     }
     {
         'name': 'editable-content.jira'
-        'match': '(?i)^\\s*(below[\\s]+this[\\s]+line.*|)$'
+        'match': '(?i)^\\s*(below[\\s]+this[\\s]+line.*)$'
     }
     {
         'name': 'issue.no-parent-in-selection.jira'
