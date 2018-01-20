@@ -53,7 +53,7 @@ In the Packages menu, select **Breakdown → Pull from JIRA** to get your select
 Optionally, you can define in your configuration section to visualize the epic link key for stories and the parent issue key for sub-tasks.
 
 ```
-fields: parentkey
+options: parentkey
 ```
 
 
@@ -86,24 +86,27 @@ Epic This will become a new epic
     Sub This will become a new sub-task inside of a new story inside of a new epic
 ```
 
-For any issue, the following JIRA fields can be modified: *status, assignee, story points, fixversion* and *summary.* For epics and stories even changing the *issuetype* is allowed. A full-fledged issue will be displayed like:
+For any issue, the following JIRA fields can be modified: *status, assignee, story points, fixversion, components* and *summary.* For epics and stories even changing the *issuetype* is allowed. A full-fledged issue will be displayed like:
 
 ```
-Story REST-32 ( s:In Progress a:admin p:13 v:Version 3.0 ) As a developer, I want to have the story status highlighted
+Story REST-32 As a developer, I want to have the story status highlighted (s:In Progress a:admin p:13 v:Version 3.0 c:Frontend)
 ```
 
 An issue will start with the issuetype, which can be an *epic,* a *story* or a *sub-task*. It´s allowed to change epics into stories and stories into epics.
 
 Issues which are already available in JIRA will have the JIRA issue key.
 
-The issue key is followed by a paranthesis section, containing:
+The next part of the issue is the *summary*, which is free text.
+
+The summary is followed by a paranthesis section, containing:
 
 * ```s:<status>``` to indicate the issue status
 * ```a:<assignee>``` to indicate the JIRA user who is assigned to the issue
 * ```p:<story points>``` to indicate the story points for the issue, this is only valid for epics and stories and must be an integer number
 * ```v:<fixversion>``` to indicate the fixversion for the issue
+* ```c:<component>``` to indicate the component for the issue
 
-The last part of the issue is the *summary*, which is free text.
+
 
 ## Ranking 
 
@@ -111,10 +114,10 @@ Atom has a nice function to move entire lines up and down with <kbd>CTRL-↑</kb
 
 Breakdown for Atom leverages this function, as it allows you to change your ranking in an quick and easy manner by still keeping a good overview of your entire breakdown structure. 
 
-If your query is not **SORTED BY Rank ASC**, you will **mess up** the ranking of your project when you apply the ranking inside of Atom and push the changes back to JIRA. For this reason ranking is a guarded feature in Breakdown for Atom - you have to activate it in your configuration section by adding the ```rank``` entry to your ```fields```, like   
+If your query is not **SORTED BY Rank ASC**, you will **mess up** the ranking of your project when you apply the ranking inside of Atom and push the changes back to JIRA. For this reason ranking is a guarded feature in Breakdown for Atom - you have to activate it in your configuration section by adding the ```rank``` entry to your ```options```, like   
 
 ```
-fields: rank
+options: rank
 ```
 
 To change the rank for a story with sub-tasks, select the story line and all sub-tasks below, then apply the same command to move all selected lines at once.
@@ -153,6 +156,12 @@ For the creation of epics and stories from within Atom, you can optionally defin
 ```
 fixversion: <your default fixversion>
 points: <the default amount of points>
+```
+
+If you want to make sure to not accidently push back to JIRA, activate ```nopush``` in your ```options``` section, like: 
+
+```
+options: nopush
 ```
 
 
