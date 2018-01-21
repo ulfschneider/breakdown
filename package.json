@@ -1,7 +1,7 @@
 {
   "name": "breakdown",
   "main": "./lib/breakdown",
-  "version": "0.34.2",
+  "version": "0.35.0",
   "description": "Display and manipulate a breakdown structure of your JIRA Scrum project - even offline and only eventually connected to your JIRA system",
   "keywords": [
     "agile",
