@@ -366,7 +366,7 @@ patterns: [
         'patterns': [
             {
                 'name': 'issue.status.jira'
-                'match': '(?i)(s:\\s*)(.+?)(?=a:|p:|v:|c:|\\))'
+                'match': '(?i)\\b(s:\\s*)(.+?)(?=\\ba:|\\bp:|\\bv:|\\bc:|\\))'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -375,7 +375,7 @@ patterns: [
             }
             {
                 'name': 'issue.assignee.jira'
-                'match': '(?i)(a:\\s*)(.+?)(?=s:|p:|v:|c:|\\))'
+                'match': '(?i)\\b(a:\\s*)(.+?)(?=\\bs:|\\bp:|\\bv:|\\bc:|\\))'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -384,7 +384,7 @@ patterns: [
             }
             {
                 'name': 'issue.points.jira'
-                'match': '(?i)(p:\\s*)(.+?)(?=s:|a:|v:|c:|\\))'
+                'match': '(?i)\\b(p:\\s*)(.+?)(?=\\bs:|\\ba:|\\bv:|\\bc:|\\))'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -393,7 +393,7 @@ patterns: [
             }
             {
                 'name': 'issue.fixversion.jira'
-                'match': '(?i)(v:\\s*)(.+?)(?=s:|a:|p:|c:|\\))'
+                'match': '(?i)\\b(v:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bc:|\\))'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -402,7 +402,7 @@ patterns: [
             }
             {
                 'name': 'issue.components.jira'
-                'match': '(?i)(c:\\s*)(.+?)(?=s:|a:|p:|v:|\\))'
+                'match': '(?i)\\b(c:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bv:|\\))'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -413,5 +413,5 @@ patterns: [
     }
     'summary': {
         'name': 'issue.summary.jira'
-        'match': '[^\\s].*(?=\\((.*(s|a|p|v|c|):.*)\\))|[^\\s].*(?=\\((.*(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?=\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\((.*(s|a|p|v|c|):.*)\\))|[^\\s].*(?!\\((.*(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\^[A-Za-z]{1,10}-\\d+)'
+        'match': '[^\\s].*(?=\\((.*\\b(s|a|p|v|c|):.*)\\))|[^\\s].*(?=\\((.*\\b(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?=\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\((.*\\b(s|a|p|v|c|):.*)\\))|[^\\s].*(?!\\((.*\\b(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\^[A-Za-z]{1,10}-\\d+)'
     }
