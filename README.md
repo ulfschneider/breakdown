@@ -158,12 +158,27 @@ fixversion: <your default fixversion>
 points: <the default amount of points>
 ```
 
+## Guarded pushing
+
 If you want to make sure to not accidently push back to JIRA, activate ```nopush``` in your ```options``` section, like: 
 
 ```
 options: nopush
 ```
 
+If you only allow specific push operations, instead of forbidding the entire pushing, you can combine the following options
+
+* ```pushcreate``` will only allow the creation of new issues but not the modification or deletion.
+* ```pushupdate``` will only allow updating of already existing issues, but not creation or deletion.
+* ```pushdelete''' will only allow deleting issues, but not creation or modification.
+
+For example, an option setting of
+
+```
+options: pushcreate pushupdate
+```
+
+will allow to create and update issues, but not to delete issues.
 
 ## Package configuration
 
