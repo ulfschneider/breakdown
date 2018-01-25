@@ -168,15 +168,15 @@ options: nopush
 
 If you only allow specific push operations, instead of forbidding the entire pushing, you can combine the following options
 
-* ```pushcreate``` will only allow the creation of new issues but not the modification or deletion.
-* ```pushupdate``` will only allow updating of already existing issues, but not creation or deletion.
-* ```pushupdateself``` will only allow updating of already existing issues where the current JIRA user is also assigned to the issue. In more simple terms: update only your own issues.
-* ```pushdelete``` will only allow deleting issues, but not creation or modification.
+* ```create``` will only allow the creation of new issues but not the modification or deletion of issues.
+* ```update``` will only allow updating of already existing issues, but not creation or deletions of issues.
+* ```updateself``` will only allow updating of already existing issues where the current JIRA user is also assigned to the issue. In more simple terms: update only your own issues.
+* ```delete``` will only allow deleting issues, but not creation or modification of issues.
 
 For example, an option setting of
 
 ```
-options: pushcreate pushupdateself
+options: create updateself
 ```
 
 will allow to create new issues and update your own issues, but not to delete issues.
