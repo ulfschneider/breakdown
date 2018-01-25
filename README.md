@@ -176,10 +176,10 @@ If you only allow specific push operations, instead of forbidding the entire pus
 For example, an option setting of
 
 ```
-options: pushcreate pushupdate
+options: pushcreate pushupdatesekf
 ```
 
-will allow to create and update issues, but not to delete issues.
+will allow to create new issues and update your own issues, but not to delete issues.
 
 ## Package configuration
 
