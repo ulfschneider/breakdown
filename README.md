@@ -170,7 +170,7 @@ If you only allow specific push operations, instead of forbidding the entire pus
 
 * ```pushcreate``` will only allow the creation of new issues but not the modification or deletion.
 * ```pushupdate``` will only allow updating of already existing issues, but not creation or deletion.
-* ```pushupdateself```will only allow updating of already existing issues where the current JIRA user is also assigned to the issue. In more simple terms: update only your own issues.
+* ```pushupdateself``` will only allow updating of already existing issues where the current JIRA user is also assigned to the issue. In more simple terms: update only your own issues.
 * ```pushdelete``` will only allow deleting issues, but not creation or modification.
 
 For example, an option setting of
