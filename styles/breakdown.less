@@ -51,27 +51,47 @@ atom-text-editor {
         color: @text-color-success;
     }
 
+    .syntax--timetracking {
+        color: @text-color-success;
+
+        .syntax--punctuation {
+            color: @text-color-success;
+        }
+    }
+
+    .syntax--timetracking.syntax--spent {
+        color: darken(@text-color-highlight, 15%);
+    }
+
+    .syntax--timetracking.syntax--remaining {
+        color: @text-color-warning;
+    }
+
     .syntax--editable-content {
         color: @text-color-warning;
     }
 
     .syntax--issue.syntax--field.syntax--identifier,
     .syntax--issue.syntax--summary,
-    .syntax--issue.syntax--unresolved,
-    .syntax--punctuation {
+    .syntax--issue.syntax--unresolved {
         color: darken(@text-color-highlight, 15%);
+
+        .syntax--punctuation {
+            color: @text-color-success;
+        }
     }
 
     .syntax--issue.syntax--resolved {
         .syntax--fields.syntax--begin,
         .syntax--fields.syntax--end,
-        .syntax--issue.syntax--component .syntax--punctuation,
+        .syntax--issue.syntax--component,
         .syntax--issue.syntax--field.syntax--identifier,
         .syntax--issue.syntax--field.syntax--value,
         .syntax--issue.syntax--key,
         .syntax--issue.syntax--parent.syntax--key,
         .syntax--issue.syntax--resolved,
-        .syntax--issue.syntax--summary {
+        .syntax--issue.syntax--summary,
+        .syntax--punctuation {
             color: darken(@text-color-success, 30%);
         }
 
