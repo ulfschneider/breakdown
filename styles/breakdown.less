@@ -29,6 +29,10 @@ atom-text-editor {
         color: @ui-site-color-4;
     }
 
+    .syntax--punctuation {
+        color: @text-color-success;
+    }
+
     .syntax--settings {
         .syntax--begin,
         .syntax--end,
@@ -54,17 +58,13 @@ atom-text-editor {
     .syntax--timetracking {
         color: @text-color-success;
 
-        .syntax--punctuation {
-            color: @text-color-success;
+        .syntax--spent {
+            color: darken(@text-color-highlight, 15%);
         }
-    }
 
-    .syntax--timetracking.syntax--spent {
-        color: darken(@text-color-highlight, 15%);
-    }
-
-    .syntax--timetracking.syntax--remaining {
-        color: @text-color-warning;
+        .syntax--remaining {
+            color: @text-color-warning;
+        }
     }
 
     .syntax--editable-content {
@@ -75,10 +75,6 @@ atom-text-editor {
     .syntax--issue.syntax--summary,
     .syntax--issue.syntax--unresolved {
         color: darken(@text-color-highlight, 15%);
-
-        .syntax--punctuation {
-            color: @text-color-success;
-        }
     }
 
     .syntax--issue.syntax--resolved {
@@ -91,8 +87,13 @@ atom-text-editor {
         .syntax--issue.syntax--parent.syntax--key,
         .syntax--issue.syntax--resolved,
         .syntax--issue.syntax--summary,
-        .syntax--punctuation {
+        .syntax--punctuation,
+        .syntax--timetracking {
             color: darken(@text-color-success, 30%);
+
+            .syntax--remaining {
+                color: @text-color-warning;
+            }
         }
 
         .syntax--issue.syntax--status {
