@@ -104,6 +104,16 @@ patterns: [
                 'name': 'statistics.end.jira'
         'patterns': [
             {
+                'name': 'issuecount.unresolved.jira'
+                'begin': '(?i)^\\s*\\d+\\s*issues\\s*unresolved'
+                'patterns': [
+                    {
+                    'include': '#timetracking'
+                    }
+                ]
+                'end': '\\s*$'
+            }
+            {
                 'name': 'issue.unresolved.jira'
                 'begin': '(?i)^\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
                 'beginCaptures':
@@ -129,6 +139,16 @@ patterns: [
                 ]
             }
             {
+                'name': 'issuecount.resolved.jira'
+                'begin': '(?i)^\\s*\\d+\\s*issues\\s*resolved'
+                'patterns': [
+                    {
+                        'include': '#timetracking'
+                    }
+                ]
+                'end': '\\s*$'
+            }
+            {
                 'name': 'issue.resolved.jira'
                 'begin': '(?i)^\\s*(Resolved)\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
                 'beginCaptures':
@@ -140,22 +160,25 @@ patterns: [
                         'name': 'issue.type-and-state.jira'
                         'patterns': [
                             {
-                            'include': '#timetracking'
+                                'include': '#timetracking'
                             }
                         ]
                     '4':
                         'name': 'punctuation.separator.jira'
-
                 'end': '$'
                 'patterns': [
                     {
-                    'include': '#parentkey'
+                        'include': '#parentkey'
                     }
                     {
-                    'include': '#summary'
+                        'include': '#summary'
                     }
                 ]
             }
+            {
+            'include': '#timetracking'
+            }
+
         ]
     }
     {
@@ -427,12 +450,12 @@ patterns: [
     }
     'timetracking': {
         'name': 'timetracking.jira'
-        'match': '(?i)\\[(.*?)\\s*(\\|)\\s*(.*?)\\]'
+        'match': '(?i)\\[(.*?logged)\\s*(\\|)\\s*(.*?remain)\\]'
         'captures':
             '1':
                 'name': 'timetracking.spent.jira'
             '2':
-                'name': 'punctuation.separator.jira' 
+                'name': 'punctuation.separator.jira'
             '3':
                 'name': 'timetracking.remaining.jira'
     }
