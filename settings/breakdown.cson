@@ -1,7 +1,7 @@
-'.breakdown.jira':
+'.breakdown':
     'editor':
         'showIndentGuide': true
         'softWrap': true
         'softWrapAtPreferredLineLength': true
-        'softWrapHangingIndent': 4 
+        'softWrapHangingIndent': 4
         'tabLength': 4
