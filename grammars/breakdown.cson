@@ -85,7 +85,7 @@ patterns: [
                 'patterns': [
                     {
                         'name': 'settings.value.jira'
-                        'match': '(?i)\\b(parentkey)\\b|\\b(rank)\\b|\\b(nopush)\\b'
+                        'match': '(?i)\\b(parentkey)\\b|\\b(rank)\\b|\\b(nopush)\\b|\\b(create)\\b|\\b(update)\\b|\\b(updateself)\\b|\\b(delete)\\b'
                     }
                 ]
 
@@ -104,13 +104,28 @@ patterns: [
                 'name': 'statistics.end.jira'
         'patterns': [
             {
+                'name': 'issuecount.unresolved.jira'
+                'begin': '(?i)^\\s*\\d+\\s*issues\\s*unresolved'
+                'patterns': [
+                    {
+                    'include': '#timetracking'
+                    }
+                ]
+                'end': '\\s*$'
+            }
+            {
                 'name': 'issue.unresolved.jira'
-                'begin': '(?i)^\\s*([A-Za-z]{1,10}-\\d+)\\s*([^\\s].*?)(:)'
+                'begin': '(?i)^\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
                 'beginCaptures':
                     '1':
                         'name': 'issue.key.jira'
                     '2':
                         'name': 'issue.type-and-state.jira'
+                        'patterns': [
+                            {
+                            'include': '#timetracking'
+                            }
+                        ]
                     '3':
                         'name': 'punctuation.separator.jira'
                 'end': '$'
@@ -124,8 +139,18 @@ patterns: [
                 ]
             }
             {
+                'name': 'issuecount.resolved.jira'
+                'begin': '(?i)^\\s*\\d+\\s*issues\\s*resolved'
+                'patterns': [
+                    {
+                        'include': '#timetracking'
+                    }
+                ]
+                'end': '\\s*$'
+            }
+            {
                 'name': 'issue.resolved.jira'
-                'begin': '(?i)^\\s*(Resolved)\\s*([A-Za-z]{1,10}-\\d+)\\s*([^\\s].*?)(:)'
+                'begin': '(?i)^\\s*(Resolved)\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
                 'beginCaptures':
                     '1':
                         'name': 'issue.resolved.jira'
@@ -133,19 +158,27 @@ patterns: [
                         'name': 'issue.key.jira'
                     '3':
                         'name': 'issue.type-and-state.jira'
+                        'patterns': [
+                            {
+                                'include': '#timetracking'
+                            }
+                        ]
                     '4':
                         'name': 'punctuation.separator.jira'
-
                 'end': '$'
                 'patterns': [
                     {
-                    'include': '#parentkey'
+                        'include': '#parentkey'
                     }
                     {
-                    'include': '#summary'
+                        'include': '#summary'
                     }
                 ]
             }
+            {
+            'include': '#timetracking'
+            }
+
         ]
     }
     {
@@ -366,7 +399,7 @@ patterns: [
         'patterns': [
             {
                 'name': 'issue.status.jira'
-                'match': '(?i)(s:\\s*)(.+?)(?=a:|p:|v:|c:|\\))'
+                'match': '(?i)\\b(s:\\s*)(.+?)(?=\\ba:|\\bp:|\\bv:|\\bc:|\\))'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -375,7 +408,7 @@ patterns: [
             }
             {
                 'name': 'issue.assignee.jira'
-                'match': '(?i)(a:\\s*)(.+?)(?=s:|p:|v:|c:|\\))'
+                'match': '(?i)\\b(a:\\s*)(.+?)(?=\\bs:|\\bp:|\\bv:|\\bc:|\\))'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -384,7 +417,7 @@ patterns: [
             }
             {
                 'name': 'issue.points.jira'
-                'match': '(?i)(p:\\s*)(.+?)(?=s:|a:|v:|c:|\\))'
+                'match': '(?i)\\b(p:\\s*)(.+?)(?=\\bs:|\\ba:|\\bv:|\\bc:|\\))'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -393,7 +426,7 @@ patterns: [
             }
             {
                 'name': 'issue.fixversion.jira'
-                'match': '(?i)(v:\\s*)(.+?)(?=s:|a:|p:|c:|\\))'
+                'match': '(?i)\\b(v:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bc:|\\))'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -402,7 +435,7 @@ patterns: [
             }
             {
                 'name': 'issue.components.jira'
-                'match': '(?i)(c:\\s*)(.+?)(?=s:|a:|p:|v:|\\))'
+                'match': '(?i)\\b(c:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bv:|\\))'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.jira'
@@ -413,5 +446,16 @@ patterns: [
     }
     'summary': {
         'name': 'issue.summary.jira'
-        'match': '[^\\s].*(?=\\((.*(s|a|p|v|c|):.*)\\))|[^\\s].*(?=\\((.*(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?=\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\((.*(s|a|p|v|c|):.*)\\))|[^\\s].*(?!\\((.*(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\^[A-Za-z]{1,10}-\\d+)'
+        'match': '[^\\s].*(?=\\((.*\\b(s|a|p|v|c|):.*)\\))|[^\\s].*(?=\\((.*\\b(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?=\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\((.*\\b(s|a|p|v|c|):.*)\\))|[^\\s].*(?!\\((.*\\b(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\^[A-Za-z]{1,10}-\\d+)'
+    }
+    'timetracking': {
+        'name': 'timetracking.jira'
+        'match': '(?i)\\[(.*?logged)\\s*(\\|)\\s*(.*?remain)\\]'
+        'captures':
+            '1':
+                'name': 'timetracking.spent.jira'
+            '2':
+                'name': 'punctuation.separator.jira'
+            '3':
+                'name': 'timetracking.remaining.jira'
     }

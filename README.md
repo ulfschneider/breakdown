@@ -158,12 +158,28 @@ fixversion: <your default fixversion>
 points: <the default amount of points>
 ```
 
+## Guarded pushing
+
 If you want to make sure to not accidently push back to JIRA, activate ```nopush``` in your ```options``` section, like: 
 
 ```
 options: nopush
 ```
 
+If you only allow specific push operations, instead of forbidding the entire pushing, you can combine the following options
+
+* ```create``` will only allow the creation of new issues but not the modification or deletion of issues.
+* ```update``` will only allow updating of already existing issues, but not creation or deletions of issues.
+* ```updateself``` will only allow updating of already existing issues where the current JIRA user is also assigned to the issue. In more simple terms: update only your own issues.
+* ```delete``` will only allow deleting issues, but not creation or modification of issues.
+
+For example, an option setting of
+
+```
+options: create updateself
+```
+
+will allow to create new issues and update your own issues, but not to delete issues.
 
 ## Package configuration
 
