@@ -106,6 +106,11 @@ The summary is followed by a paranthesis section, containing:
 * ```v:<fixversion>``` to indicate the fixversion for the issue
 * ```c:<component>``` to indicate the component for the issue
 
+You get autocompletion suggestions for all of the fields in the paranthesis section - except for the story points. Autocompletion will only work while you are connected to your JIRA server. In a situation where you are working offline, you should add the ```offline``` option to your configuration. This will avoid network failures in context of autocompletion.
+
+```
+options: offline
+```
 
 
 ## Ranking 
