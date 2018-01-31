@@ -85,7 +85,7 @@ patterns: [
                 'patterns': [
                     {
                         'name': 'settings.value.jira'
-                        'match': '(?i)\\b(parentkey)\\b|\\b(rank)\\b|\\b(nopush)\\b|\\b(create)\\b|\\b(update)\\b|\\b(updateself)\\b|\\b(delete)\\b'
+                        'match': '(?i)\\b(parentkey)\\b|\\b(rank)\\b|\\b(nopush)\\b|\\b(create)\\b|\\b(update)\\b|\\b(updateself)\\b|\\b(delete)\\b|\\b(offline)\\b'
                     }
                 ]
 
