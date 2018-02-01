@@ -7,8 +7,8 @@ Display and manipulate a breakdown structure of your JIRA Scrum project - even o
 ## Contents
 
 - [Installation](#installation)
--- [Atom GUI](#atom-gui)
--- [Command line](#command-line)
+	- [Atom GUI](#atom-gui)
+	- [Command line](#command-line)
 - [Issues and improvements](#issues-and-improvements)
 - [How to use](#how-to-use)
 - [A world of caution](#a-word-of-caution)
