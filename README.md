@@ -4,6 +4,26 @@ Display and manipulate a breakdown structure of your JIRA Scrum project - even o
 
 ![Breakdown Pull](/doc/breakdown-pull.gif)
 
+## Contents
+
+- [Installation](#installation)
+-- [Atom GUI](#atom-gui)
+-- [Command line](#command-line)
+- [Issues and improvements](#issues-and-improvements)
+- [How to use](#how-to-use)
+- [A world of caution](#a-word-of-caution)
+- [Pulling from JIRA](#pulling-from-jira)
+- [Working with the editor](#working-with-the-editor)
+- [Creating and modifying issues](#creating-and-modifying-issues)
+- [Ranking](#ranking)
+- [Changing parents](#changing-parents)
+- [Deleting issues](#deleting-issues)
+- [What is not possible from within Atom](#what-is-not-possible-from-within-atom)
+- [Pushing to JIRA](#pushing-to-jira)
+- [Guarded pushing](#guarded-pushing)
+- [Configuration reference](#configuration-reference)
+- [Package configuration](#package-configuration)
+
 ## Installation
 
 ### Atom GUI
@@ -100,11 +120,11 @@ The next part of the issue is the *summary*, which is free text.
 
 The summary is followed by a paranthesis section, containing:
 
-* ```s:<status>``` to indicate the issue status
-* ```a:<assignee>``` to indicate the JIRA user who is assigned to the issue
-* ```p:<story points>``` to indicate the story points for the issue, this is only valid for epics and stories and must be an integer number
-* ```v:<fixversion>``` to indicate the fixversion for the issue
-* ```c:<component>``` to indicate the component for the issue
+- ```s:<status>``` to indicate the issue status
+- ```a:<assignee>``` to indicate the JIRA user who is assigned to the issue
+- ```p:<story points>``` to indicate the story points for the issue, this is only valid for epics and stories and must be an integer number
+- ```v:<fixversion>``` to indicate the fixversion for the issue
+- ```c:<component>``` to indicate the component for the issue
 
 You get autocompletion suggestions for all of the fields in the paranthesis section - except for the story points. Autocompletion will only work while you are connected to your JIRA server. In a situation where you are working offline, you should add the ```offline``` option to your configuration. This will avoid network failures in context of autocompletion.
 
@@ -173,10 +193,10 @@ options: nopush
 
 If you only allow specific push operations, instead of forbidding the entire pushing, you can combine the following options
 
-* ```create``` will only allow the creation of new issues but not the modification or deletion of issues.
-* ```update``` will only allow updating of already existing issues, but not creation or deletions of issues.
-* ```updateself``` will only allow updating of already existing issues where the current JIRA user is also assigned to the issue. In more simple terms: update only your own issues.
-* ```delete``` will only allow deleting issues, but not creation or modification of issues.
+* ```create``` will only allow the creation of new issues when pushing to JIRA, but not the modification or deletion of issues.
+* ```update``` will only allow updating of already existing issues when pushing to JIRA, but not creation or deletions of issues.
+* ```updateself``` will only allow updating of already existing issues where the current JIRA user is also assigned to the issue, when pushing to JIRA. In more simple terms: update only your own issues.
+* ```delete``` will only allow deleting issues when pushing to JIRA, but not the creation or modification of issues.
 
 For example, an option setting of
 
@@ -186,13 +206,42 @@ options: create updateself
 
 will allow to create new issues and update your own issues, but not to delete issues.
 
+## Configuration reference
+
+Below is a configuration section with all possible configurations. Mandatory are only the settings for ```url```, ```project``` and ```query```.
+
+```
+breakdown
+url: <JIRA URL>
+project: <key of JIRA project you want to create new issues in>
+query: <any JIRA JQL query to select your download dataset>
+fixversion: <your default fixversion>
+points: <the default amount of points>
+options: create delete nopush offline parentkey rank update updateself 
+---
+```
+
+
+Options:
+
+- ```create``` will only allow the creation of new issues when pushing to JIRA, but not the modification or deletion of issues.
+- ```delete``` will only allow deleting issues when pushing to JIRA, but not creation or modification of issues.
+- ```nopush``` disable pushing to JIRA.
+- ```offline``` autocompletion will only work while you are connected to your JIRA server. In a situation where you are working offline, you should add the ```offline``` option to your configuration. This will avoid network failures in context of autocompletion.
+- ```parentkey``` visualize the epic link key for stories and the parent issue key for sub-tasks.
+- ```rank``` if your query is not **SORTED BY Rank ASC**, you will **mess up** the ranking of your project when you apply the ranking inside of Atom and push the changes back to JIRA. For this reason ranking is a guarded feature in Breakdown for Atom - you have to activate it in your configuration section by adding the ```rank``` option. 
+- ```update``` will only allow updating of already existing issues when pushing to JIRA, but not the creation or deletion of issues.
+- ```updateself``` will only allow updating of already existing issues where the current JIRA user is also assigned to the issue, when pushing to JIRA. In more simple terms: update only your own issues.
+
+
+
 ## Package configuration
 
 In addition to the configuration section of the ```.bkdn``` file, you can make some settings at the level of the breakdown package. Press <kbd>CMD-,</kbd> and navigate to the *packages* tab. Search for the *breakdown* package and click on *Settings.* You will find the following configuration options:
 
-* **JIRA URL**: This URL will be used in case you don´t provide a URL in the config section of your ```.bkdn``` file.
-* **Default Story Points**:The default amount of story points to assign to new created epics or stories.
-* **Fold all editor lines after a pull**: By default, all editor lines will be folded after pulling from JIRA.
+- **JIRA URL**: This URL will be used in case you don´t provide a URL in the config section of your ```.bkdn``` file.
+- **Default Story Points**:The default amount of story points to assign to new created epics or stories.
+- **Fold all editor lines after a pull**: By default, all editor lines will be folded after pulling from JIRA.
 
 
 
