@@ -201,11 +201,11 @@ patterns: [
         'match': '(?i)^\\s*(>>)?\\s*(empty[\\s]+parent.*|without[\\s]+parent.*)$'
         'captures':
             '1':
-                'name': 'active.sprint.jira' 
+                'name': 'active.sprint.jira'
     }
     {
         'name': 'issue.delete.epic.jira'
-        'begin': '(?i)^\\s*(del|delete)(>>)?\\s*(\\s*resolved\\s*|\\s*)(Epic)\\b'
+        'begin': '(?i)^\\s*(del|delete)\\s*(>>)?\\s*(\\s*resolved\\s*|\\s*)(Epic)\\b'
         'beginCaptures':
             '1':
                 'name': 'issue.delete.jira'
@@ -222,7 +222,7 @@ patterns: [
     }
     {
         'name': 'issue.delete.story.jira'
-        'begin': '(?i)^\\s*(del|delete)(>>)?\\s*(\\s*resolved\\s*|\\s*)(Story)\\b'
+        'begin': '(?i)^\\s*(del|delete)\\s*(>>)?\\s*(\\s*resolved\\s*|\\s*)(Story)\\b'
         'beginCaptures':
             '1':
                 'name': 'issue.delete.jira'
@@ -242,7 +242,7 @@ patterns: [
     }
     {
         'name': 'issue.delete.sub-task.jira'
-        'begin': '(?i)^\\s*(del|delete)(>>)?\\s*(\\s*resolved\\s*|\\s*)(Sub-Task|Subtask|Sub)\\s+'
+        'begin': '(?i)^\\s*(del|delete)\\s*(>>)?\\s*(\\s*resolved\\s*|\\s*)(Sub-Task|Subtask|Sub)\\s+'
         'beginCaptures':
             '1':
                 'name': 'issue.delete.jira'
