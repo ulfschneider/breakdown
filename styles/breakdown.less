@@ -48,7 +48,7 @@ atom-text-editor {
         color: @text-color-success;
 
         .syntax--issuecount {
-            color:@text-color-success;
+            color: @text-color-success;
         }
 
         .syntax--timetracking {
@@ -58,7 +58,6 @@ atom-text-editor {
                 color: @text-color-warning;
             }
         }
-
     }
 
     .syntax--fields.syntax--begin,
@@ -67,7 +66,6 @@ atom-text-editor {
     .syntax--issue.syntax--type-and-state {
         color: @text-color-success;
     }
-
 
     .syntax--editable-content {
         color: @text-color-warning;
@@ -135,5 +133,22 @@ atom-text-editor {
             text-decoration: underline;
             cursor: pointer;
         }
+    }
+}
+
+.blink {
+    animation: 1.5s linear infinite blink_effect;
+}
+@keyframes blink_effect {
+    0% {
+        visibility: visible;
+    }
+
+    50% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: hidden;
     }
 }
