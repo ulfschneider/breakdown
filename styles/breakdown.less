@@ -25,6 +25,27 @@
 }
 
 atom-text-editor {
+    // Controls the appearance of the unfolded icon in the gutter
+    .gutter .line-number .icon-right {
+        opacity: 1;
+        color: @text-color-highlight;
+
+        &:hover {
+            color: lighten(@text-color-highlight, 15%);
+        }
+
+        &::before {
+            content: "▼";
+        }
+    }
+    // Controls the appearance of the folded icon in the gutter
+    .gutter .line-number.folded .icon-right,
+    .gutter:hover .line-number.folded .icon-right {
+        &::before {
+            content: "►";
+        }
+    }
+
     .syntax--breakdown {
         color: @ui-site-color-4;
     }
@@ -68,8 +89,7 @@ atom-text-editor {
     }
 
     .syntax--active.syntax--sprint {
-        color: @app-background-color;
-        background: @text-color-warning;
+        color: @text-color-warning;
     }
 
     .syntax--editable-content {
