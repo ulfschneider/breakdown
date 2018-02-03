@@ -76,7 +76,7 @@ Optionally, you can define in your configuration section to visualize the epic l
 options: parentkey
 ```
 
-Any story that is contained in the current sprint will be prefixed by ```>>```. An epic that contains stories which are in the current sprint will also be prefixed with ```>>```
+Any story that is contained in the current sprint will be prefixed by ```⟳```. An epic that contains stories which are in the current sprint will also be prefixed with ```⟳```.
 
 
 ## Working with the editor

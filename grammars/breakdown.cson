@@ -115,7 +115,7 @@ patterns: [
             }
             {
                 'name': 'issue.unresolved.jira'
-                'begin': '(?i)^\\s*(>>)?\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
+                'begin': '(?i)^\\s*(⟳)?\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
                 'beginCaptures':
                     '1':
                         'name': 'active.sprint.jira'
@@ -152,7 +152,7 @@ patterns: [
             }
             {
                 'name': 'issue.resolved.jira'
-                'begin': '(?i)^\\s*(>>)?\\s*(Resolved)\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
+                'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
                 'beginCaptures':
                     '1':
                         'name': 'active.sprint.jira'
@@ -191,21 +191,21 @@ patterns: [
     }
     {
         'name': 'issue.no-parent-in-selection.jira'
-        'match': '(?i)^\\s*(>>)?\\s*(no[\\s]+parent.*|parent[\\s]+not.*|parent[\\s]+is[\\s]+not.*)$'
+        'match': '(?i)^\\s*(⟳)?\\s*(no[\\s]+parent.*|parent[\\s]+not.*|parent[\\s]+is[\\s]+not.*)$'
         'captures':
             '1':
                 'name': 'active.sprint.jira'
     }
     {
         'name': 'issue.empty-parent.jira'
-        'match': '(?i)^\\s*(>>)?\\s*(empty[\\s]+parent.*|without[\\s]+parent.*)$'
+        'match': '(?i)^\\s*(⟳)?\\s*(empty[\\s]+parent.*|without[\\s]+parent.*)$'
         'captures':
             '1':
                 'name': 'active.sprint.jira'
     }
     {
         'name': 'issue.delete.epic.jira'
-        'begin': '(?i)^\\s*(del|delete)\\s*(>>)?\\s*(\\s*resolved\\s*|\\s*)(Epic)\\b'
+        'begin': '(?i)^\\s*(del|delete)\\s*(⟳)?\\s*(\\s*resolved\\s*|\\s*)(Epic)\\b'
         'beginCaptures':
             '1':
                 'name': 'issue.delete.jira'
@@ -222,7 +222,7 @@ patterns: [
     }
     {
         'name': 'issue.delete.story.jira'
-        'begin': '(?i)^\\s*(del|delete)\\s*(>>)?\\s*(\\s*resolved\\s*|\\s*)(Story)\\b'
+        'begin': '(?i)^\\s*(del|delete)\\s*(⟳)?\\s*(\\s*resolved\\s*|\\s*)(Story)\\b'
         'beginCaptures':
             '1':
                 'name': 'issue.delete.jira'
@@ -242,7 +242,7 @@ patterns: [
     }
     {
         'name': 'issue.delete.sub-task.jira'
-        'begin': '(?i)^\\s*(del|delete)\\s*(>>)?\\s*(\\s*resolved\\s*|\\s*)(Sub-Task|Subtask|Sub)\\s+'
+        'begin': '(?i)^\\s*(del|delete)\\s*(⟳)?\\s*(\\s*resolved\\s*|\\s*)(Sub-Task|Subtask|Sub)\\s+'
         'beginCaptures':
             '1':
                 'name': 'issue.delete.jira'
@@ -262,7 +262,7 @@ patterns: [
     }
     {
         'name': 'issue.resolved.epic.jira'
-        'begin': '(?i)^\\s*(>>)?\\s*(Resolved)\\s+(Epic)\\b'
+        'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s+(Epic)\\b'
         'beginCaptures':
             '1':
                 'name': 'active.sprint.jira'
@@ -285,7 +285,7 @@ patterns: [
     }
     {
         'name': 'issue.resolved.story.jira'
-        'begin': '(?i)^\\s*(>>)?\\s*(Resolved)\\s+(Story)\\b'
+        'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s+(Story)\\b'
         'beginCaptures':
             '1':
                 'name': 'active.sprint.jira'
@@ -311,7 +311,7 @@ patterns: [
     }
     {
         'name': 'issue.resolved.sub-task.jira'
-        'begin': '(?i)^\\s*(>>)?\\s*(Resolved)\\s+(Sub-Task|Subtask|Sub)\\s+'
+        'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s+(Sub-Task|Subtask|Sub)\\s+'
         'beginCaptures':
             '1':
                 'name': 'active.sprint.jira'
@@ -337,7 +337,7 @@ patterns: [
     }
     {
         'name': 'issue.epic.jira'
-        'begin': '(?i)^\\s*(>>)?\\s*(Epic)\\b'
+        'begin': '(?i)^\\s*(⟳)?\\s*(Epic)\\b'
         'beginCaptures':
             '1':
                 'name': 'active.sprint.jira'
@@ -358,7 +358,7 @@ patterns: [
     }
     {
         'name': 'issue.story.jira'
-        'begin': '(?i)^\\s*(>>)?\\s*(Story)\\b'
+        'begin': '(?i)^\\s*(⟳)?\\s*(Story)\\b'
         'beginCaptures':
             '1':
                 'name': 'active.sprint.jira'
@@ -382,7 +382,7 @@ patterns: [
     }
     {
         'name': 'issue.sub-task.jira'
-        'begin': '(?i)^\\s*(>>)?\\s*(Sub-Task|Subtask|Sub)\\s+'
+        'begin': '(?i)^\\s*(⟳)?\\s*(Sub-Task|Subtask|Sub)\\s+'
         'beginCaptures':
             '1':
                 'name': 'active.sprint.jira'
