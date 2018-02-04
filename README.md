@@ -170,9 +170,9 @@ DEL Epic REST-26 ( s:In Progress p:13 ) This epic will be removed when pushed
 
 ## What is not possible from within Atom
 
-* Only stories are allowed to be ranked. The ranking of epics or sub-tasks is not supported.
-* You cannot convert sub-tasks into stories or epics and you cannot move sub-tasks to different parents.
-* To delete a story with sub-tasks you first have to delete the sub-tasks.
+- Only stories are allowed to be ranked. The ranking of epics or sub-tasks is not supported.
+- You cannot convert sub-tasks into stories or epics and you cannot move sub-tasks to different parents.
+- To delete a story with sub-tasks you first have to delete the sub-tasks.
 
 ## Pushing to JIRA
 
@@ -187,26 +187,26 @@ points: <the default amount of points>
 
 ## Guarded pushing
 
-If you want to make sure to not accidently push back to JIRA, activate ```nopush``` in your ```options``` section, like: 
-
-```
-options: nopush
-```
-
-If you only allow specific push operations, instead of forbidding the entire pushing, you can combine the following options
-
-* ```create``` will only allow the creation of new issues when pushing to JIRA, but not the modification or deletion of issues.
-* ```update``` will only allow updating of already existing issues when pushing to JIRA, but not creation or deletions of issues.
-* ```updateself``` will only allow updating of already existing issues where the current JIRA user is also assigned to the issue, when pushing to JIRA. In more simple terms: update only your own issues.
-* ```delete``` will only allow deleting issues when pushing to JIRA, but not the creation or modification of issues.
-
-For example, an option setting of
+By default, every ```.bkdn``` file has two pushguards activated in the options section of the configuration. These are ```create``` and ```updateself``` (even if you do not provide the options at all, they will be added automatically and visualized after a push or pull operation). 
 
 ```
 options: create updateself
 ```
 
-will allow to create new issues and update your own issues, but not to delete issues.
+The two pushguards ensure, that you can only push new issues, as well as modifications of issues with the current user being the issue assignee. Which means: you can create new issues and update your own ones.
+
+The following pushguards are allowed to be combined:
+
+- ```create``` will allow the creation of new issues.
+- ```update``` will only allow updating of already existing issues.
+- ```updateself``` will allow updating of already existing issues with the current user being the issue assignee. In more simple terms: update only your own issues.
+- ```delete``` will allow the deletion of issues.
+
+The entire pushing can be disbled by activating ```nopush``` in the ```options``` section, like: 
+
+```
+options: nopush
+```
 
 ## Configuration reference
 
@@ -219,23 +219,20 @@ project: <key of JIRA project you want to create new issues in>
 query: <any JIRA JQL query to select your download dataset>
 fixversion: <your default fixversion>
 points: <the default amount of points>
-options: create delete nopush offline parentkey rank update updateself 
+options: create update updateself delete nopush rank offline parentkey 
 ---
 ```
 
-
 Options:
 
-- ```create``` will only allow the creation of new issues when pushing to JIRA, but not the modification or deletion of issues.
-- ```delete``` will only allow deleting issues when pushing to JIRA, but not creation or modification of issues.
+- ```create``` will allow the creation of new issues.
+- ```update``` will only allow updating of already existing issues.
+- ```updateself``` will allow updating of already existing issues with the current user being the issue assignee. In more simple terms: update only your own issues.
+- ```delete``` will allow the deletion of issues.
 - ```nopush``` disable pushing to JIRA.
-- ```offline``` autocompletion will only work while you are connected to your JIRA server. In a situation where you are working offline, you should add the ```offline``` option to your configuration. This will avoid network failures in context of autocompletion.
-- ```parentkey``` visualize the epic link key for stories and the parent issue key for sub-tasks.
 - ```rank``` if your query is not **SORTED BY Rank ASC**, you will **mess up** the ranking of your project when you apply the ranking inside of Atom and push the changes back to JIRA. For this reason ranking is a guarded feature in Breakdown for Atom - you have to activate it in your configuration section by adding the ```rank``` option. 
-- ```update``` will only allow updating of already existing issues when pushing to JIRA, but not the creation or deletion of issues.
-- ```updateself``` will only allow updating of already existing issues where the current JIRA user is also assigned to the issue, when pushing to JIRA. In more simple terms: update only your own issues.
-
-
+- ```offline``` autocompletion will only work while you are connected to your JIRA server. In a situation where you are working offline, you should add the ```offline``` option to your configuration. This will avoid network failures in context of autocompletion.
+- ```parentkey``` will visualize the epic link key for stories and the parent issue key for sub-tasks.
 
 ## Package configuration
 
