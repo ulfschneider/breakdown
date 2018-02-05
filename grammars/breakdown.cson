@@ -180,6 +180,9 @@ patterns: [
                 ]
             }
             {
+            'include': '#activesprint'
+            }
+            {
             'include': '#timetracking'
             }
 
@@ -486,4 +489,8 @@ patterns: [
                 'name': 'punctuation.separator.jira'
             '3':
                 'name': 'timetracking.remaining.jira'
+    }
+    'activesprint': {
+        'name': 'active.sprint.jira'
+        'match': '⟳'
     }
