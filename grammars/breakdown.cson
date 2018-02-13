@@ -198,6 +198,8 @@ patterns: [
         'captures':
             '1':
                 'name': 'active.sprint.jira'
+            '2':
+                'name': 'no-parent-in-selection.jira'
     }
     {
         'name': 'issue.empty-parent.jira'
@@ -205,6 +207,8 @@ patterns: [
         'captures':
             '1':
                 'name': 'active.sprint.jira'
+            '2':
+                'name': 'empty-parent.jira'
     }
     {
         'name': 'issue.delete.epic.jira'
