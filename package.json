@@ -29,6 +29,7 @@
     }
   },
   "dependencies": {
+    "moment": "^2.20.1",
     "request": "^2.83.0",
     "underscore": "^1.8.3"
   },
