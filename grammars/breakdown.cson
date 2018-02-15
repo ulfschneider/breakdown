@@ -8,83 +8,83 @@ foldingStartMarker: ''
 foldingStopMarker: ''
 patterns: [
     {
-        'name': 'settings.bkdn'
+        'name': 'settings.jira'
         'begin': '(?i)^\\s*(jira-breakdown|breakdown)\\s*$'
         'beginCaptures':
             '1':
-                'name': 'settings.begin.bkdn'
+                'name': 'settings.begin.jira'
         'end': '^\\s*---\\s*$'
         'endCaptures':
             '0':
-                'name': 'settings.end.bkdn'
+                'name': 'settings.end.jira'
         'patterns': [
             {
-                'name': 'settings.jira-url.bkdn'
+                'name': 'settings.jira-url.jira'
                 'match': '(?i)^\\s*(url)\\s*(:)\\s*(.*)'
                 'captures':
                     '1':
-                        'name': 'settings.key.bkdn'
+                        'name': 'settings.key.jira'
                     '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
+                        'name': 'settings.punctuation.separator.key-value.jira'
                     '3':
-                        'name': 'settings.value.bkdn'
+                        'name': 'settings.value.jira'
             }
             {
-                'name': 'settings.query.bkdn'
+                'name': 'settings.query.jira'
                 'match': '(?i)^\\s*(query)\\s*(:)\\s*(.*)'
                 'captures':
                     '1':
-                        'name': 'settings.key.bkdn'
+                        'name': 'settings.key.jira'
                     '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
+                        'name': 'settings.punctuation.separator.key-value.jira'
                     '3':
-                        'name': 'settings.value.bkdn'
+                        'name': 'settings.value.jira'
             }
             {
-                'name': 'settings.project.bkdn'
+                'name': 'settings.project.jira'
                 'match': '(?i)^\\s*(project)\\s*(:)\\s*(.*)'
                 'captures':
                     '1':
-                        'name': 'settings.key.bkdn'
+                        'name': 'settings.key.jira'
                     '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
+                        'name': 'settings.punctuation.separator.key-value.jira'
                     '3':
-                        'name': 'settings.value.bkdn'
+                        'name': 'settings.value.jira'
             }
             {
-                'name': 'settings.fixversion.bkdn'
+                'name': 'settings.fixversion.jira'
                 'match': '(?i)^\\s*(fixversion)\\s*(:)\\s*(.*)'
                 'captures':
                     '1':
-                        'name': 'settings.key.bkdn'
+                        'name': 'settings.key.jira'
                     '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
+                        'name': 'settings.punctuation.separator.key-value.jira'
                     '3':
-                        'name': 'settings.value.bkdn'
+                        'name': 'settings.value.jira'
             }
             {
-                'name': 'settings.points.bkdn'
+                'name': 'settings.points.jira'
                 'match': '(?i)^\\s*(points)\\s*(:)\\s*(.*)'
                 'captures':
                     '1':
-                        'name': 'settings.key.bkdn'
+                        'name': 'settings.key.jira'
                     '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
+                        'name': 'settings.punctuation.separator.key-value.jira'
                     '3':
-                        'name': 'settings.value.bkdn'
+                        'name': 'settings.value.jira'
             }
             {
-                'name': 'settings.options.bkdn'
+                'name': 'settings.options.jira'
                 'begin': '(?i)^\\s*(fields|options)\\s*(:)'
                 'beginCaptures':
                     '1':
-                        'name': 'settings.key.bkdn'
+                        'name': 'settings.key.jira'
                     '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
+                        'name': 'settings.punctuation.separator.key-value.jira'
                 'end': '\\s?$'
                 'patterns': [
                     {
-                        'name': 'settings.value.bkdn'
+                        'name': 'settings.value.jira'
                         'match': '(?i)\\b(parentkey)\\b|\\b(rank)\\b|\\b(nopush)\\b|\\b(create)\\b|\\b(update)\\b|\\b(updateself)\\b|\\b(delete)\\b|\\b(offline)\\b'
                     }
                     {
@@ -96,18 +96,18 @@ patterns: [
         ]
     }
     {
-        'name': 'statistics.bkdn'
+        'name': 'statistics.jira'
         'begin': '(?i)^\\s*(statistics)\\s*$'
         'beginCaptures':
             '1':
-                'name': 'statistics.begin.bkdn'
+                'name': 'statistics.begin.jira'
         'end': '^\\s*---\\s*$'
         'endCaptures':
             '0':
-                'name': 'statistics.end.bkdn'
+                'name': 'statistics.end.jira'
         'patterns': [
             {
-                'name': 'issuecount.unresolved.bkdn'
+                'name': 'issuecount.unresolved.jira'
                 'begin': '(?i)^\\s*\\d+\\s*issues\\s*unresolved'
                 'patterns': [
                     {
@@ -117,22 +117,22 @@ patterns: [
                 'end': '\\s*$'
             }
             {
-                'name': 'issue.unresolved.bkdn'
+                'name': 'issue.unresolved.jira'
                 'begin': '(?i)^\\s*(⟳)?\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
                 'beginCaptures':
                     '1':
-                        'name': 'active.sprint.bkdn'
+                        'name': 'active.sprint.jira'
                     '2':
-                        'name': 'issue.key.bkdn'
+                        'name': 'issue.key.jira'
                     '3':
-                        'name': 'issue.type-and-state.bkdn'
+                        'name': 'issue.type-and-state.jira'
                         'patterns': [
                             {
                             'include': '#timetracking'
                             }
                         ]
                     '4':
-                        'name': 'punctuation.separator.bkdn'
+                        'name': 'punctuation.separator.jira'
                 'end': '$'
                 'patterns': [
                     {
@@ -144,7 +144,7 @@ patterns: [
                 ]
             }
             {
-                'name': 'issuecount.resolved.bkdn'
+                'name': 'issuecount.resolved.jira'
                 'begin': '(?i)^\\s*\\d+\\s*issues\\s*resolved'
                 'patterns': [
                     {
@@ -154,24 +154,24 @@ patterns: [
                 'end': '\\s*$'
             }
             {
-                'name': 'issue.resolved.bkdn'
+                'name': 'issue.resolved.jira'
                 'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
                 'beginCaptures':
                     '1':
-                        'name': 'active.sprint.bkdn'
+                        'name': 'active.sprint.jira'
                     '2':
-                        'name': 'issue.resolved.bkdn'
+                        'name': 'issue.resolved.jira'
                     '3':
-                        'name': 'issue.key.bkdn'
+                        'name': 'issue.key.jira'
                     '4':
-                        'name': 'issue.type-and-state.bkdn'
+                        'name': 'issue.type-and-state.jira'
                         'patterns': [
                             {
                                 'include': '#timetracking'
                             }
                         ]
                     '5':
-                        'name': 'punctuation.separator.bkdn'
+                        'name': 'punctuation.separator.jira'
                 'end': '$'
                 'patterns': [
                     {
@@ -192,37 +192,37 @@ patterns: [
         ]
     }
     {
-        'name': 'editable-content.bkdn'
+        'name': 'editable-content.jira'
         'match': '(?i)^\\s*(below[\\s]+this[\\s]+line.*)$'
     }
     {
-        'name': 'issue.no-parent-in-selection.bkdn'
+        'name': 'issue.no-parent-in-selection.jira'
         'match': '(?i)^\\s*(⟳)?\\s*(no[\\s]+parent.*|parent[\\s]+not.*|parent[\\s]+is[\\s]+not.*)$'
         'captures':
             '1':
-                'name': 'active.sprint.bkdn'
+                'name': 'active.sprint.jira'
             '2':
-                'name': 'no-parent-in-selection.bkdn'
+                'name': 'no-parent-in-selection.jira'
     }
     {
-        'name': 'issue.empty-parent.bkdn'
+        'name': 'issue.empty-parent.jira'
         'match': '(?i)^\\s*(⟳)?\\s*(empty[\\s]+parent.*|without[\\s]+parent.*)$'
         'captures':
             '1':
-                'name': 'active.sprint.bkdn'
+                'name': 'active.sprint.jira'
             '2':
-                'name': 'empty-parent.bkdn'
+                'name': 'empty-parent.jira'
     }
     {
-        'name': 'issue.delete.epic.bkdn'
+        'name': 'issue.delete.epic.jira'
         'begin': '(?i)^\\s*(del|delete)\\s*(⟳)?\\s*(\\s*resolved\\s*|\\s*)(Epic)\\b'
         'beginCaptures':
             '1':
-                'name': 'issue.delete.bkdn'
+                'name': 'issue.delete.jira'
             '2':
-                'name': 'active.sprint.bkdn'
+                'name': 'active.sprint.jira'
             '4':
-                'name': 'issue.type.epic.bkdn'
+                'name': 'issue.type.epic.jira'
         'end': '$'
         'patterns': [
             {
@@ -231,15 +231,15 @@ patterns: [
         ]
     }
     {
-        'name': 'issue.delete.story.bkdn'
+        'name': 'issue.delete.story.jira'
         'begin': '(?i)^\\s*(del|delete)\\s*(⟳)?\\s*(\\s*resolved\\s*|\\s*)(Story)\\b'
         'beginCaptures':
             '1':
-                'name': 'issue.delete.bkdn'
+                'name': 'issue.delete.jira'
             '2':
-                'name': 'active.sprint.bkdn'
+                'name': 'active.sprint.jira'
             '4':
-                'name': 'issue.type.story.bkdn'
+                'name': 'issue.type.story.jira'
         'end': '$'
         'patterns': [
             {
@@ -251,15 +251,15 @@ patterns: [
         ]
     }
     {
-        'name': 'issue.delete.sub-task.bkdn'
+        'name': 'issue.delete.sub-task.jira'
         'begin': '(?i)^\\s*(del|delete)\\s*(⟳)?\\s*(\\s*resolved\\s*|\\s*)(Sub-Task|Subtask|Sub)\\s+'
         'beginCaptures':
             '1':
-                'name': 'issue.delete.bkdn'
+                'name': 'issue.delete.jira'
             '2':
-                'name': 'active.sprint.bkdn'
+                'name': 'active.sprint.jira'
             '4':
-                'name': 'issue.type.sub-task.bkdn'
+                'name': 'issue.type.sub-task.jira'
         'end': '$'
         'patterns': [
             {
@@ -271,15 +271,15 @@ patterns: [
         ]
     }
     {
-        'name': 'issue.resolved.epic.bkdn'
+        'name': 'issue.resolved.epic.jira'
         'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s+(Epic)\\b'
         'beginCaptures':
             '1':
-                'name': 'active.sprint.bkdn'
+                'name': 'active.sprint.jira'
             '2':
-                'name': 'issue.resolved.bkdn'
+                'name': 'issue.resolved.jira'
             '3':
-                'name': 'issue.type.epic.bkdn'
+                'name': 'issue.type.epic.jira'
         'end': '\\s*$'
         'patterns': [
             {
@@ -294,15 +294,15 @@ patterns: [
         ]
     }
     {
-        'name': 'issue.resolved.story.bkdn'
+        'name': 'issue.resolved.story.jira'
         'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s+(Story)\\b'
         'beginCaptures':
             '1':
-                'name': 'active.sprint.bkdn'
+                'name': 'active.sprint.jira'
             '2':
-                'name': 'issue.resolved.bkdn'
+                'name': 'issue.resolved.jira'
             '3':
-                'name': 'issue.type.story.bkdn'
+                'name': 'issue.type.story.jira'
         'end': '\\s*$'
         'patterns': [
             {
@@ -320,15 +320,15 @@ patterns: [
         ]
     }
     {
-        'name': 'issue.resolved.sub-task.bkdn'
+        'name': 'issue.resolved.sub-task.jira'
         'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s+(Sub-Task|Subtask|Sub)\\s+'
         'beginCaptures':
             '1':
-                'name': 'active.sprint.bkdn'
+                'name': 'active.sprint.jira'
             '2':
-                'name': 'issue.resolved.bkdn'
+                'name': 'issue.resolved.jira'
             '3':
-                'name': 'issue.type.sub-task.bkdn'
+                'name': 'issue.type.sub-task.jira'
         'end': '\\s*$'
         'patterns': [
             {
@@ -346,13 +346,13 @@ patterns: [
         ]
     }
     {
-        'name': 'issue.epic.bkdn'
+        'name': 'issue.epic.jira'
         'begin': '(?i)^\\s*(⟳)?\\s*(Epic)\\b'
         'beginCaptures':
             '1':
-                'name': 'active.sprint.bkdn'
+                'name': 'active.sprint.jira'
             '2':
-                'name': 'issue.type.epic.bkdn'
+                'name': 'issue.type.epic.jira'
         'end': '\\s*$'
         'patterns': [
             {
@@ -367,13 +367,13 @@ patterns: [
         ]
     }
     {
-        'name': 'issue.story.bkdn'
+        'name': 'issue.story.jira'
         'begin': '(?i)^\\s*(⟳)?\\s*(Story)\\b'
         'beginCaptures':
             '1':
-                'name': 'active.sprint.bkdn'
+                'name': 'active.sprint.jira'
             '2':
-                'name': 'issue.type.story.bkdn'
+                'name': 'issue.type.story.jira'
         'end': '\\s*$'
         'patterns': [
             {
@@ -391,13 +391,13 @@ patterns: [
         ]
     }
     {
-        'name': 'issue.sub-task.bkdn'
+        'name': 'issue.sub-task.jira'
         'begin': '(?i)^\\s*(⟳)?\\s*(Sub-Task|Subtask|Sub)\\s+'
         'beginCaptures':
             '1':
-                'name': 'active.sprint.bkdn'
+                'name': 'active.sprint.jira'
             '2':
-                'name': 'issue.type.sub-task.bkdn'
+                'name': 'issue.type.sub-task.jira'
         'end': '\\s*$'
         'patterns': [
             {
@@ -417,91 +417,91 @@ patterns: [
 ]
 'repository':
     'key': {
-        'name': 'issue.key.bkdn'
+        'name': 'issue.key.jira'
         'match': '[A-Za-z]{1,10}-\\d+'
         }
     'parentkey': {
-        'name': 'issue.parent.key.bkdn'
+        'name': 'issue.parent.key.jira'
         'match': '\\^[A-Za-z]{1,10}-\\d+'
     }
     'fields': {
-        'name': 'issue.fields.bkdn'
+        'name': 'issue.fields.jira'
         'begin': '\\('
         'beginCaptures':
             '0':
-                'name': 'fields.begin.bkdn'
+                'name': 'fields.begin.jira'
         'end': '\\)|$'
         'endCaptures':
             '0':
-                'name': 'fields.end.bkdn'
+                'name': 'fields.end.jira'
         'patterns': [
             {
-                'name': 'issue.status.bkdn'
+                'name': 'issue.status.jira'
                 'match': '(?i)\\b(s:\\s*)(.+?)(?=\\ba:|\\bp:|\\bv:|\\bc:|\\))'
                 'captures':
                     '1':
-                        'name':'issue.field.identifier.bkdn'
+                        'name':'issue.field.identifier.jira'
                     '2':
-                        'name': 'issue.field.value.bkdn'
+                        'name': 'issue.field.value.jira'
             }
             {
-                'name': 'issue.assignee.bkdn'
+                'name': 'issue.assignee.jira'
                 'match': '(?i)\\b(a:\\s*)(.+?)(?=\\bs:|\\bp:|\\bv:|\\bc:|\\))'
                 'captures':
                     '1':
-                        'name':'issue.field.identifier.bkdn'
+                        'name':'issue.field.identifier.jira'
                     '2':
-                        'name': 'issue.field.value.bkdn'
+                        'name': 'issue.field.value.jira'
             }
             {
-                'name': 'issue.points.bkdn'
+                'name': 'issue.points.jira'
                 'match': '(?i)\\b(p:\\s*)(.+?)(?=\\bs:|\\ba:|\\bv:|\\bc:|\\))'
                 'captures':
                     '1':
-                        'name':'issue.field.identifier.bkdn'
+                        'name':'issue.field.identifier.jira'
                     '2':
-                        'name': 'issue.field.value.bkdn'
+                        'name': 'issue.field.value.jira'
             }
             {
-                'name': 'issue.fixversion.bkdn'
+                'name': 'issue.fixversion.jira'
                 'match': '(?i)\\b(v:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bc:|\\))'
                 'captures':
                     '1':
-                        'name':'issue.field.identifier.bkdn'
+                        'name':'issue.field.identifier.jira'
                     '2':
-                        'name': 'issue.field.value.bkdn'
+                        'name': 'issue.field.value.jira'
             }
             {
-                'name': 'issue.components.bkdn'
+                'name': 'issue.components.jira'
                 'match': '(?i)\\b(c:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bv:|\\))'
                 'captures':
                     '1':
-                        'name':'issue.field.identifier.bkdn'
+                        'name':'issue.field.identifier.jira'
                     '2':
-                        'name': 'issue.field.value.bkdn'
+                        'name': 'issue.field.value.jira'
             }
         ]
     }
     'summary': {
-        'name': 'issue.summary.bkdn'
+        'name': 'issue.summary.jira'
         'match': '[^\\s].*(?=\\((.*\\b(s|a|p|v|c|):.*)\\))|[^\\s].*(?=\\((.*\\b(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?=\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\((.*\\b(s|a|p|v|c|):.*)\\))|[^\\s].*(?!\\((.*\\b(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\^[A-Za-z]{1,10}-\\d+)'
     }
     'timetracking': {
-        'name': 'timetracking.bkdn'
+        'name': 'timetracking.jira'
         'match': '(?i)\\[(.*?logged)\\s*(\\|)\\s*(.*?remain)\\]'
         'captures':
             '1':
-                'name': 'timetracking.spent.bkdn'
+                'name': 'timetracking.spent.jira'
             '2':
-                'name': 'punctuation.separator.bkdn'
+                'name': 'punctuation.separator.jira'
             '3':
-                'name': 'timetracking.remaining.bkdn'
+                'name': 'timetracking.remaining.jira'
     }
     'activesprint': {
-        'name': 'active.sprint.bkdn'
+        'name': 'active.sprint.jira'
         'match': '⟳'
     }
     'punctuation': {
-        'name': 'punctuation.separator.bkdn'
+        'name': 'punctuation.separator.jira'
         'match': '[,;.:-_]'
     }
