@@ -10,7 +10,7 @@
     "scrum"
   ],
   "repository": "https://github.com/ulfschneider/breakdown",
-  "license": "mit",
+  "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
