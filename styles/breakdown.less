@@ -27,7 +27,7 @@
 .breakdown-statistics {
     .gutter {
         background: @tool-panel-background-color;
-        padding:5px;
+        padding: 5px;
         cursor: pointer;
     }
 
@@ -54,11 +54,25 @@
     }
 
     .legend {
-        color: @tab-background-color-active;
+        color: @text-color;
     }
 
     .axis {
         color: @text-color;
+    }
+
+    .label {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .reload {
+        margin-left: 1.62em * 1.62em;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
