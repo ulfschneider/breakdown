@@ -24,6 +24,64 @@
     }
 }
 
+.breakdown-statistics {
+    .gutter {
+        background: @tool-panel-background-color;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .content {
+        background: @tab-background-color-active;
+    }
+
+    .download {
+        font-size: 1.62em * 1.62em;
+        text-align: center;
+        padding-top: 200px;
+    }
+
+    .done {
+        stroke: @tab-background-color-active;
+        fill: @background-color-success;
+        color: @background-color-success;
+    }
+
+    .indeterminate {
+        stroke: @tab-background-color-active;
+        fill: @background-color-warning;
+        color: @background-color-warning;
+    }
+
+    .new {
+        stroke: @tab-background-color-active;
+        fill: @text-color; //@background-color-info;
+        color: @text-color; //@text-color-info;
+    }
+
+    .legend {
+        color: @text-color;
+    }
+
+    .axis {
+        color: @text-color;
+    }
+
+    .label {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .reload {
+        margin-left: 1.62em * 1.62em;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
 atom-text-editor {
     // Controls the appearance of the unfolded icon in the gutter
     .gutter .line-number .icon-right {
