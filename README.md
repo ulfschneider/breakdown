@@ -187,7 +187,7 @@ The entire pushing can be disbled by activating `nopush` in the `options` sectio
 
 ## Cumulative Flow Diagram
 
-At the bottom of the editor, a panel with a Cumulative Flow Diagram (CFD) can be opened by clicking on the panel title.
+At the bottom of the editor a panel with a Cumulative Flow Diagram (CFD) can be opened by clicking on the panel title.
 The CFD will count issues by their status values. By configuring the option `cfdpoints`, the CFD will count story points instead of counting issues.
 
     options: cfdpoints
