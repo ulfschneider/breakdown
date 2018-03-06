@@ -43,8 +43,9 @@ Alternatively, use your terminal to install the breakdown package.
 1.  Install [Atom](https://atom.io)
 2.  In the terminal, install the breakdown package via apm
 
-
-    apm install breakdown
+```
+apm install breakdown
+```
 
 ## Issues and improvements
 
@@ -54,11 +55,13 @@ Please file an issue on [GitHub](https://github.com/ulfschneider/breakdown/issue
 
 To pull JIRA data into your Atom editor or push new issues and changes from Atom to JIRA, create a file with a `.bkdn` filetype, e.g. `myjira.bkdn`. The file must start with your configuration section and at least contain the following first five lines:
 
-    breakdown
-    url: <JIRA URL>
-    project: <key of JIRA project you want to create new issues in>
-    query: <any JIRA JQL query to select your download dataset>
-    ---
+```
+breakdown
+url: <JIRA URL>
+project: <key of JIRA project you want to create new issues in>
+query: <any JIRA JQL query to select your download dataset>
+---
+```
 
 ## A word of caution
 
@@ -70,7 +73,9 @@ In the Packages menu, select **Breakdown → Pull from JIRA** to get your select
 
 Optionally, you can define in your configuration section to visualize the epic link key for stories and the parent issue key for sub-tasks.
 
-    options: parentkey
+```
+options: parentkey
+```
 
 Any story that is contained in the current sprint will be prefixed by `⟳`. An epic that contains stories which are in the current sprint will also be prefixed with `⟳`.
 
@@ -97,13 +102,17 @@ JIRA issues can be created and modified inside of the Atom editor. It´s always 
 
 In the following example a new epic is created, containing a new story which again contains a new sub-task:
 
-    Epic This will become a new epic
-      Story This will become a new story inside of a new epic
+```
+Epic This will become a new epic
+    Story This will become a new story inside of a new epic
         Sub This will become a new sub-task inside of a new story inside of a new epic
+```
 
 For any issue, the following JIRA fields can be modified: _status, assignee, story points, fixversion, components_ and _summary._ For epics and stories even changing the _issuetype_ is allowed. A full-fledged issue will be displayed like:
 
-    Story REST-32 As a developer, I want to have the story status highlighted (s:In Progress a:admin p:13 v:Version 3.0 c:Frontend)
+```
+Story REST-32 As a developer, I want to have the story status highlighted (s:In Progress a:admin p:13 v:Version 3.0 c:Frontend)
+```
 
 An issue will start with the issuetype, which can be an _epic,_ a _story_ or a _sub-task_. It´s allowed to change epics into stories and stories into epics.
 
@@ -121,7 +130,9 @@ The summary is followed by a paranthesis section, containing:
 
 You get autocompletion suggestions for all of the fields in the paranthesis section - except for the story points. Autocompletion will only work while you are connected to your JIRA server. In a situation where you are working offline, you should add the `offline` option to your configuration. This will avoid network failures in context of autocompletion.
 
-    options: offline
+```
+options: offline
+```
 
 ## Ranking
 
@@ -131,7 +142,9 @@ Breakdown for Atom leverages this function, as it allows you to change your rank
 
 If your query is not **SORTED BY Rank ASC**, you will **mess up** the ranking of your project when you apply the ranking inside of Atom and push the changes back to JIRA. For this reason ranking is a guarded feature in Breakdown for Atom - you have to activate it in your configuration section by adding the `rank` entry to your `options`, like   
 
-    options: rank
+```
+options: rank
+```
 
 To change the rank for a story with sub-tasks, select the story line and all sub-tasks below, then apply the same command to move all selected lines at once.
 
@@ -147,7 +160,9 @@ Move stories from one epic to the other by using the cut and paste option of you
 
 Issues can be removed by placing a deletion mark in front of the issue:
 
-    DEL Epic REST-26 ( s:In Progress p:13 ) This epic will be removed when pushed
+```
+DEL Epic REST-26 ( s:In Progress p:13 ) This epic will be removed when pushed
+```
 
 ![Breakdown Resolve Delete](/doc/breakdown-resolve-delete.gif)
 
@@ -163,14 +178,18 @@ In the Packages menu, select **Breakdown → Push to JIRA** to push your changes
 
 For the creation of epics and stories from within Atom, you can optionally define in your configuration section a default _fixversion_ and the default amount of _story points_ to assign to those epics and stories when pushing them to JIRA. So you don´t need to specify those values for each new created issue in Atom. However, you can overwrite the setting in each issue. Configure with:
 
-    fixversion: <your default fixversion>
-    points: <the default amount of points>
+```
+fixversion: <your default fixversion>
+points: <the default amount of points>
+```
 
 ## Guarded pushing
 
 By default, every `.bkdn` file has two pushguards activated in the options section of the configuration. These are `create` and `updateself` (even if you do not provide the options at all, they will be added automatically and visualized after a push or pull operation).
 
-    options: create updateself
+```
+options: create updateself
+```
 
 The two pushguards ensure, that you can only push new issues, as well as modifications of issues with the current user being the issue assignee. Which means: you can create new issues and update your own ones.
 
@@ -183,27 +202,42 @@ The following pushguards are allowed to be combined:
 
 The entire pushing can be disbled by activating `nopush` in the `options` section, like:
 
-    options: nopush
+```
+options: nopush
+```
 
 ## Cumulative Flow Diagram
 
 At the bottom of the editor a panel with a Cumulative Flow Diagram (CFD) can be opened by clicking on the panel title.
 The CFD will count issues by their status values. By configuring the option `cfdpoints`, the CFD will count story points instead of counting issues.
 
-    options: cfdpoints
+```
+options: cfdpoints
+```
+
+The start date and the end date for the CFD visualization can be configured with `fromdate` and `todate`settings.
+
+```
+fromdate: <start date for CFD in format YYYY-MM-DD>
+todate: <end date for CFD in format YYYY-MM-DD>
+```
 
 ## Configuration reference
 
 Below is a configuration section with all possible configurations. Mandatory are only the settings for `url`, `project` and `query`.
 
-    breakdown
-    url: <JIRA URL>
-    project: <key of JIRA project you want to create new issues in>
-    query: <any JIRA JQL query to select your download dataset>
-    fixversion: <your default fixversion>
-    points: <the default amount of points>
-    options: create update updateself delete nopush rank offline parentkey
-    ---
+```
+breakdown
+url: <JIRA URL>
+project: <key of JIRA project you want to create new issues in>
+query: <any JIRA JQL query to select your download dataset>
+fixversion: <your default fixversion>
+points: <the default amount of points>
+options: create update updateself delete nopush rank offline parentkey cfdpoints
+fromdate: <start date for cfd presentation, YYYY-MM-DD>
+todate: <end date for cfd presentation, YYYY-MM-DD>
+---
+```
 
 Options:
 
@@ -216,6 +250,8 @@ Options:
 -   `offline` autocompletion will only work while you are connected to your JIRA server. In a situation where you are working offline, you should add the `offline` option to your configuration. This will avoid network failures in context of autocompletion.
 -   `parentkey` will visualize the epic link key for stories and the parent issue key for sub-tasks.
 -   `cfdpoints` will let the Cumulative Flow Diagram visualize status changes by counting story points instead of counting issues.
+-   `fromdate` will be used by the Cumulative Flow Diagram as the start date for the visualization. Format is `YYYY-MM-DD`.
+-   `todate` will be used by the Cumulative Flow Diagram as the end date for the visualization. Format is `YYYY-MM-DD`.
 
 ## Package configuration
 
