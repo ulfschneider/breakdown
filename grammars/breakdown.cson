@@ -74,6 +74,28 @@ patterns: [
                         'name': 'settings.value.bkdn'
             }
             {
+                'name': 'settings.from-date.bkdn'
+                'match': '(?i)^\\s*(fromdate)\\s*(:)\\s*(.*)'
+                'captures':
+                    '1':
+                        'name': 'settings.key.bkdn'
+                    '2':
+                        'name': 'settings.punctuation.separator.key-value.bkdn'
+                    '3':
+                        'name': 'settings.value.bkdn'
+            }
+            {
+                'name': 'settings.to-date.bkdn'
+                'match': '(?i)^\\s*(todate)\\s*(:)\\s*(.*)'
+                'captures':
+                    '1':
+                        'name': 'settings.key.bkdn'
+                    '2':
+                        'name': 'settings.punctuation.separator.key-value.bkdn'
+                    '3':
+                        'name': 'settings.value.bkdn'
+            } 
+            {
                 'name': 'settings.options.bkdn'
                 'begin': '(?i)^\\s*(fields|options)\\s*(:)'
                 'beginCaptures':
