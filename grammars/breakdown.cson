@@ -94,7 +94,31 @@ patterns: [
                         'name': 'settings.punctuation.separator.key-value.bkdn'
                     '3':
                         'name': 'settings.value.bkdn'
-            } 
+            }
+            {
+                'name': 'settings.marker.bkdn'
+                'begin': '(?i)^\\s*(marker)\\s*(:)'
+                'beginCaptures':
+                    '1':
+                        'name': 'settings.key.bkdn'
+                    '2':
+                        'name': 'settings.punctuation.separator.key-value.bkdn'
+                'end': '\\s?$'
+                'patterns': [
+                    {
+                        'name': 'settings.value.bkdn'
+                        'match': '(?i)\\((\\s*\\d{4}-\\d{2}-\\d{2}\\s*:\\s*.*)\\)|(\\d{4}-\\d{2}-\\d{2})'
+                        'captures':
+                            '1':
+                                'name': 'marker.full.bkdn'
+                            '2':
+                                'name': 'marker.date.bkdn'
+                    }
+                    {
+                        'include': '#punctuation'
+                    }
+                ]
+            }
             {
                 'name': 'settings.options.bkdn'
                 'begin': '(?i)^\\s*(fields|options)\\s*(:)'
