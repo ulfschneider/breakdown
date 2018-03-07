@@ -107,7 +107,7 @@ patterns: [
                 'patterns': [
                     {
                         'name': 'settings.value.bkdn'
-                        'match': '(?i)\\((\\s*\\d{4}-\\d{2}-\\d{2}\\s*:\\s*.*)\\)|(\\d{4}-\\d{2}-\\d{2})'
+                        'match': '(?i)\\((\\s*\\d{4}-\\d{2}-\\d{2}\\s*:\\s*.*?)\\)|(\\d{4}-\\d{2}-\\d{2})'
                         'captures':
                             '1':
                                 'name': 'marker.full.bkdn'
