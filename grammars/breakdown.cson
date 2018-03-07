@@ -96,8 +96,8 @@ patterns: [
                         'name': 'settings.value.bkdn'
             }
             {
-                'name': 'settings.marker.bkdn'
-                'begin': '(?i)^\\s*(marker)\\s*(:)'
+                'name': 'settings.markers.bkdn'
+                'begin': '(?i)^\\s*(markers)\\s*(:)'
                 'beginCaptures':
                     '1':
                         'name': 'settings.key.bkdn'

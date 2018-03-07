@@ -222,10 +222,10 @@ fromdate: <start date for CFD in format YYYY-MM-DD>
 todate: <end date for CFD in format YYYY-MM-DD>
 ```
 
-Milestones inside of the CFD can be defined with the `marker` setting. The `marker` setting holds a list of marker tags, of which each one is either in the format (YYYY-MM-DD:Label of marker) or just YYYY-MM-DD. A marker must be within in the date range of `fromdate` and `todate`.
+Milestones inside of the CFD can be defined with the `markers` setting. The `markers` setting holds a list of marker tags, of which each one is either in the format (YYYY-MM-DD:Label of marker) or just YYYY-MM-DD. A marker must be within in the date range of `fromdate` and `todate`.
 
 ```
-marker: (YYYY-MM-DD:Label of marker) 
+markers: (YYYY-MM-DD:Label of marker) 
 ```
 
 ## Configuration reference
@@ -241,7 +241,7 @@ fixversion: <your default fixversion>
 points: <the default amount of points>
 options: create update updateself delete nopush rank offline parentkey cfdpoints
 fromdate: <start date for cfd presentation, YYYY-MM-DD>
-marker: <list of markers for cfd presentation, either in format YYYY-MM-DD or (YYYY-MM-DD:Label)>
+markers: <list of markers for cfd presentation, either in format YYYY-MM-DD or (YYYY-MM-DD:Label)>
 todate: <end date for cfd presentation, YYYY-MM-DD>
 ---
 ```
