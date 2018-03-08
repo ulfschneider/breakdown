@@ -228,6 +228,12 @@ Milestones inside of the CFD can be defined with the `markers` setting. The `mar
 markers: (YYYY-MM-DD:Label of marker) 
 ```
 
+A predicted completion date can be indicated by specifying from what date beginning the completion progress should be tracked. Use the `predict` setting to configure that tracking start date. 
+
+```
+predict: YYYY-MM-DD
+```
+
 ## Configuration reference
 
 Below is a configuration section with all possible configurations. Mandatory are only the settings for `url`, `project` and `query`.
