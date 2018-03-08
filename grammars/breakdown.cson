@@ -96,6 +96,17 @@ patterns: [
                         'name': 'settings.value.bkdn'
             }
             {
+                'name': 'settings.predict.bkdn'
+                'match': '(?i)^\\s*(predict)\\s*(:)\\s*(.*)'
+                'captures':
+                    '1':
+                        'name': 'settings.key.bkdn'
+                    '2':
+                        'name': 'settings.punctuation.separator.key-value.bkdn'
+                    '3':
+                        'name': 'settings.value.bkdn'
+            }
+            {
                 'name': 'settings.markers.bkdn'
                 'begin': '(?i)^\\s*(markers)\\s*(:)'
                 'beginCaptures':
