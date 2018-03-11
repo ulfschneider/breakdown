@@ -228,7 +228,7 @@ Milestones inside of the CFD can be defined with the `markers` setting. The `mar
 markers: (YYYY-MM-DD:Label of marker) 
 ```
 
-A predicted completion date can be indicated by specifying from what date beginning the completion progress should be tracked. Use the `predict` setting to configure that tracking start date. 
+A predicted completion date can be indicated depending on the configured start date. Use the `predict` setting to configure that tracking start date. 
 
 ```
 predict: YYYY-MM-DD
@@ -247,6 +247,7 @@ fixversion: <your default fixversion>
 points: <the default amount of points>
 options: create update updateself delete nopush rank offline parentkey cfdpoints
 fromdate: <start date for cfd presentation, YYYY-MM-DD>
+predict: YYYY-MM-DD
 markers: <list of markers for cfd presentation, either in format YYYY-MM-DD or (YYYY-MM-DD:Label)>
 todate: <end date for cfd presentation, YYYY-MM-DD>
 ---
@@ -264,6 +265,8 @@ Options:
 -   `parentkey` will visualize the epic link key for stories and the parent issue key for sub-tasks.
 -   `cfdpoints` will let the Cumulative Flow Diagram visualize status changes by counting story points instead of counting issues.
 -   `fromdate` will be used by the Cumulative Flow Diagram as the start date for the visualization. Format is `YYYY-MM-DD`.
+-   `predict`  predicted completion date can be indicated depending on the configured start date. Use the `predict` setting to configure that tracking start date. Format is `YYYY-MM-DD`.
+-   'markers' indicate milestones inside of the Cumulative Flow Diagram. Either in format `YYYY-MM-DD` or `(YYYY-MM-DD:Label)`.
 -   `todate` will be used by the Cumulative Flow Diagram as the end date for the visualization. Format is `YYYY-MM-DD`.
 
 ## Package configuration
