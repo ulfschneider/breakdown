@@ -265,7 +265,7 @@ Options:
 -   `parentkey` will visualize the epic link key for stories and the parent issue key for sub-tasks.
 -   `cfdpoints` will let the Cumulative Flow Diagram visualize status changes by counting story points instead of counting issues.
 -   `fromdate` will be used by the Cumulative Flow Diagram as the start date for the visualization. Format is `YYYY-MM-DD`.
--   `predict`  predicted completion date can be indicated depending on the configured start date. Use the `predict` setting to configure that tracking start date. Format is `YYYY-MM-DD`.
+-   `predict`  a predicted completion date can be indicated depending on the configured start date. Use the `predict` setting to configure that tracking start date. Format is `YYYY-MM-DD`.
 -   'markers' indicate milestones inside of the Cumulative Flow Diagram. Either in format `YYYY-MM-DD` or `(YYYY-MM-DD:Label)`.
 -   `todate` will be used by the Cumulative Flow Diagram as the end date for the visualization. Format is `YYYY-MM-DD`.
 
