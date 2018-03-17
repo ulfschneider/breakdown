@@ -209,6 +209,9 @@ options: nopush
 ## Cumulative Flow Diagram
 
 At the bottom of the editor a panel with a Cumulative Flow Diagram (CFD) and a visualization of the Avg. Lead Time and Avg. Cycle Time can be opened by clicking on the panel title, which is *Charts*.
+
+![Breakdown Create and Push](/doc/breakdown-cfd.gif)
+
 The CFD will count issues by their status values. By configuring the option `cfdpoints`, the CFD will count story points instead of counting issues.
 
 ```
@@ -247,7 +250,7 @@ fixversion: <your default fixversion>
 points: <the default amount of points>
 options: create update updateself delete nopush rank offline parentkey cfdpoints
 fromdate: <start date for cfd presentation, YYYY-MM-DD>
-predict: YYYY-MM-DD
+predict: <start date for prediction, YYYY-MM-DD>
 markers: <list of markers for cfd presentation, either in format YYYY-MM-DD or (YYYY-MM-DD:Label)>
 todate: <end date for cfd presentation, YYYY-MM-DD>
 ---
@@ -264,10 +267,6 @@ Options:
 -   `offline` autocompletion will only work while you are connected to your JIRA server. In a situation where you are working offline, you should add the `offline` option to your configuration. This will avoid network failures in context of autocompletion.
 -   `parentkey` will visualize the epic link key for stories and the parent issue key for sub-tasks.
 -   `cfdpoints` will let the Cumulative Flow Diagram visualize status changes by counting story points instead of counting issues.
--   `fromdate` will be used by the Cumulative Flow Diagram as the start date for the visualization. Format is `YYYY-MM-DD`.
--   `predict`  a predicted completion date can be indicated depending on the configured start date. Use the `predict` setting to configure that tracking start date. Format is `YYYY-MM-DD`.
--   'markers' indicate milestones inside of the Cumulative Flow Diagram. Either in format `YYYY-MM-DD` or `(YYYY-MM-DD:Label)`.
--   `todate` will be used by the Cumulative Flow Diagram as the end date for the visualization. Format is `YYYY-MM-DD`.
 
 ## Package configuration
 
