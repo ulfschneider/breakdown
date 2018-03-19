@@ -210,7 +210,7 @@ options: nopush
 
 At the bottom of the editor a panel with a Cumulative Flow Diagram (CFD) and a visualization of the Avg. Lead Time and Avg. Cycle Time can be opened by clicking on the panel title, which is *Charts*.
 
-![Breakdown Create and Push](/doc/breakdown-cfd.gif)
+![Breakdown Create and Push](/doc/breakdown-cfd.jpg)
 
 The CFD will count issues by their status values. By configuring the option `cfdpoints`, the CFD will count story points instead of counting issues.
 
