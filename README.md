@@ -2,28 +2,28 @@
 
 Display and manipulate a breakdown structure of your JIRA Scrum project - even offline and only eventually connected to your JIRA system.
 
-![Breakdown Pull](/doc/breakdown-pull.gif)
+![Breakdown Pull](https://github.com/ulfschneider/breakdown/doc/breakdown-pull.gif)
 
 ## Contents
 
--   [Installation](#installation)
-    		\- [Atom GUI](#atom-gui)
-    		\- [Command line](#command-line)
--   [Issues and improvements](#issues-and-improvements)
--   [How to use](#how-to-use)
--   [A world of caution](#a-word-of-caution)
--   [Pulling from JIRA](#pulling-from-jira)
--   [Working with the editor](#working-with-the-editor)
--   [Creating and modifying issues](#creating-and-modifying-issues)
--   [Ranking](#ranking)
--   [Changing parents](#changing-parents)
--   [Deleting issues](#deleting-issues)
--   [What is not possible from within Atom](#what-is-not-possible-from-within-atom)
--   [Pushing to JIRA](#pushing-to-jira)
--   [Guarded pushing](#guarded-pushing)
--   [Cumulative Flow Diagram](#cumulative-flow-diagram)
--   [Configuration reference](#configuration-reference)
--   [Package configuration](#package-configuration)
+- [Installation](#installation)
+	- [Atom GUI](#atom-gui)
+	- [Command line](#command-line)
+- [Issues and improvements](#issues-and-improvements)
+- [How to use](#how-to-use)
+- [A world of caution](#a-word-of-caution)
+- [Pulling from JIRA](#pulling-from-jira)
+- [Working with the editor](#working-with-the-editor)
+- [Creating and modifying issues](#creating-and-modifying-issues)
+- [Ranking](#ranking)
+- [Changing parents](#changing-parents)
+- [Deleting issues](#deleting-issues)
+- [What is not possible from within Atom](#what-is-not-possible-from-within-atom)
+- [Pushing to JIRA](#pushing-to-jira)
+- [Guarded pushing](#guarded-pushing)
+- [Cumulative Flow Diagram](#cumulative-flow-diagram)
+- [Configuration reference](#configuration-reference)
+- [Package configuration](#package-configuration)
 
 ## Installation
 
