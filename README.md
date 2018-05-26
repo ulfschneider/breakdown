@@ -2,7 +2,7 @@
 
 Display and manipulate a breakdown structure of your JIRA Scrum project - even offline and only eventually connected to your JIRA system.
 
-![Breakdown Pull](/doc/breakdown-pull.gif)
+![Breakdown Pull](https://github.com/ulfschneider/breakdown/raw/master/doc/breakdown-pull.gif)
 
 ## Contents
 
@@ -98,7 +98,7 @@ You can open an issue inside of JIRA by doing a <kbd>CMD-MOUSECLICK</kbd> on the
 
 JIRA issues can be created and modified inside of the Atom editor. It´s always one issue per line. A new issue must contain at least the JIRA issuetype and the summary. The changes need to be pushed to JIRA to be effective.
 
-![Breakdown Create and Push](/doc/breakdown-create-push.gif)
+![Breakdown Create and Push](https://github.com/ulfschneider/breakdown/raw/master/doc/breakdown-create-push.gif)
 
 In the following example a new epic is created, containing a new story which again contains a new sub-task:
 
@@ -150,7 +150,7 @@ To change the rank for a story with sub-tasks, select the story line and all sub
 
 Currently you cannot rank epics or sub-tasks, only the ranking of stories is supported.
 
-![Breakdown Rank](/doc/breakdown-rank.gif)
+![Breakdown Rank](https://github.com/ulfschneider/breakdown/raw/master/doc/breakdown-rank.gif)
 
 ## Changing parents
 
@@ -164,7 +164,7 @@ Issues can be removed by placing a deletion mark in front of the issue:
 DEL Epic REST-26 ( s:In Progress p:13 ) This epic will be removed when pushed
 ```
 
-![Breakdown Resolve Delete](/doc/breakdown-resolve-delete.gif)
+![Breakdown Resolve Delete](https://github.com/ulfschneider/breakdown/raw/master/doc/breakdown-resolve-delete.gif)
 
 ## What is not possible from within Atom
 
@@ -210,7 +210,7 @@ options: nopush
 
 At the bottom of the editor a panel with a Cumulative Flow Diagram (CFD) and a visualization of the Avg. Lead Time and Avg. Cycle Time can be opened by clicking on the panel title, which is *Charts*.
 
-![Breakdown Create and Push](/doc/breakdown-cfd.jpg)
+![Breakdown Create and Push](https://github.com/ulfschneider/breakdown/raw/master/doc/breakdown-cfd.jpg)
 
 The CFD will count issues by their status values. By configuring the option `cfdpoints`, the CFD will count story points instead of counting issues.
 
