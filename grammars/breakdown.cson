@@ -481,6 +481,27 @@ patterns: [
         'name': 'issue.parent.key.bkdn'
         'match': '\\^[A-Za-z]{1,10}-\\d+'
     }
+    'status': {
+        'name': 'issue.status.bkdn'
+        'match': '(?i)\\b(s:\\s*)(.+?)(?=\\ba:|\\bp:|\\bv:|\\bc:|\\))'
+        'captures':
+            '1':
+                'name':'issue.field.identifier.bkdn'
+            '2':
+                'name': 'issue.field.value.bkdn'
+    },
+    'assignee': {
+
+    },
+    'points': {
+
+    },
+    'fixversion': {
+
+    },
+    'components': {
+
+    }
     'fields': {
         'name': 'issue.fields.bkdn'
         'begin': '\\('
@@ -494,7 +515,7 @@ patterns: [
         'patterns': [
             {
                 'name': 'issue.status.bkdn'
-                'match': '(?i)\\b(s:\\s*)(.+?)(?=\\ba:|\\bp:|\\bv:|\\bc:|\\))'
+                'match': '(?i)\\b(s:\\s*)(.+?)(?=\\ba:|\\bp:|\\bv:|\\bc:|\\bo:|\\))'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.bkdn'
@@ -503,7 +524,7 @@ patterns: [
             }
             {
                 'name': 'issue.assignee.bkdn'
-                'match': '(?i)\\b(a:\\s*)(.+?)(?=\\bs:|\\bp:|\\bv:|\\bc:|\\))'
+                'match': '(?i)\\b(a:\\s*)(.+?)(?=\\bs:|\\bp:|\\bv:|\\bc:|\\bo:|\\))'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.bkdn'
@@ -512,7 +533,7 @@ patterns: [
             }
             {
                 'name': 'issue.points.bkdn'
-                'match': '(?i)\\b(p:\\s*)(.+?)(?=\\bs:|\\ba:|\\bv:|\\bc:|\\))'
+                'match': '(?i)\\b(p:\\s*)(.+?)(?=\\bs:|\\ba:|\\bv:|\\bc:|\\bo:|\\))'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.bkdn'
@@ -520,8 +541,17 @@ patterns: [
                         'name': 'issue.field.value.bkdn'
             }
             {
+                'name': 'issue.origestimate.bkdn'
+                'match': '(?i)\\b(o:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bv:|\\bc:|\\))'
+                'captures':
+                    '1':
+                        'name':'issue.field.identifier.bkdn'
+                    '2':
+                        'name': 'issue.field.value.bkdn'
+            }                        
+            {
                 'name': 'issue.fixversion.bkdn'
-                'match': '(?i)\\b(v:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bc:|\\))'
+                'match': '(?i)\\b(v:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bc:|\\bo:|\\))'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.bkdn'
@@ -530,7 +560,7 @@ patterns: [
             }
             {
                 'name': 'issue.components.bkdn'
-                'match': '(?i)\\b(c:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bv:|\\))'
+                'match': '(?i)\\b(c:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bv:|\\bo:|\\))'
                 'captures':
                     '1':
                         'name':'issue.field.identifier.bkdn'
