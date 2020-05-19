@@ -473,8 +473,8 @@ patterns: [
     }
     {
         'name': 'issue.description.bkdn'
-        'begin': '(?i)^\\s*\/\/\\s*'        
-        'end': '\\s*$'
+        'begin': '(?i)^\\s*\/\/'        
+        'end': '\\s*?$'
         'patterns': [
             {
                 'name': 'description.value.bkdn'
