@@ -165,7 +165,7 @@ To change the rank for a story with sub-tasks, select the lines that contain the
 
 Currently, you cannot rank epics or sub-tasks; only the ranking of stories is supported.
 
-> Issue descriptions to not move along with the issue when ranking the issue this way!
+> When ranking an issue this way, the issue description (if there is any) needs to be collapsed, otherwise it will not move along with the issue!
 
 ![Breakdown Rank](https://github.com/ulfschneider/breakdown/raw/master/doc/breakdown-rank.gif)
 
