@@ -471,6 +471,17 @@ patterns: [
             }
         ]
     }
+    {
+        'name': 'issue.description.bkdn'
+        'begin': '(?i)^\\s*\/\/\\s*'        
+        'end': '\\s*$'
+        'patterns': [
+            {
+                'name': 'description.value.bkdn'
+                'match': '(.*)'   
+            }         
+        ]
+    }    
 ]
 'repository':
     'key': {

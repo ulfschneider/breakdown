@@ -173,7 +173,7 @@ atom-text-editor {
     .syntax--issue.syntax--field.syntax--identifier,
     .syntax--issue.syntax--summary,
     .syntax--issue.syntax--unresolved {
-        color: darken(@text-color-highlight, 15%);
+        color: @text-color-highlight;
     }
 
     .syntax--issue.syntax--resolved {
@@ -232,6 +232,10 @@ atom-text-editor {
             text-decoration: underline;
             cursor: pointer;
         }
+    }
+
+    .syntax--issue.syntax--description {
+        color: darken(@text-color-highlight, 15%);
     }
 }
 
