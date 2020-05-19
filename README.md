@@ -11,10 +11,11 @@ Display and manipulate a breakdown structure of your JIRA Scrum project - even o
     - [Command line](#command-line)
 - [Issues and improvements](#issues-and-improvements)
 - [How to use](#how-to-use)
-- [A world of caution](#a-word-of-caution)
+- [A word of caution](#a-word-of-caution)
 - [Pulling from JIRA](#pulling-from-jira)
 - [Working with the editor](#working-with-the-editor)
 - [Creating and modifying issues](#creating-and-modifying-issues)
+- [Issue descriptions](#issue-descriptions)
 - [Ranking](#ranking)
 - [Changing parents](#changing-parents)
 - [Deleting issues](#deleting-issues)
@@ -108,7 +109,7 @@ Epic This will become a new epic
         Sub This will become a new sub-task inside of a new story inside of a new epic
 ```
 
-For any issue, the following JIRA fields can be modified: _status, assignee, story points, fixversion, components_ and _summary._ For epics and stories even changing the _issuetype_ is allowed. A full-fledged issue will be displayed like:
+For any issue, the following JIRA fields can be modified: _status, assignee, story points, fixversion, components, summary, and descriptionn_ For epics and stories even changing the _issuetype_ is allowed. A full-fledged issue will be displayed like:
 
 ```
 Story REST-32 As a developer, I want to have the story status highlighted (s:In Progress a:admin p:13 v:Version 3.0 c:Frontend)
@@ -135,6 +136,19 @@ You get autocompletion suggestions for all of the fields in the parentheses sect
 options: offline
 ```
 
+## Issue descriptions
+
+The issue description typically contains more text than what can be put into the summary field.
+You can create issue descriptions by starting a new line below of an issue with the double slash `//`.
+
+It would look like
+
+```
+Story REST-32 As a developer, I want to have the story status highlighted (s:In Progress a:admin p:13 v:Version 3.0 c:Frontend)
+    //A highlighted story status will allow to quickly identify if a story is completed.
+    //Let´s make life a little bit easier here!
+```
+
 ## Ranking
 
 Atom has a nice function to move entire lines up and down with <kbd>CTRL-↑</kbd> and <kbd>CTRL-↓</kbd>, on Mac it´s <kbd>CTRL-⌘-↑</kbd> and <kbd>CTRL-⌘-↓</kbd>.
@@ -152,6 +166,8 @@ To change the rank for a story with sub-tasks, select the lines that contain the
 Currently, you cannot rank epics or sub-tasks; only the ranking of stories is supported.
 
 ![Breakdown Rank](https://github.com/ulfschneider/breakdown/raw/master/doc/breakdown-rank.gif)
+
+> Also, descriptions to not move along with the issue when ranking the issue this way!
 
 ## Changing parents
 
