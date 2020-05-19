@@ -165,9 +165,11 @@ To change the rank for a story with sub-tasks, select the lines that contain the
 
 Currently, you cannot rank epics or sub-tasks; only the ranking of stories is supported.
 
+> Issue descriptions to not move along with the issue when ranking the issue this way!
+
 ![Breakdown Rank](https://github.com/ulfschneider/breakdown/raw/master/doc/breakdown-rank.gif)
 
-> Also, descriptions to not move along with the issue when ranking the issue this way!
+
 
 ## Changing parents
 
