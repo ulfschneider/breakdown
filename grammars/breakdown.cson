@@ -74,63 +74,6 @@ patterns: [
                         'name': 'settings.value.bkdn'
             }
             {
-                'name': 'settings.from-date.bkdn'
-                'match': '(?i)^\\s*(fromdate)\\s*(:)\\s*(.*)'
-                'captures':
-                    '1':
-                        'name': 'settings.key.bkdn'
-                    '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
-                    '3':
-                        'name': 'settings.value.bkdn'
-            }
-            {
-                'name': 'settings.to-date.bkdn'
-                'match': '(?i)^\\s*(todate)\\s*(:)\\s*(.*)'
-                'captures':
-                    '1':
-                        'name': 'settings.key.bkdn'
-                    '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
-                    '3':
-                        'name': 'settings.value.bkdn'
-            }
-            {
-                'name': 'settings.predict.bkdn'
-                'match': '(?i)^\\s*(predict)\\s*(:)\\s*(.*)'
-                'captures':
-                    '1':
-                        'name': 'settings.key.bkdn'
-                    '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
-                    '3':
-                        'name': 'settings.value.bkdn'
-            }
-            {
-                'name': 'settings.markers.bkdn'
-                'begin': '(?i)^\\s*(markers)\\s*(:)'
-                'beginCaptures':
-                    '1':
-                        'name': 'settings.key.bkdn'
-                    '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
-                'end': '\\s?$'
-                'patterns': [
-                    {
-                        'name': 'settings.value.bkdn'
-                        'match': '(?i)\\((\\s*\\d{4}-\\d{2}-\\d{2}\\s*:\\s*.*?)\\)|(\\d{4}-\\d{2}-\\d{2})'
-                        'captures':
-                            '1':
-                                'name': 'marker.full.bkdn'
-                            '2':
-                                'name': 'marker.date.bkdn'
-                    }
-                    {
-                        'include': '#punctuation'
-                    }
-                ]
-            }
-            {
                 'name': 'settings.options.bkdn'
                 'begin': '(?i)^\\s*(fields|options)\\s*(:)'
                 'beginCaptures':
@@ -142,7 +85,7 @@ patterns: [
                 'patterns': [
                     {
                         'name': 'settings.value.bkdn'
-                        'match': '(?i)\\b(parentkey)\\b|\\b(rank)\\b|\\b(nopush)\\b|\\b(create)\\b|\\b(update)\\b|\\b(updateself)\\b|\\b(delete)\\b|\\b(offline)\\b|\\b(cfdpoints)\\b'
+                        'match': '(?i)\\b(parentkey)\\b|\\b(rank)\\b|\\b(nopush)\\b|\\b(create)\\b|\\b(update)\\b|\\b(updateself)\\b|\\b(delete)\\b|\\b(offline)\\b'
                     }
                     {
                         'include': '#punctuation'
@@ -473,15 +416,15 @@ patterns: [
     }
     {
         'name': 'issue.description.bkdn'
-        'begin': '(?i)^\\s*\/\/'        
+        'begin': '(?i)^\\s*\/\/'
         'end': '\\s*?$'
         'patterns': [
             {
                 'name': 'description.value.bkdn'
-                'match': '(.*)'   
-            }         
+                'match': '(.*)'
+            }
         ]
-    }    
+    }
 ]
 'repository':
     'key': {
@@ -559,7 +502,7 @@ patterns: [
                         'name':'issue.field.identifier.bkdn'
                     '2':
                         'name': 'issue.field.value.bkdn'
-            }                        
+            }
             {
                 'name': 'issue.fixversion.bkdn'
                 'match': '(?i)\\b(v:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bc:|\\bo:|\\))'

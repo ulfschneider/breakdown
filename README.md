@@ -4,6 +4,8 @@ Display and manipulate a breakdown structure of your JIRA Scrum project - even o
 
 ![Breakdown Pull](https://github.com/ulfschneider/breakdown/raw/master/doc/breakdown-pull.gif)
 
+> With version 0.88.0 the Cumulative Flow Diagram has been removed. It is not part of the core functionality but slows down the pull handling as well as the push handling.
+
 ## Contents
 
 - [Installation](#installation)
@@ -22,7 +24,6 @@ Display and manipulate a breakdown structure of your JIRA Scrum project - even o
 - [What is not possible from within Atom](#what-is-not-possible-from-within-atom)
 - [Pushing to JIRA](#pushing-to-jira)
 - [Guarded pushing](#guarded-pushing)
-- [Cumulative Flow Diagram](#cumulative-flow-diagram)
 - [Configuration reference](#configuration-reference)
 - [Package configuration](#package-configuration)
 
@@ -225,37 +226,6 @@ The entire pushing can be disabled by activating `nopush` in the `options` secti
 options: nopush
 ```
 
-## Cumulative Flow Diagram
-
-At the bottom of the editor a panel with a Cumulative Flow Diagram (CFD) and a visualization of the Avg. Lead Time and Avg. Cycle Time can be opened by clicking on the panel title, which is *Charts*.
-
-![Breakdown Create and Push](https://github.com/ulfschneider/breakdown/raw/master/doc/breakdown-cfd.jpg)
-
-The CFD will count issues by their status values. By configuring the option `cfdpoints`, the CFD will count story points instead of counting issues.
-
-```
-options: cfdpoints
-```
-
-The start date and the end date for the CFD visualization can be configured with `fromdate` and `todate` settings.
-
-```
-fromdate: <start date for CFD in format YYYY-MM-DD>
-todate: <end date for CFD in format YYYY-MM-DD>
-```
-
-Milestones inside of the CFD can be defined with the `markers` setting. The `markers` setting holds a list of marker tags, of which each one is either in the format (YYYY-MM-DD:Label of marker) or just YYYY-MM-DD. A marker must be within the date range of `fromdate` and `todate`.
-
-```
-markers: (YYYY-MM-DD:Label of marker)
-```
-
-A predicted completion date can be indicated depending on the configured start date. Use the `predict` setting to configure that tracking start date.
-
-```
-predict: YYYY-MM-DD
-```
-
 ## Configuration reference
 
 Below is a configuration section with all possible configurations. Mandatory are only the settings for `url`, `project` and `query`.
@@ -267,11 +237,7 @@ project: <key of JIRA project you want to create new issues in>
 query: <any JIRA JQL query to select your download dataset>
 fixversion: <your default fixversion>
 points: <the default amount of points>
-options: create update updateself delete nopush rank offline parentkey cfdpoints
-fromdate: <start date for cfd presentation, YYYY-MM-DD>
-predict: <start date for prediction, YYYY-MM-DD>
-markers: <list of markers for cfd presentation, either in format YYYY-MM-DD or (YYYY-MM-DD:Label)>
-todate: <end date for cfd presentation, YYYY-MM-DD>
+options: create update updateself delete nopush rank offline parentkey 
 ---
 ```
 
@@ -285,7 +251,6 @@ Options:
 -   `rank` if your query is not **SORTED BY Rank ASC**, you will **mess up** the ranking of your project when you apply the ranking inside of Atom and push the changes back to JIRA. For this reason, ranking is a guarded feature in Breakdown for Atom - you have to activate it in your configuration section by adding the `rank` option.
 -   `offline` autocompletion will only work while you are connected to your JIRA server. In a situation where you are working offline, you should add the `offline` option to your configuration. This will avoid network failures in the context of autocompletion.
 -   `parentkey` will visualize the epic link key for stories and the parent issue key for sub-tasks.
--   `cfdpoints` will let the Cumulative Flow Diagram visualize status changes by counting story points instead of counting issues.
 
 ## Package configuration
 
