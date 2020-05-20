@@ -125,8 +125,8 @@ The summary is followed by a parentheses section, containing:
 
 -   `s:<status>` to indicate the issue status
 -   `a:<assignee>` to indicate the JIRA user who is assigned to the issue
--   `p:<story points>` to indicate the story points for the issue, this is only valid for epics and stories and must be an integer number
--   `o:<original estimate>` to indicate the original estimate of any issue, to be provided in the Jira format (e.g., 2w 3d), this is only valid for sub-tasks
+-   `p:<story points>` to indicate the story points for the issue; <mark>this is only valid for epics and stories and must be an integer number</mark>
+-   `o:<original estimate>` to indicate the original estimate; <mark>setting the original estimate is only possible for sub-tasks and must be provided in the Jira format (e.g., 2w 3d) – mind the space between 2w and 3d!</mark>; aggregated estimate values are displayed for all issues, if available
 -   `v:<fixversion>` to indicate the fixversion for the issue
 -   `c:<component>` to indicate the component for the issue
 
