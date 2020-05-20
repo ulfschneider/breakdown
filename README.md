@@ -247,10 +247,10 @@ todate: <end date for CFD in format YYYY-MM-DD>
 Milestones inside of the CFD can be defined with the `markers` setting. The `markers` setting holds a list of marker tags, of which each one is either in the format (YYYY-MM-DD:Label of marker) or just YYYY-MM-DD. A marker must be within the date range of `fromdate` and `todate`.
 
 ```
-markers: (YYYY-MM-DD:Label of marker) 
+markers: (YYYY-MM-DD:Label of marker)
 ```
 
-A predicted completion date can be indicated depending on the configured start date. Use the `predict` setting to configure that tracking start date. 
+A predicted completion date can be indicated depending on the configured start date. Use the `predict` setting to configure that tracking start date.
 
 ```
 predict: YYYY-MM-DD
