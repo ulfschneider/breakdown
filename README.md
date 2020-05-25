@@ -2,7 +2,8 @@
 
 Display and manipulate a breakdown structure of your JIRA Scrum project - even offline and only eventually connected to your JIRA system.
 
-> With version 0.88.0 the Cumulative Flow Diagram has been removed from Breakdown. It didn´t contribute to the core experience of Breakdown, but it slowed down the communication to the Jira server.
+> With version 0.88.0 the Cumulative Flow Diagram has been removed from Breakdown. It didn´t contribute to the core experience but slowed down the communication to the Jira server.
+> With version 0.89.0 the statistics getting visualized when requested with the option `statistics`.
 
 ![Breakdown Pull](https://github.com/ulfschneider/breakdown/raw/master/doc/breakdown-pull.gif)
 
@@ -237,7 +238,7 @@ project: <key of JIRA project you want to create new issues in>
 query: <any JIRA JQL query to select your download dataset>
 fixversion: <your default fixversion>
 points: <the default amount of points>
-options: create update updateself delete nopush rank offline parentkey 
+options: create update updateself delete nopush rank offline parentkey statistics
 ---
 ```
 
@@ -251,6 +252,7 @@ Options:
 -   `rank` if your query is not **SORTED BY Rank ASC**, you will **mess up** the ranking of your project when you apply the ranking inside of Atom and push the changes back to JIRA. For this reason, ranking is a guarded feature in Breakdown for Atom - you have to activate it in your configuration section by adding the `rank` option.
 -   `offline` autocompletion will only work while you are connected to your JIRA server. In a situation where you are working offline, you should add the `offline` option to your configuration. This will avoid network failures in the context of autocompletion.
 -   `parentkey` will visualize the epic link key for stories and the parent issue key for sub-tasks.
+-   `statistics` will visualize all assignees that can be derived from the JIRA query and show the resolution of the tasks each assignee is involved in.
 
 ## Package configuration
 

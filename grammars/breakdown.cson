@@ -85,7 +85,7 @@ patterns: [
                 'patterns': [
                     {
                         'name': 'settings.value.bkdn'
-                        'match': '(?i)\\b(parentkey)\\b|\\b(rank)\\b|\\b(nopush)\\b|\\b(create)\\b|\\b(update)\\b|\\b(updateself)\\b|\\b(delete)\\b|\\b(offline)\\b'
+                        'match': '(?i)\\b(parentkey)\\b|\\b(rank)\\b|\\b(nopush)\\b|\\b(create)\\b|\\b(update)\\b|\\b(updateself)\\b|\\b(delete)\\b|\\b(offline)\\b|\\b(statistics)\\b'
                     }
                     {
                         'include': '#punctuation'
@@ -97,7 +97,7 @@ patterns: [
     }
     {
         'name': 'statistics.bkdn'
-        'begin': '(?i)^\\s*(statistics)\\s*$'
+        'begin': '(?i)^\\s*(statistics\\s*|pulled\\s+at.*)$'
         'beginCaptures':
             '1':
                 'name': 'statistics.begin.bkdn'
