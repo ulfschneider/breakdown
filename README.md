@@ -252,7 +252,7 @@ Options:
 -   `rank` if your query is not **SORTED BY Rank ASC**, you will **mess up** the ranking of your project when you apply the ranking inside of Atom and push the changes back to JIRA. For this reason, ranking is a guarded feature in Breakdown for Atom - you have to activate it in your configuration section by adding the `rank` option.
 -   `offline` autocompletion will only work while you are connected to your JIRA server. In a situation where you are working offline, you should add the `offline` option to your configuration. This will avoid network failures in the context of autocompletion.
 -   `parentkey` will visualize the epic link key for stories and the parent issue key for sub-tasks.
--   `statistics` will visualize all assignees that can be derived from the JIRA query and show the resolution of the tasks each assignee is involved in.
+-   `statistics` will visualize statistics about the issues, including all assignees that can be derived from the JIRA query and the resolution of the tasks each assignee is involved in.
 
 ## Package configuration
 
