@@ -3,7 +3,7 @@
 Display and manipulate a breakdown structure of your JIRA Scrum project - even offline and only eventually connected to your JIRA system.
 
 > With version 0.88.0 the Cumulative Flow Diagram has been removed from Breakdown. It didn´t contribute to the core experience but slowed down the communication to the Jira server.
-> With version 0.89.0 the statistics getting visualized when requested with the option `statistics`.
+> With version 0.89.0 the statistics are only getting visualized when requested with the option `statistics`.
 
 ![Breakdown Pull](https://github.com/ulfschneider/breakdown/raw/master/doc/breakdown-pull.gif)
 
