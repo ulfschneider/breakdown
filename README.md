@@ -2,7 +2,7 @@
 
 Display and manipulate a breakdown structure of your JIRA Scrum project - even offline and only eventually connected to your JIRA system.
 
-![Breakdown Pull](https://github.com/ulfschneider/breakdown/blob/master/doc/breakdown-pull.gif)
+![Breakdown Pull](https://github.com/ulfschneider/breakdown/blob/master/doc/breakdown-pull.gif?raw=true)
 
 ## Contents
 
