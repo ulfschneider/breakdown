@@ -429,11 +429,11 @@ patterns: [
 'repository':
     'key': {
         'name': 'issue.key.bkdn'
-        'match': '[A-Za-z]{1,10}-\\d+'
+        'match': '[A-Za-z]+-\\d+'
         }
     'parentkey': {
         'name': 'issue.parent.key.bkdn'
-        'match': '\\^[A-Za-z]{1,10}-\\d+'
+        'match': '\\^[A-Za-z]+-\\d+'
     }
     'status': {
         'name': 'issue.status.bkdn'
