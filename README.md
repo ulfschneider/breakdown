@@ -2,7 +2,7 @@
 
 Display and manipulate a breakdown structure of your JIRA Scrum project - even offline and only eventually connected to your JIRA system.
 
-![Breakdown Pull](https://ulf.codes/blog/breakdown/breakdown-pull.gif)
+![Breakdown Pull](https://ulf.codes/img/breakdown/breakdown-pull.gif)
 
 ## Contents
 
@@ -98,7 +98,7 @@ You can open an issue inside of JIRA by doing a <kbd>CMD-MOUSECLICK</kbd> on the
 
 JIRA issues can be created and modified inside of the Atom editor. It´s always one issue per line. A new issue must contain at least the JIRA issue type and the summary. The changes need to be pushed to JIRA to be effective.
 
-![Breakdown Create and Push](https://ulf.codes/blog/breakdown/breakdown-create-push.gif)
+![Breakdown Create and Push](https://ulf.codes/img/breakdown/breakdown-create-push.gif)
 
 In the following example a new epic is created, containing a new story which again contains a new sub-task:
 
@@ -166,7 +166,7 @@ Currently, you cannot rank epics or sub-tasks; only the ranking of stories is su
 
 > When ranking an issue this way, the issue description (if there is any) needs to be collapsed, otherwise it will not move along with the issue!
 
-![Breakdown Rank](https://ulf.codes/blog/breakdown/breakdown-rank.gif)
+![Breakdown Rank](https://ulf.codes/img/breakdown/breakdown-rank.gif)
 
 
 
@@ -182,7 +182,7 @@ Issues can be removed by placing a deletion mark in front of the issue:
 DEL Epic REST-26 ( s:In Progress p:13 ) This epic will be removed when pushed
 ```
 
-![Breakdown Resolve Delete](https://ulf.codes/blog/breakdown/breakdown-resolve-delete.gif)
+![Breakdown Resolve Delete](https://ulf.codes/img/breakdown/breakdown-resolve-delete.gif)
 
 ## What is not possible from within Atom
 
