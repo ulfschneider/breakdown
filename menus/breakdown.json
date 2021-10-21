@@ -1,10 +1,10 @@
 {
     "context-menu": {
         "atom-text-editor": [{
-            "label": "Pull from JIRA",
+            "label": "Pull from Jira",
             "command": "breakdown:pull"
         }, {
-            "label": "Push to JIRA",
+            "label": "Push to Jira",
             "command": "breakdown:push"
         }]
     },
@@ -13,10 +13,10 @@
         "submenu": [{
             "label": "Breakdown",
             "submenu": [{
-                "label": "Pull from JIRA",
+                "label": "Pull from Jira",
                 "command": "breakdown:pull"
             }, {
-                "label": "Push to JIRA",
+                "label": "Push to Jira",
                 "command": "breakdown:push"
             }]
         }]

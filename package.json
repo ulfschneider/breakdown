@@ -2,7 +2,7 @@
   "name": "breakdown",
   "main": "./lib/breakdown",
   "version": "0.90.8",
-  "description": "Display and manipulate a breakdown structure of your JIRA Scrum project - even offline and only eventually connected to your JIRA system",
+  "description": "Display and manipulate a breakdown structure of your Jira Scrum project - even offline and only eventually connected to your Jira system",
   "keywords": [
     "agile",
     "breakdown",
@@ -37,7 +37,7 @@
   },
   "configSchema": {
     "jiraUrl": {
-      "title": "JIRA URL",
+      "title": "Jira URL",
       "description": "This URL will be used in case you don´t provide a URL in the config section of your .bkdn file",
       "type": "string",
       "default": "",
