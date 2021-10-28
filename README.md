@@ -249,3 +249,5 @@ In addition to the configuration section of the `.bkdn` file, you can make some 
 -   **Jira URL**: This URL will be used in case you don´t provide a URL in the config section of your `.bkdn` file.
 -   **Default Story Points**: The default amount of story points to assign to new created epics or stories.
 -   **Fold all editor lines after a pull**: By default, all editor lines will be folded after pulling from Jira.
+-   **Username for accessing Jira**: A user to authenticate against Jira. 
+-   **API Token for accessing Jira**: An API Token to authenticate against Jira.

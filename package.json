@@ -56,6 +56,19 @@
       "type": "boolean",
       "default": true,
       "order": 3
+    },
+    "user": {
+      "title": "Username for accessing Jira",
+      "type": "string",
+      "default": "",
+      "order": 4
+    },
+    "pass": {
+      "title": "API Token for accessing Jira",
+      "description": "Though it´s possible, you should NOT store a password here!",
+      "type": "string",
+      "default": "",
+      "order": 5
     }
   }
 }
