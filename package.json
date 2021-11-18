@@ -1,74 +1,75 @@
 {
-  "name": "breakdown",
-  "main": "./lib/breakdown",
-  "version": "0.92.2",
-  "description": "Display and manipulate a breakdown structure of your Jira Scrum project - even offline and only eventually connected to your Jira system",
-  "keywords": [
-    "agile",
-    "breakdown",
-    "jira",
-    "scrum"
-  ],
-  "repository": "https://github.com/ulfschneider/breakdown",
-  "license": "MIT",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-  "consumedServices": {
-    "status-bar": {
-      "versions": {
-        "^1.0.0": "consumeStatusBar"
-      }
+    "name": "breakdown",
+    "main": "./lib/breakdown",
+    "version": "0.92.2",
+    "description": "Display and manipulate a breakdown structure of your Jira Scrum project - even offline and only eventually connected to your Jira system",
+    "keywords": [
+        "agile",
+        "breakdown",
+        "jira",
+        "scrum"
+    ],
+    "repository": "https://github.com/ulfschneider/breakdown",
+    "license": "MIT",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    },
+    "consumedServices": {
+        "status-bar": {
+            "versions": {
+                "^1.0.0": "consumeStatusBar"
+            }
+        }
+    },
+    "providedServices": {
+        "autocomplete.provider": {
+            "versions": {
+                "4.0.0": "provide"
+            }
+        }
+    },
+    "dependencies": {
+        "d3": "^4.13.0",
+        "moment": "^2.26.0",
+        "request": "^2.88.2",
+        "somap": "^0.5.12",
+        "underscore": "^1.10.2"
+    },
+    "configSchema": {
+        "jiraUrl": {
+            "title": "Jira URL",
+            "description": "This URL will be used in case you don´t provide a URL in the config section of your .bkdn file",
+            "type": "string",
+            "default": "",
+            "order": 1
+        },
+        "defaultStoryPoints": {
+            "title": "Default Story Points",
+            "description": "The default amount of story points to assign to new created epics or stories",
+            "type": "integer",
+            "default": 0,
+            "minimum": 0,
+            "order": 2
+        },
+        "foldAfterPull": {
+            "title": "Fold all editor lines after a successful pull",
+            "type": "boolean",
+            "default": true,
+            "order": 3
+        },
+        "user": {
+            "title": "Username",
+            "description": "The username will be used for accessing Jira",
+            "type": "string",
+            "default": "",
+            "order": 4
+        },
+        "pass": {
+            "title": "API Token",
+            "description": "Provide your API Token, which will be used for accessing Jira. Though it´s possible, you should NOT store a password here! If you don´t already have an API Token, visit your Jira, sign in, and click on your Avatar icon (top right corner of the screen). Choose API Token Authentication and create yourself a token (or re-use an already existing).",
+            "type": "string",
+            "default": "",
+            "order": 5
+        }
     }
-  },
-  "providedServices": {
-    "autocomplete.provider": {
-      "versions": {
-        "4.0.0": "provide"
-      }
-    }
-  },
-  "dependencies": {
-    "d3": "^4.13.0",
-    "moment": "^2.26.0",
-    "request": "^2.88.2",
-    "somap": "^0.5.12",
-    "underscore": "^1.10.2"
-  },
-  "configSchema": {
-    "jiraUrl": {
-      "title": "Jira URL",
-      "description": "This URL will be used in case you don´t provide a URL in the config section of your .bkdn file",
-      "type": "string",
-      "default": "",
-      "order": 1
-    },
-    "defaultStoryPoints": {
-      "title": "Default Story Points",
-      "description": "The default amount of story points to assign to new created epics or stories",
-      "type": "integer",
-      "default": 0,
-      "minimum": 0,
-      "order": 2
-    },
-    "foldAfterPull": {
-      "title": "Fold all editor lines after a successful pull",
-      "type": "boolean",
-      "default": true,
-      "order": 3
-    },
-    "user": {
-      "title": "Username for accessing Jira",
-      "type": "string",
-      "default": "",
-      "order": 4
-    },
-    "pass": {
-      "title": "API Token for accessing Jira",
-      "description": "Though it´s possible, you should NOT store a password here!",
-      "type": "string",
-      "default": "",
-      "order": 5
-    }
-  }
 }

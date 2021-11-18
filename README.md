@@ -49,6 +49,12 @@ apm install breakdown
 
 Please file an issue on [GitHub](https://github.com/ulfschneider/breakdown/issues) for bugs or desired improvements. Refer to the [release notes](https://github.com/ulfschneider/breakdown/releases) to get information about release contents.
 
+## Credentials
+
+> In this explanation the <kbd>CMD</kbd> key stands for <kbd>⌘</kbd> on a Mac and <kbd>CTRL</kbd> on other platforms.
+
+Breakdown will ask you for your Jira credentials when required. You can configure the Breakdown package to have your credentials stored for you, so you would provide them only one-time, which is more convenient. To configure the Breakdown package accordingly, in Atom, press <kbd>CMD-,</kbd> to enter the Atom configuration, go to **Packages**, go to **filter packages by name** and key in **breakdown**. For the Breakdown package click on **Settings**. In the upcoming settings pane, provide your **Username** and your **API Token** (you password could go in here as well but that´s not recommended).
+
 ## How to use
 
 To pull Jira data into your Atom editor or push new issues and changes from Atom to Jira, create a file with a `.bkdn` filetype, e.g. `myjira.bkdn`. The file must start with your configuration section and at least contain the following first five lines:
@@ -78,8 +84,6 @@ options: parentkey
 Any story that is contained in the current sprint will be prefixed by `⟳`. An epic that contains stories which are in the current sprint will also be prefixed with `⟳`.
 
 ## Working with the editor
-
-> In this explanation the <kbd>CMD</kbd> key stands for <kbd>⌘</kbd> on a Mac and <kbd>CTRL</kbd> on other platforms.
 
 By default, after a pull, all editor lines are folded. In the editor, folding can be controlled with the following keys
 
