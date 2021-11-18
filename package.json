@@ -33,7 +33,7 @@
         "moment": "^2.26.0",
         "request": "^2.88.2",
         "somap": "^0.5.12",
-        "underscore": "^1.10.2"
+        "underscore": "^1.12.1"
     },
     "configSchema": {
         "jiraUrl": {
