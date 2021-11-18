@@ -66,7 +66,7 @@
         },
         "pass": {
             "title": "API Token",
-            "description": "Provide your API Token, which will be used for accessing Jira. Though it´s possible, you should NOT store a password here! If you don´t already have an API Token, visit your Jira, sign in, and click on your Avatar icon (top right corner of the screen). Choose API Token Authentication and create yourself a token (or re-use an already existing).",
+            "description": "Provide your API Token, which will be used for accessing Jira. Though it´s possible, you should NOT store a password here! If you don´t already have an API Token, visit your Jira, sign in, and click on your Avatar icon (top right corner of the screen). Choose API Token Authentication and create yourself a token.",
             "type": "string",
             "default": "",
             "order": 5
