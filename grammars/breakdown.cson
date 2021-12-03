@@ -1,548 +1,548 @@
 scopeName: 'breakdown'
 name: 'Breakdown'
 fileTypes: [
-    'bkdn'
+	'bkdn'
 ]
 firstLineMatch: '(?i)^\\s*(jira-breakdown|breakdown)\\s*$'
 foldingStartMarker: ''
 foldingStopMarker: ''
 patterns: [
-    {
-        'name': 'settings.bkdn'
-        'begin': '(?i)^\\s*(jira-breakdown|breakdown)\\s*$'
-        'beginCaptures':
-            '1':
-                'name': 'settings.begin.bkdn'
-        'end': '^\\s*---\\s*$'
-        'endCaptures':
-            '0':
-                'name': 'settings.end.bkdn'
-        'patterns': [
-            {
-                'name': 'settings.jira-url.bkdn'
-                'match': '(?i)^\\s*(url)\\s*(:)\\s*(.*)'
-                'captures':
-                    '1':
-                        'name': 'settings.key.bkdn'
-                    '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
-                    '3':
-                        'name': 'settings.value.bkdn'
-            }
-            {
-                'name': 'settings.query.bkdn'
-                'match': '(?i)^\\s*(query)\\s*(:)\\s*(.*)'
-                'captures':
-                    '1':
-                        'name': 'settings.key.bkdn'
-                    '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
-                    '3':
-                        'name': 'settings.value.bkdn'
-            }
-            {
-                'name': 'settings.project.bkdn'
-                'match': '(?i)^\\s*(project)\\s*(:)\\s*(.*)'
-                'captures':
-                    '1':
-                        'name': 'settings.key.bkdn'
-                    '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
-                    '3':
-                        'name': 'settings.value.bkdn'
-            }
-            {
-                'name': 'settings.fixversion.bkdn'
-                'match': '(?i)^\\s*(fixversion)\\s*(:)\\s*(.*)'
-                'captures':
-                    '1':
-                        'name': 'settings.key.bkdn'
-                    '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
-                    '3':
-                        'name': 'settings.value.bkdn'
-            }
-            {
-                'name': 'settings.points.bkdn'
-                'match': '(?i)^\\s*(points)\\s*(:)\\s*(.*)'
-                'captures':
-                    '1':
-                        'name': 'settings.key.bkdn'
-                    '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
-                    '3':
-                        'name': 'settings.value.bkdn'
-            }
-            {
-                'name': 'settings.options.bkdn'
-                'begin': '(?i)^\\s*(fields|options)\\s*(:)'
-                'beginCaptures':
-                    '1':
-                        'name': 'settings.key.bkdn'
-                    '2':
-                        'name': 'settings.punctuation.separator.key-value.bkdn'
-                'end': '\\s?$'
-                'patterns': [
-                    {
-                        'name': 'settings.value.bkdn'
-                        'match': '(?i)\\b(parentkey)\\b|\\b(rank)\\b|\\b(nopush)\\b|\\b(create)\\b|\\b(update)\\b|\\b(updateself)\\b|\\b(delete)\\b|\\b(offline)\\b|\\b(statistics)\\b'
-                    }
-                    {
-                        'include': '#punctuation'
-                    }
-                ]
+	{
+		'name': 'settings.bkdn'
+		'begin': '(?i)^\\s*(jira-breakdown|breakdown)\\s*$'
+		'beginCaptures':
+			'1':
+				'name': 'settings.begin.bkdn'
+		'end': '^\\s*---\\s*$'
+		'endCaptures':
+			'0':
+				'name': 'settings.end.bkdn'
+		'patterns': [
+			{
+				'name': 'settings.jira-url.bkdn'
+				'match': '(?i)^\\s*(url)\\s*(:)\\s*(.*)'
+				'captures':
+					'1':
+						'name': 'settings.key.bkdn'
+					'2':
+						'name': 'settings.punctuation.separator.key-value.bkdn'
+					'3':
+						'name': 'settings.value.bkdn'
+			}
+			{
+				'name': 'settings.query.bkdn'
+				'match': '(?i)^\\s*(query)\\s*(:)\\s*(.*)'
+				'captures':
+					'1':
+						'name': 'settings.key.bkdn'
+					'2':
+						'name': 'settings.punctuation.separator.key-value.bkdn'
+					'3':
+						'name': 'settings.value.bkdn'
+			}
+			{
+				'name': 'settings.project.bkdn'
+				'match': '(?i)^\\s*(project)\\s*(:)\\s*(.*)'
+				'captures':
+					'1':
+						'name': 'settings.key.bkdn'
+					'2':
+						'name': 'settings.punctuation.separator.key-value.bkdn'
+					'3':
+						'name': 'settings.value.bkdn'
+			}
+			{
+				'name': 'settings.fixversion.bkdn'
+				'match': '(?i)^\\s*(fixversion)\\s*(:)\\s*(.*)'
+				'captures':
+					'1':
+						'name': 'settings.key.bkdn'
+					'2':
+						'name': 'settings.punctuation.separator.key-value.bkdn'
+					'3':
+						'name': 'settings.value.bkdn'
+			}
+			{
+				'name': 'settings.points.bkdn'
+				'match': '(?i)^\\s*(points)\\s*(:)\\s*(.*)'
+				'captures':
+					'1':
+						'name': 'settings.key.bkdn'
+					'2':
+						'name': 'settings.punctuation.separator.key-value.bkdn'
+					'3':
+						'name': 'settings.value.bkdn'
+			}
+			{
+				'name': 'settings.options.bkdn'
+				'begin': '(?i)^\\s*(fields|options)\\s*(:)'
+				'beginCaptures':
+					'1':
+						'name': 'settings.key.bkdn'
+					'2':
+						'name': 'settings.punctuation.separator.key-value.bkdn'
+				'end': '\\s?$'
+				'patterns': [
+					{
+						'name': 'settings.value.bkdn'
+						'match': '(?i)\\b(parentkey)\\b|\\b(rank)\\b|\\b(nopush)\\b|\\b(create)\\b|\\b(update)\\b|\\b(updateself)\\b|\\b(delete)\\b|\\b(offline)\\b|\\b(statistics)\\b'
+					}
+					{
+						'include': '#punctuation'
+					}
+				]
 
-            }
-        ]
-    }
-    {
-        'name': 'statistics.bkdn'
-        'begin': '(?i)^\\s*(statistics\\s*|pulled\\s+at.*)$'
-        'beginCaptures':
-            '1':
-                'name': 'statistics.begin.bkdn'
-        'end': '^\\s*---\\s*$'
-        'endCaptures':
-            '0':
-                'name': 'statistics.end.bkdn'
-        'patterns': [
-            {
-                'name': 'issuecount.unresolved.bkdn'
-                'begin': '(?i)^\\s*\\d+\\s*issues\\s*unresolved'
-                'patterns': [
-                    {
-                    'include': '#timetracking'
-                    }
-                ]
-                'end': '\\s*$'
-            }
-            {
-                'name': 'issue.unresolved.bkdn'
-                'begin': '(?i)^\\s*(⟳)?\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
-                'beginCaptures':
-                    '1':
-                        'name': 'active.sprint.bkdn'
-                    '2':
-                        'name': 'issue.key.bkdn'
-                    '3':
-                        'name': 'issue.type-and-state.bkdn'
-                        'patterns': [
-                            {
-                            'include': '#timetracking'
-                            }
-                        ]
-                    '4':
-                        'name': 'punctuation.separator.bkdn'
-                'end': '$'
-                'patterns': [
-                    {
-                    'include': '#parentkey'
-                    }
-                    {
-                    'include': '#summary'
-                    }
-                ]
-            }
-            {
-                'name': 'issuecount.resolved.bkdn'
-                'begin': '(?i)^\\s*\\d+\\s*issues\\s*resolved'
-                'patterns': [
-                    {
-                        'include': '#timetracking'
-                    }
-                ]
-                'end': '\\s*$'
-            }
-            {
-                'name': 'issue.resolved.bkdn'
-                'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
-                'beginCaptures':
-                    '1':
-                        'name': 'active.sprint.bkdn'
-                    '2':
-                        'name': 'issue.resolved.bkdn'
-                    '3':
-                        'name': 'issue.key.bkdn'
-                    '4':
-                        'name': 'issue.type-and-state.bkdn'
-                        'patterns': [
-                            {
-                                'include': '#timetracking'
-                            }
-                        ]
-                    '5':
-                        'name': 'punctuation.separator.bkdn'
-                'end': '$'
-                'patterns': [
-                    {
-                        'include': '#parentkey'
-                    }
-                    {
-                        'include': '#summary'
-                    }
-                ]
-            }
-            {
-            'include': '#activesprint'
-            }
-            {
-            'include': '#timetracking'
-            }
+			}
+		]
+	}
+	{
+		'name': 'statistics.bkdn'
+		'begin': '(?i)^\\s*(statistics\\s*|pulled\\s+at.*)$'
+		'beginCaptures':
+			'1':
+				'name': 'statistics.begin.bkdn'
+		'end': '^\\s*---\\s*$'
+		'endCaptures':
+			'0':
+				'name': 'statistics.end.bkdn'
+		'patterns': [
+			{
+				'name': 'issuecount.unresolved.bkdn'
+				'begin': '(?i)^\\s*\\d+\\s*issues\\s*unresolved'
+				'patterns': [
+					{
+					'include': '#timetracking'
+					}
+				]
+				'end': '\\s*$'
+			}
+			{
+				'name': 'issue.unresolved.bkdn'
+				'begin': '(?i)^\\s*(⟳)?\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
+				'beginCaptures':
+					'1':
+						'name': 'active.sprint.bkdn'
+					'2':
+						'name': 'issue.key.bkdn'
+					'3':
+						'name': 'issue.type-and-state.bkdn'
+						'patterns': [
+							{
+							'include': '#timetracking'
+							}
+						]
+					'4':
+						'name': 'punctuation.separator.bkdn'
+				'end': '$'
+				'patterns': [
+					{
+					'include': '#parentkey'
+					}
+					{
+					'include': '#summary'
+					}
+				]
+			}
+			{
+				'name': 'issuecount.resolved.bkdn'
+				'begin': '(?i)^\\s*\\d+\\s*issues\\s*resolved'
+				'patterns': [
+					{
+						'include': '#timetracking'
+					}
+				]
+				'end': '\\s*$'
+			}
+			{
+				'name': 'issue.resolved.bkdn'
+				'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
+				'beginCaptures':
+					'1':
+						'name': 'active.sprint.bkdn'
+					'2':
+						'name': 'issue.resolved.bkdn'
+					'3':
+						'name': 'issue.key.bkdn'
+					'4':
+						'name': 'issue.type-and-state.bkdn'
+						'patterns': [
+							{
+								'include': '#timetracking'
+							}
+						]
+					'5':
+						'name': 'punctuation.separator.bkdn'
+				'end': '$'
+				'patterns': [
+					{
+						'include': '#parentkey'
+					}
+					{
+						'include': '#summary'
+					}
+				]
+			}
+			{
+			'include': '#activesprint'
+			}
+			{
+			'include': '#timetracking'
+			}
 
-        ]
-    }
-    {
-        'name': 'editable-content.bkdn'
-        'match': '(?i)^\\s*(below[\\s]+this[\\s]+line.*)$'
-    }
-    {
-        'name': 'issue.no-parent-in-selection.bkdn'
-        'match': '(?i)^\\s*(⟳)?\\s*(no[\\s]+parent.*|parent[\\s]+not.*|parent[\\s]+is[\\s]+not.*)$'
-        'captures':
-            '1':
-                'name': 'active.sprint.bkdn'
-            '2':
-                'name': 'no-parent-in-selection.bkdn'
-    }
-    {
-        'name': 'issue.empty-parent.bkdn'
-        'match': '(?i)^\\s*(⟳)?\\s*(empty[\\s]+parent.*|without[\\s]+parent.*)$'
-        'captures':
-            '1':
-                'name': 'active.sprint.bkdn'
-            '2':
-                'name': 'empty-parent.bkdn'
-    }
-    {
-        'name': 'issue.delete.epic.bkdn'
-        'begin': '(?i)^\\s*(del|delete)\\s*(⟳)?\\s*(\\s*resolved\\s*|\\s*)(Epic)\\b'
-        'beginCaptures':
-            '1':
-                'name': 'issue.delete.bkdn'
-            '2':
-                'name': 'active.sprint.bkdn'
-            '4':
-                'name': 'issue.type.epic.bkdn'
-        'end': '$'
-        'patterns': [
-            {
-                'include': '#key'
-            }
-        ]
-    }
-    {
-        'name': 'issue.delete.story.bkdn'
-        'begin': '(?i)^\\s*(del|delete)\\s*(⟳)?\\s*(\\s*resolved\\s*|\\s*)(Story)\\b'
-        'beginCaptures':
-            '1':
-                'name': 'issue.delete.bkdn'
-            '2':
-                'name': 'active.sprint.bkdn'
-            '4':
-                'name': 'issue.type.story.bkdn'
-        'end': '$'
-        'patterns': [
-            {
-                'include': '#key'
-            }
-            {
-                'include': '#parentkey'
-            }
-        ]
-    }
-    {
-        'name': 'issue.delete.sub-task.bkdn'
-        'begin': '(?i)^\\s*(del|delete)\\s*(⟳)?\\s*(\\s*resolved\\s*|\\s*)(Sub-Task|Subtask|Sub)\\s+'
-        'beginCaptures':
-            '1':
-                'name': 'issue.delete.bkdn'
-            '2':
-                'name': 'active.sprint.bkdn'
-            '4':
-                'name': 'issue.type.sub-task.bkdn'
-        'end': '$'
-        'patterns': [
-            {
-                'include': '#key'
-            }
-            {
-                'include': '#parentkey'
-            }
-        ]
-    }
-    {
-        'name': 'issue.resolved.epic.bkdn'
-        'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s+(Epic)\\b'
-        'beginCaptures':
-            '1':
-                'name': 'active.sprint.bkdn'
-            '2':
-                'name': 'issue.resolved.bkdn'
-            '3':
-                'name': 'issue.type.epic.bkdn'
-        'end': '\\s*$'
-        'patterns': [
-            {
-                'include': '#key'
-            }
-            {
-                'include': '#fields'
-            }
-            {
-                'include': '#summary'
-            }
-        ]
-    }
-    {
-        'name': 'issue.resolved.story.bkdn'
-        'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s+(Story)\\b'
-        'beginCaptures':
-            '1':
-                'name': 'active.sprint.bkdn'
-            '2':
-                'name': 'issue.resolved.bkdn'
-            '3':
-                'name': 'issue.type.story.bkdn'
-        'end': '\\s*$'
-        'patterns': [
-            {
-                'include': '#key'
-            }
-            {
-                'include': '#fields'
-            }
-            {
-                'include': '#parentkey'
-            }
-            {
-                'include': '#summary'
-            }
-        ]
-    }
-    {
-        'name': 'issue.resolved.sub-task.bkdn'
-        'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s+(Sub-Task|Subtask|Sub)\\s+'
-        'beginCaptures':
-            '1':
-                'name': 'active.sprint.bkdn'
-            '2':
-                'name': 'issue.resolved.bkdn'
-            '3':
-                'name': 'issue.type.sub-task.bkdn'
-        'end': '\\s*$'
-        'patterns': [
-            {
-                'include': '#key'
-            }
-            {
-                'include': '#fields'
-            }
-            {
-                'include': '#parentkey'
-            }
-            {
-                'include': '#summary'
-            }
-        ]
-    }
-    {
-        'name': 'issue.epic.bkdn'
-        'begin': '(?i)^\\s*(⟳)?\\s*(Epic)\\b'
-        'beginCaptures':
-            '1':
-                'name': 'active.sprint.bkdn'
-            '2':
-                'name': 'issue.type.epic.bkdn'
-        'end': '\\s*$'
-        'patterns': [
-            {
-                'include': '#key'
-            }
-            {
-                'include': '#fields'
-            }
-            {
-                'include': '#summary'
-            }
-        ]
-    }
-    {
-        'name': 'issue.story.bkdn'
-        'begin': '(?i)^\\s*(⟳)?\\s*(Story)\\b'
-        'beginCaptures':
-            '1':
-                'name': 'active.sprint.bkdn'
-            '2':
-                'name': 'issue.type.story.bkdn'
-        'end': '\\s*$'
-        'patterns': [
-            {
-                'include': '#key'
-            }
-            {
-                'include': '#fields'
-            }
-            {
-                'include': '#parentkey'
-            }
-            {
-                'include': '#summary'
-            }
-        ]
-    }
-    {
-        'name': 'issue.sub-task.bkdn'
-        'begin': '(?i)^\\s*(⟳)?\\s*(Sub-Task|Subtask|Sub)\\s+'
-        'beginCaptures':
-            '1':
-                'name': 'active.sprint.bkdn'
-            '2':
-                'name': 'issue.type.sub-task.bkdn'
-        'end': '\\s*$'
-        'patterns': [
-            {
-                'include': '#key'
-            }
-            {
-                'include': '#fields'
-            }
-            {
-                'include': '#parentkey'
-            }
-            {
-                'include': '#summary'
-            }
-        ]
-    }
-    {
-        'name': 'issue.description.bkdn'
-        'begin': '(?i)^\\s*\/\/'
-        'end': '\\s*?$'
-        'patterns': [
-            {
-                'name': 'description.value.bkdn'
-                'match': '(.*)'
-            }
-        ]
-    }
+		]
+	}
+	{
+		'name': 'editable-content.bkdn'
+		'match': '(?i)^\\s*(below[\\s]+this[\\s]+line.*)$'
+	}
+	{
+		'name': 'issue.no-parent-in-selection.bkdn'
+		'match': '(?i)^\\s*(⟳)?\\s*(no[\\s]+parent.*|parent[\\s]+not.*|parent[\\s]+is[\\s]+not.*)$'
+		'captures':
+			'1':
+				'name': 'active.sprint.bkdn'
+			'2':
+				'name': 'no-parent-in-selection.bkdn'
+	}
+	{
+		'name': 'issue.empty-parent.bkdn'
+		'match': '(?i)^\\s*(⟳)?\\s*(empty[\\s]+parent.*|without[\\s]+parent.*)$'
+		'captures':
+			'1':
+				'name': 'active.sprint.bkdn'
+			'2':
+				'name': 'empty-parent.bkdn'
+	}
+	{
+		'name': 'issue.delete.epic.bkdn'
+		'begin': '(?i)^\\s*(del|delete)\\s*(⟳)?\\s*(\\s*resolved\\s*|\\s*)(Epic)\\b'
+		'beginCaptures':
+			'1':
+				'name': 'issue.delete.bkdn'
+			'2':
+				'name': 'active.sprint.bkdn'
+			'4':
+				'name': 'issue.type.epic.bkdn'
+		'end': '$'
+		'patterns': [
+			{
+				'include': '#key'
+			}
+		]
+	}
+	{
+		'name': 'issue.delete.story.bkdn'
+		'begin': '(?i)^\\s*(del|delete)\\s*(⟳)?\\s*(\\s*resolved\\s*|\\s*)(Story)\\b'
+		'beginCaptures':
+			'1':
+				'name': 'issue.delete.bkdn'
+			'2':
+				'name': 'active.sprint.bkdn'
+			'4':
+				'name': 'issue.type.story.bkdn'
+		'end': '$'
+		'patterns': [
+			{
+				'include': '#key'
+			}
+			{
+				'include': '#parentkey'
+			}
+		]
+	}
+	{
+		'name': 'issue.delete.sub-task.bkdn'
+		'begin': '(?i)^\\s*(del|delete)\\s*(⟳)?\\s*(\\s*resolved\\s*|\\s*)(Sub-Task|Subtask|Sub)\\s+'
+		'beginCaptures':
+			'1':
+				'name': 'issue.delete.bkdn'
+			'2':
+				'name': 'active.sprint.bkdn'
+			'4':
+				'name': 'issue.type.sub-task.bkdn'
+		'end': '$'
+		'patterns': [
+			{
+				'include': '#key'
+			}
+			{
+				'include': '#parentkey'
+			}
+		]
+	}
+	{
+		'name': 'issue.resolved.epic.bkdn'
+		'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s+(Epic)\\b'
+		'beginCaptures':
+			'1':
+				'name': 'active.sprint.bkdn'
+			'2':
+				'name': 'issue.resolved.bkdn'
+			'3':
+				'name': 'issue.type.epic.bkdn'
+		'end': '\\s*$'
+		'patterns': [
+			{
+				'include': '#key'
+			}
+			{
+				'include': '#fields'
+			}
+			{
+				'include': '#summary'
+			}
+		]
+	}
+	{
+		'name': 'issue.resolved.story.bkdn'
+		'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s+(Story)\\b'
+		'beginCaptures':
+			'1':
+				'name': 'active.sprint.bkdn'
+			'2':
+				'name': 'issue.resolved.bkdn'
+			'3':
+				'name': 'issue.type.story.bkdn'
+		'end': '\\s*$'
+		'patterns': [
+			{
+				'include': '#key'
+			}
+			{
+				'include': '#fields'
+			}
+			{
+				'include': '#parentkey'
+			}
+			{
+				'include': '#summary'
+			}
+		]
+	}
+	{
+		'name': 'issue.resolved.sub-task.bkdn'
+		'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s+(Sub-Task|Subtask|Sub)\\s+'
+		'beginCaptures':
+			'1':
+				'name': 'active.sprint.bkdn'
+			'2':
+				'name': 'issue.resolved.bkdn'
+			'3':
+				'name': 'issue.type.sub-task.bkdn'
+		'end': '\\s*$'
+		'patterns': [
+			{
+				'include': '#key'
+			}
+			{
+				'include': '#fields'
+			}
+			{
+				'include': '#parentkey'
+			}
+			{
+				'include': '#summary'
+			}
+		]
+	}
+	{
+		'name': 'issue.epic.bkdn'
+		'begin': '(?i)^\\s*(⟳)?\\s*(Epic)\\b'
+		'beginCaptures':
+			'1':
+				'name': 'active.sprint.bkdn'
+			'2':
+				'name': 'issue.type.epic.bkdn'
+		'end': '\\s*$'
+		'patterns': [
+			{
+				'include': '#key'
+			}
+			{
+				'include': '#fields'
+			}
+			{
+				'include': '#summary'
+			}
+		]
+	}
+	{
+		'name': 'issue.story.bkdn'
+		'begin': '(?i)^\\s*(⟳)?\\s*(Story)\\b'
+		'beginCaptures':
+			'1':
+				'name': 'active.sprint.bkdn'
+			'2':
+				'name': 'issue.type.story.bkdn'
+		'end': '\\s*$'
+		'patterns': [
+			{
+				'include': '#key'
+			}
+			{
+				'include': '#fields'
+			}
+			{
+				'include': '#parentkey'
+			}
+			{
+				'include': '#summary'
+			}
+		]
+	}
+	{
+		'name': 'issue.sub-task.bkdn'
+		'begin': '(?i)^\\s*(⟳)?\\s*(Sub-Task|Subtask|Sub)\\s+'
+		'beginCaptures':
+			'1':
+				'name': 'active.sprint.bkdn'
+			'2':
+				'name': 'issue.type.sub-task.bkdn'
+		'end': '\\s*$'
+		'patterns': [
+			{
+				'include': '#key'
+			}
+			{
+				'include': '#fields'
+			}
+			{
+				'include': '#parentkey'
+			}
+			{
+				'include': '#summary'
+			}
+		]
+	}
+	{
+		'name': 'issue.description.bkdn'
+		'begin': '(?i)^\\s*\/\/'
+		'end': '\\s*?$'
+		'patterns': [
+			{
+				'name': 'description.value.bkdn'
+				'match': '(.*)'
+			}
+		]
+	}
 ]
 'repository':
-    'key': {
-        'name': 'issue.key.bkdn'
-        'match': '[A-Za-z]+-\\d+'
-        }
-    'parentkey': {
-        'name': 'issue.parent.key.bkdn'
-        'match': '\\^[A-Za-z]+-\\d+'
-    }
-    'status': {
-        'name': 'issue.status.bkdn'
-        'match': '(?i)\\b(s:\\s*)(.+?)(?=\\ba:|\\bp:|\\bv:|\\bc:|\\))'
-        'captures':
-            '1':
-                'name':'issue.field.identifier.bkdn'
-            '2':
-                'name': 'issue.field.value.bkdn'
-    },
-    'assignee': {
+	'key': {
+		'name': 'issue.key.bkdn'
+		'match': '[A-Za-z]+-\\d+'
+		}
+	'parentkey': {
+		'name': 'issue.parent.key.bkdn'
+		'match': '\\^[A-Za-z]+-\\d+'
+	}
+	'status': {
+		'name': 'issue.status.bkdn'
+		'match': '(?i)\\b(s:\\s*)(.+?)(?=\\ba:|\\bp:|\\bv:|\\bc:|\\))'
+		'captures':
+			'1':
+				'name':'issue.field.identifier.bkdn'
+			'2':
+				'name': 'issue.field.value.bkdn'
+	},
+	'assignee': {
 
-    },
-    'points': {
+	},
+	'points': {
 
-    },
-    'fixversion': {
+	},
+	'fixversion': {
 
-    },
-    'components': {
+	},
+	'components': {
 
-    }
-    'fields': {
-        'name': 'issue.fields.bkdn'
-        'begin': '\\('
-        'beginCaptures':
-            '0':
-                'name': 'fields.begin.bkdn'
-        'end': '\\)|$'
-        'endCaptures':
-            '0':
-                'name': 'fields.end.bkdn'
-        'patterns': [
-            {
-                'name': 'issue.status.bkdn'
-                'match': '(?i)\\b(s:\\s*)(.+?)(?=\\ba:|\\bp:|\\bv:|\\bc:|\\bo:|\\))'
-                'captures':
-                    '1':
-                        'name':'issue.field.identifier.bkdn'
-                    '2':
-                        'name': 'issue.field.value.bkdn'
-            }
-            {
-                'name': 'issue.assignee.bkdn'
-                'match': '(?i)\\b(a:\\s*)(.+?)(?=\\bs:|\\bp:|\\bv:|\\bc:|\\bo:|\\))'
-                'captures':
-                    '1':
-                        'name':'issue.field.identifier.bkdn'
-                    '2':
-                        'name': 'issue.field.value.bkdn'
-            }
-            {
-                'name': 'issue.points.bkdn'
-                'match': '(?i)\\b(p:\\s*)(.+?)(?=\\bs:|\\ba:|\\bv:|\\bc:|\\bo:|\\))'
-                'captures':
-                    '1':
-                        'name':'issue.field.identifier.bkdn'
-                    '2':
-                        'name': 'issue.field.value.bkdn'
-            }
-            {
-                'name': 'issue.origestimate.bkdn'
-                'match': '(?i)\\b(o:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bv:|\\bc:|\\))'
-                'captures':
-                    '1':
-                        'name':'issue.field.identifier.bkdn'
-                    '2':
-                        'name': 'issue.field.value.bkdn'
-            }
-            {
-                'name': 'issue.fixversion.bkdn'
-                'match': '(?i)\\b(v:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bc:|\\bo:|\\))'
-                'captures':
-                    '1':
-                        'name':'issue.field.identifier.bkdn'
-                    '2':
-                        'name': 'issue.field.value.bkdn'
-            }
-            {
-                'name': 'issue.components.bkdn'
-                'match': '(?i)\\b(c:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bv:|\\bo:|\\))'
-                'captures':
-                    '1':
-                        'name':'issue.field.identifier.bkdn'
-                    '2':
-                        'name': 'issue.field.value.bkdn'
-            }
-        ]
-    }
-    'summary': {
-        'name': 'issue.summary.bkdn'
-        'match': '[^\\s].*(?=\\((.*\\b(s|a|p|v|c|):.*)\\))|[^\\s].*(?=\\((.*\\b(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?=\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\((.*\\b(s|a|p|v|c|):.*)\\))|[^\\s].*(?!\\((.*\\b(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\^[A-Za-z]{1,10}-\\d+)'
-    }
-    'timetracking': {
-        'name': 'timetracking.bkdn'
-        'match': '(?i)\\[(.*?logged)\\s*(\\|)\\s*(.*?remain)\\]'
-        'captures':
-            '1':
-                'name': 'timetracking.spent.bkdn'
-            '2':
-                'name': 'punctuation.separator.bkdn'
-            '3':
-                'name': 'timetracking.remaining.bkdn'
-    }
-    'activesprint': {
-        'name': 'active.sprint.bkdn'
-        'match': '⟳'
-    }
-    'punctuation': {
-        'name': 'punctuation.separator.bkdn'
-        'match': '[,;.:-_]'
-    }
+	}
+	'fields': {
+		'name': 'issue.fields.bkdn'
+		'begin': '\\('
+		'beginCaptures':
+			'0':
+				'name': 'fields.begin.bkdn'
+		'end': '\\)|$'
+		'endCaptures':
+			'0':
+				'name': 'fields.end.bkdn'
+		'patterns': [
+			{
+				'name': 'issue.status.bkdn'
+				'match': '(?i)\\b(s:\\s*)(.+?)(?=\\ba:|\\bp:|\\bv:|\\bc:|\\bo:|\\))'
+				'captures':
+					'1':
+						'name':'issue.field.identifier.bkdn'
+					'2':
+						'name': 'issue.field.value.bkdn'
+			}
+			{
+				'name': 'issue.assignee.bkdn'
+				'match': '(?i)\\b(a:\\s*)(.+?)(?=\\bs:|\\bp:|\\bv:|\\bc:|\\bo:|\\))'
+				'captures':
+					'1':
+						'name':'issue.field.identifier.bkdn'
+					'2':
+						'name': 'issue.field.value.bkdn'
+			}
+			{
+				'name': 'issue.points.bkdn'
+				'match': '(?i)\\b(p:\\s*)(.+?)(?=\\bs:|\\ba:|\\bv:|\\bc:|\\bo:|\\))'
+				'captures':
+					'1':
+						'name':'issue.field.identifier.bkdn'
+					'2':
+						'name': 'issue.field.value.bkdn'
+			}
+			{
+				'name': 'issue.origestimate.bkdn'
+				'match': '(?i)\\b(o:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bv:|\\bc:|\\))'
+				'captures':
+					'1':
+						'name':'issue.field.identifier.bkdn'
+					'2':
+						'name': 'issue.field.value.bkdn'
+			}
+			{
+				'name': 'issue.fixversion.bkdn'
+				'match': '(?i)\\b(v:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bc:|\\bo:|\\))'
+				'captures':
+					'1':
+						'name':'issue.field.identifier.bkdn'
+					'2':
+						'name': 'issue.field.value.bkdn'
+			}
+			{
+				'name': 'issue.components.bkdn'
+				'match': '(?i)\\b(c:\\s*)(.+?)(?=\\bs:|\\ba:|\\bp:|\\bv:|\\bo:|\\))'
+				'captures':
+					'1':
+						'name':'issue.field.identifier.bkdn'
+					'2':
+						'name': 'issue.field.value.bkdn'
+			}
+		]
+	}
+	'summary': {
+		'name': 'issue.summary.bkdn'
+		'match': '[^\\s].*(?=\\((.*\\b(s|a|p|v|c|):.*)\\))|[^\\s].*(?=\\((.*\\b(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?=\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\((.*\\b(s|a|p|v|c|):.*)\\))|[^\\s].*(?!\\((.*\\b(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\^[A-Za-z]{1,10}-\\d+)'
+	}
+	'timetracking': {
+		'name': 'timetracking.bkdn'
+		'match': '(?i)\\[(.*?logged)\\s*(\\|)\\s*(.*?remain)\\]'
+		'captures':
+			'1':
+				'name': 'timetracking.spent.bkdn'
+			'2':
+				'name': 'punctuation.separator.bkdn'
+			'3':
+				'name': 'timetracking.remaining.bkdn'
+	}
+	'activesprint': {
+		'name': 'active.sprint.bkdn'
+		'match': '⟳'
+	}
+	'punctuation': {
+		'name': 'punctuation.separator.bkdn'
+		'match': '[,;.:-_]'
+	}
