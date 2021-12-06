@@ -1,24 +1,43 @@
 {
     "context-menu": {
-        "atom-text-editor": [{
-            "label": "Pull from Jira",
-            "command": "breakdown:pull"
-        }, {
-            "label": "Push to Jira",
-            "command": "breakdown:push"
-        }]
-    },
-    "menu": [{
-        "label": "Packages",
-        "submenu": [{
-            "label": "Breakdown",
-            "submenu": [{
+        "atom-text-editor": [
+            {
                 "label": "Pull from Jira",
                 "command": "breakdown:pull"
-            }, {
+            },
+            {
                 "label": "Push to Jira",
                 "command": "breakdown:push"
-            }]
-        }]
-    }]
+            }
+            ,
+            {
+                "label": "Trim empty lines",
+                "command": "breakdown:trim"
+            }
+        ]
+    },
+    "menu": [
+        {
+            "label": "Packages",
+            "submenu": [
+                {
+                    "label": "Breakdown",
+                    "submenu": [
+                        {
+                            "label": "Pull from Jira",
+                            "command": "breakdown:pull"
+                        },
+                        {
+                            "label": "Push to Jira",
+                            "command": "breakdown:push"
+                        },
+                        {
+                            "label": "Trim empty lines",
+                            "command": "breakdown:trim"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

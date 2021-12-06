@@ -73,7 +73,7 @@ Whenever you change the `url` or the `query` of your `.bkdn` file, your direct n
 
 ## Pulling from Jira
 
-In the Packages menu, select **Breakdown → Pull from Jira** to get your selected Jira dataset into Atom. Whenever you pull the Jira dataset into your Atom editor, all contents of the editor will be overwritten by the downloaded Jira dataset.
+Select **Packages → Breakdown → Pull from Jira** to get your selected Jira dataset into Atom. Whenever you pull the Jira dataset into your Atom editor, all contents of the editor will be overwritten by the downloaded Jira dataset.
 
 Optionally, you can define in your configuration section to visualize the epic link key for stories and the parent issue key for sub-tasks.
 
@@ -95,6 +95,8 @@ By default, after a pull, all editor lines are folded. In the editor, folding ca
 Saving the editor contents with <kbd>CMD-S</kbd> will beautify your text with correct spacing and indentation.
 
 You can open an issue inside of Jira by doing a <kbd>CMD-MOUSECLICK</kbd> on the issue key.
+
+Remove all empty lines that came during your formatting via **Packages → Breakdown → Trim empty lines**.
 
 ## Creating and modifying issues
 
@@ -187,7 +189,7 @@ DEL Epic REST-26 ( s:In Progress p:13 ) This epic will be removed when pushed
 
 ## Pushing to Jira
 
-In the Packages menu, select **Breakdown → Push to Jira** to push your changes to Jira. A push is always followed by an automatic pull to bring a current dataset back into your editor. If some issues could not be pushed, you will receive a warning notification with the reason code. Also, those issues will _disappear from the editor._ Use the editor UNDO function to let those issues reappear.
+Select **Packages → Breakdown → Push to Jira** to push your changes to Jira. A push is always followed by an automatic pull to bring a current dataset back into your editor. If some issues could not be pushed, you will receive a warning notification with the reason code. Also, those issues will _disappear from the editor._ Use the editor UNDO function to let those issues reappear.
 
 For the creation of epics and stories from within Atom, you can optionally define in your configuration section a default _fixversion_ and the default amount of _story points_ to assign to those epics and stories when pushing them to Jira. So you don´t need to specify those values for each newly created issue in Atom. However, you can overwrite the setting in each issue. Configure with:
 
@@ -253,5 +255,5 @@ In addition to the configuration section of the `.bkdn` file, you can make some 
 -   **Jira URL**: This URL will be used in case you don´t provide a URL in the config section of your `.bkdn` file.
 -   **Default Story Points**: The default amount of story points to assign to new created epics or stories.
 -   **Fold all editor lines after a pull**: By default, all editor lines will be folded after pulling from Jira.
--   **Username for accessing Jira**: A user to authenticate against Jira. 
--   **API Token for accessing Jira**: An API Token to authenticate against Jira.
+-   **Username**: A user to authenticate against Jira. 
+-   **API Token**: An API Token to authenticate against Jira.

@@ -1,6 +1,7 @@
 {
     "atom-workspace": {
         "ctrl-alt-l": "breakdown:pull",
-        "ctrl-alt-s": "breakdown:push"
+        "ctrl-alt-s": "breakdown:push",
+        "ctrl-alt-t": "breakdown:trim"
     }
 }
