@@ -118,7 +118,7 @@ patterns: [
 			}
 			{
 				'name': 'issue.unresolved.bkdn'
-				'begin': '(?i)^\\s*(⟳)?\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
+				'begin': '(?i)^\\s*(⟳)?\\s*([A-Za-z0-9]-\\d+)\\s*(.*?)(:)'
 				'beginCaptures':
 					'1':
 						'name': 'active.sprint.bkdn'
@@ -155,7 +155,7 @@ patterns: [
 			}
 			{
 				'name': 'issue.resolved.bkdn'
-				'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s*([A-Za-z]{1,10}-\\d+)\\s*(.*?)(:)'
+				'begin': '(?i)^\\s*(⟳)?\\s*(Resolved)\\s*([A-Za-z0-9]-\\d+)\\s*(.*?)(:)'
 				'beginCaptures':
 					'1':
 						'name': 'active.sprint.bkdn'
@@ -429,11 +429,11 @@ patterns: [
 'repository':
 	'key': {
 		'name': 'issue.key.bkdn'
-		'match': '[A-Za-z]+-\\d+'
+		'match': '[A-Za-z0-9]+-\\d+'
 		}
 	'parentkey': {
 		'name': 'issue.parent.key.bkdn'
-		'match': '\\^[A-Za-z]+-\\d+'
+		'match': '\\^[A-Za-z0-9]+-\\d+'
 	}
 	'status': {
 		'name': 'issue.status.bkdn'
@@ -525,7 +525,7 @@ patterns: [
 	}
 	'summary': {
 		'name': 'issue.summary.bkdn'
-		'match': '[^\\s].*(?=\\((.*\\b(s|a|p|v|c|):.*)\\))|[^\\s].*(?=\\((.*\\b(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?=\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\((.*\\b(s|a|p|v|c|):.*)\\))|[^\\s].*(?!\\((.*\\b(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z]{1,10}-\\d+)|[^\\s].*(?!\\^[A-Za-z]{1,10}-\\d+)'
+		'match': '[^\\s].*(?=\\((.*\\b(s|a|p|v|c|):.*)\\))|[^\\s].*(?=\\((.*\\b(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z0-9]-\\d+)|[^\\s].*(?=\\^[A-Za-z0-9]-\\d+)|[^\\s].*(?!\\((.*\\b(s|a|p|v|c|):.*)\\))|[^\\s].*(?!\\((.*\\b(s|a|p|v|c|):.*)\\)\\s*\\^[A-Za-z0-9]-\\d+)|[^\\s].*(?!\\^[A-Za-z0-9]-\\d+)'
 	}
 	'timetracking': {
 		'name': 'timetracking.bkdn'
