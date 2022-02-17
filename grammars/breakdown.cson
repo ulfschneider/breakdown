@@ -415,6 +415,14 @@ patterns: [
 		]
 	}
 	{
+		'name': 'issue.description.field.bkdn'
+		'match': '(?i)^\\s*description\\s*$'	
+	}
+	{
+		'name': 'issue.acceptance.field.bkdn'
+		'match': '(?i)^\\s*acceptance\\s*$'
+	}
+	{
 		'name': 'issue.description.bkdn'
 		'begin': '(?i)^\\s*\/\/'
 		'end': '\\s*?$'

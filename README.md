@@ -150,6 +150,21 @@ Story REST-32 As a developer, I want to have the story status highlighted (s:In 
     //Let´s make life a little bit easier here!
 ```
 
+## Acceptance Criteria
+
+Similar to descriptions, the acceptance criteria can be added to Stories and Epics.
+The acceptance criteria has to be introduce by the keyword **Acceptance** in one line, followed by the description of the acceptance criteria in multiple subsequent lines.
+
+I would look like
+
+```
+Story REST-32 As a developer, I want to have the story status highlighted (s:In Progress a:admin p:13 v:Version 3.0 c:Frontend)
+    //A highlighted story status will allow to quickly identify if a story is completed.
+    //Let´s make life a little bit easier here!
+    Acceptance
+    //Story is shown green when in done status category, and not green otherwise
+```
+
 ## Ranking
 
 Atom has a nice function to move entire lines up and down with <kbd>CTRL-↑</kbd> and <kbd>CTRL-↓</kbd>, on Mac it´s <kbd>CTRL-⌘-↑</kbd> and <kbd>CTRL-⌘-↓</kbd>.
