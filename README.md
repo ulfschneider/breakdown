@@ -14,6 +14,8 @@ Display and manipulate a breakdown structure of your Jira Scrum project - even o
 - [Working with the editor](#working-with-the-editor)
 - [Creating and modifying issues](#creating-and-modifying-issues)
 - [Issue descriptions](#issue-descriptions)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Issue descriptions](#issue-descriptions)
 - [Ranking](#ranking)
 - [Changing parents](#changing-parents)
 - [Deleting issues](#deleting-issues)
