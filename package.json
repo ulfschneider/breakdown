@@ -34,7 +34,7 @@
         "https": "^1.0.0",
         "moment": "^2.29.2",
         "node-fetch": "^2.6.7",
-        "somap": "^0.5.12",
+        "somap": "^0.5.14",
         "underscore": "^1.10.2"
     },
     "configSchema": {
